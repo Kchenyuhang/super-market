@@ -8,4 +8,7 @@ public class DAOFactory {
     public static CashierDAO getCashierDAOInstance() {
         return new CashierDAOImpl();
     }
+    public static AdminDAO getAdminDAOInstance() {
+        return new AdminDAOImpl();
+    }
 }

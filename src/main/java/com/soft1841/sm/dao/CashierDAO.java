@@ -9,6 +9,10 @@ import java.util.List;
  * 收银员DAO接口
  */
 public interface CashierDAO {
+
+
+    Cashier getCashierByAccount(String account) throws SQLException;
+
     /**
      * 增加收银员
      * @param cashier

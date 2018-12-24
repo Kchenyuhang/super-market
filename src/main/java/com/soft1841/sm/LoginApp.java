@@ -8,6 +8,10 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+/**
+ * @author 陈宇航
+ * 2018.12.24
+ */
 public class LoginApp extends Application {
 
     @Override

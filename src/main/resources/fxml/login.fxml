@@ -35,8 +35,8 @@
       </Label>
       <RadioButton layoutX="135.0" layoutY="130.0" mnemonicParsing="false" text="收银员" styleClass="white-theme " />
       <RadioButton layoutX="361.0" layoutY="130.0" mnemonicParsing="false" text="管理员" styleClass="white-theme " />
-      <TextField layoutX="180.0" layoutY="195.0" text="请输入账号" />
-      <TextField layoutX="180.0" layoutY="275.0" text="请输入密码" />
+      <TextField layoutX="180.0" layoutY="195.0" text="请输入账号" fx:id="accountField" />
+      <PasswordField layoutX="180.0" layoutY="275.0" text="请输入密码" fx:id="passwordField"/>
       <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="101.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
          <image>
              <Image url="/img/account.png" />

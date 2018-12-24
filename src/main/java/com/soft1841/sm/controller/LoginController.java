@@ -22,7 +22,7 @@ public class LoginController {
 
     private CashierService cashierService = ServiceFactory.getCashierServiceInstance();
 
-    public void login() throws Exception {
+    public void login(){
         String account = accountField.getText().trim();
         String password = passwordField.getText().trim();
         //调用service的登录功能

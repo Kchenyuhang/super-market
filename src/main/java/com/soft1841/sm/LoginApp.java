@@ -12,7 +12,7 @@ public class LoginApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        primaryStage.setTitle ( "星辰超市管理中心" );
+        primaryStage.setTitle ( "星辰超市登录界面" );
         FXMLLoader fxmlLoader = new FXMLLoader (getClass().getResource("/fxml/login.fxml"));
         Parent root = fxmlLoader.load ();
         Scene scene = new Scene ( root,650,550 );

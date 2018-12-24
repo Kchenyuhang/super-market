@@ -20,120 +20,81 @@
             </Label>
          </children>
       </HBox>
-      <VBox layoutX="-2.0" layoutY="5.0" prefHeight="937.0" prefWidth="130.0" spacing="95.0">
+      <VBox layoutX="-2.0" layoutY="5.0" prefHeight="937.0" prefWidth="130.0" spacing="130.0">
          <children>
-            <HBox prefHeight="65.0" prefWidth="130.0">
+            <HBox prefHeight="40.0" prefWidth="121.0">
                <children>
-                  <ImageView fitHeight="66.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="39.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                          <Image url="/img/tools.png" />
                      </image>
                   </ImageView>
-                  <Label prefHeight="67.0" prefWidth="78.0" text="  帮助">
-                     <font>
-                        <Font name="STXingkai" size="27.0" />
-                     </font>
-                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="37.0" prefWidth="78.0" text="帮助" />
                </children>
             </HBox>
-            <HBox prefHeight="77.0" prefWidth="130.0">
+            <HBox prefHeight="48.0" prefWidth="132.0">
                <children>
-                  <ImageView fitHeight="77.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="41.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="/img/bill.png" />
                      </image>
                   </ImageView>
-                  <VBox prefHeight="73.0" prefWidth="68.0">
+                  <VBox prefHeight="65.0" prefWidth="103.0">
                      <children>
-                        <Label prefHeight="41.0" prefWidth="73.0" text="销售">
-                           <font>
-                              <Font name="STXingkai" size="25.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="39.0" prefWidth="72.0" text="单据">
-                           <font>
-                              <Font name="STXingkai" size="24.0" />
-                           </font>
-                        </Label>
+                        <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="83.0" text="销售单据" />
                      </children>
                   </VBox>
                </children>
             </HBox>
             <HBox prefHeight="74.0" prefWidth="130.0">
                <children>
-                  <ImageView fitHeight="77.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="42.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="/img/people.png" />
                      </image>
                   </ImageView>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label prefHeight="43.0" prefWidth="71.0" text="新增">
-                           <font>
-                              <Font name="STXingkai" size="25.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="37.0" prefWidth="67.0" text="会员">
-                           <font>
-                              <Font name="STXingkai" size="25.0" />
-                           </font>
-                        </Label>
+                        <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="86.0" text="新增会员" />
                      </children>
                   </VBox>
                </children></HBox>
             <HBox prefHeight="72.0" prefWidth="130.0">
                <children>
-                  <ImageView fitHeight="72.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="/img/dianna.png" />
                      </image>
                   </ImageView>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label prefHeight="40.0" prefWidth="72.0" text="后台">
-                           <font>
-                              <Font name="STXingkai" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="34.0" prefWidth="66.0" text="管理">
-                           <font>
-                              <Font name="STXingkai" size="25.0" />
-                           </font>
-                        </Label>
+                        <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="85.0" text="后台管理" />
                      </children>
                   </VBox>
                </children>
             </HBox>
             <HBox prefHeight="74.0" prefWidth="130.0">
                <children>
-                  <ImageView fitHeight="79.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="41.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="/img/shezhi.png" />
                      </image>
                   </ImageView>
                   <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label prefHeight="85.0" prefWidth="70.0" text="设置">
-                           <font>
-                              <Font name="STXingkai" size="25.0" />
-                           </font>
-                        </Label>
+                        <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="88.0" text="设置" />
                      </children>
                   </VBox>
                </children>
             </HBox>
             <HBox prefHeight="72.0" prefWidth="130.0">
                <children>
-                  <ImageView fitHeight="77.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="41.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="/img/YY_kaiguan.png" />
                      </image>
                   </ImageView>
-                  <Label prefHeight="74.0" prefWidth="69.0" text="退出">
-                     <font>
-                        <Font name="STXingkai" size="25.0" />
-                     </font>
-                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="86.0" text="退出" />
                </children>
             </HBox>
          </children></VBox>
@@ -163,7 +124,7 @@
             <Label prefHeight="62.0" prefWidth="138.0" />
             <Label prefHeight="33.0" prefWidth="49.0" text="小计：" />
             <Label prefHeight="55.0" prefWidth="114.0" />
-            <Label prefHeight="42.0" prefWidth="171.0" text="          总计：" styleClass="green-theme">
+            <Label prefHeight="42.0" prefWidth="171.0" styleClass="green-theme" text="          总计：">
                <font>
                   <Font size="27.0" />
                </font>
@@ -190,17 +151,17 @@
             </HBox>
          </children>
       </VBox>
-      <Label layoutX="798.0" layoutY="805.0" prefHeight="34.0" prefWidth="72.0" text="收款：" styleClass="red-theme">
+      <Label layoutX="798.0" layoutY="805.0" prefHeight="34.0" prefWidth="72.0" styleClass="red-theme" text="收款：">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Label layoutX="798.0" layoutY="844.0" text="实收：" styleClass="red-theme">
+      <Label layoutX="798.0" layoutY="844.0" styleClass="red-theme" text="实收：">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="798.0" layoutY="882.0" text="找零：" styleClass="red-theme">
+      <Label layoutX="798.0" layoutY="882.0" styleClass="red-theme" text="找零：">
          <font>
             <Font size="24.0" />
          </font>

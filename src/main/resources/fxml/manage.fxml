@@ -46,8 +46,8 @@
                            <TitledPane alignment="TOP_LEFT" text="类别管理">
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
                                    <!--点击该按钮，右侧切换图书类别数据-->
-                                   <Button text="食品类别"  />
-                                   <Button text="分类统计" />
+                                   <Button styleClass="menu-btn" text="食品类别"  />
+                                   <Button styleClass="menu-btn" text="分类统计" />
                                </VBox>
                            </TitledPane>
                            <TitledPane alignment="TOP_LEFT" text="商品管理">

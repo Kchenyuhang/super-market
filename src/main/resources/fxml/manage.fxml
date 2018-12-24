@@ -12,7 +12,8 @@
 
 
 <?import javafx.scene.effect.Reflection?>
-<BorderPane  xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.soft1841.sm.controller.LoginController">
+<BorderPane  xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+             fx:controller="com.soft1841.sm.controller.LoginController">
 
        <top>
            <AnchorPane prefHeight="80.0">

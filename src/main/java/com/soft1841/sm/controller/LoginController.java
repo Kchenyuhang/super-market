@@ -19,7 +19,7 @@ public class LoginController {
     public void login() throws Exception {
         String account = accountField.getText().trim();
         String password = passwordField.getText().trim();
-        if ("admin".equals(account) && "soft1841".equals(password)) {
+        if ("123456".equals(account) && "soft1841".equals(password)) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("提示");
             alert.setContentText("登陆成功");

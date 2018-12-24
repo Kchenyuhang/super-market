@@ -17,8 +17,6 @@ public class LoginController {
     private TextField accountField;
     @FXML
     private PasswordField passwordField;
-    @FXML
-    private ToggleGroup user;
 
     private CashierService cashierService = ServiceFactory.getCashierServiceInstance();
 

@@ -67,7 +67,7 @@
                                    <Button styleClass="menu-btn" text="统计分析" />
                                </VBox>
                            </TitledPane>
-                           <TitledPane alignment="TOP_LEFT" text="会员管理">
+                           <TitledPane alignment="TOP_LEFT" text="收银员管理">
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
                                    <Button styleClass="menu-btn" text="管理员信息" />
                                    <!--点击该按钮，右侧切换图书类别数据-->

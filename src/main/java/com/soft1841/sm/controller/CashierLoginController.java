@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -42,7 +43,7 @@ public class CashierLoginController {
             Stage cashierStage = new Stage();
             //读入布局文件
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/boundary.fxml"));
-            BorderPane root = fxmlLoader.load();
+            AnchorPane root = fxmlLoader.load();
             Scene scene = new Scene(root);
             //读入样式
             scene.getStylesheets().add("/css/manage.css");

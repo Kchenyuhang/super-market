@@ -24,6 +24,10 @@ public class ManageLoginController {
 
     private AdminService adminService = ServiceFactory.getAdminServiceInstance();
 
+    /**
+     * 登录方法
+     * @throws Exception
+     */
     public void login() throws Exception {
         String account = accountField.getText().trim();
         String password = passwordField.getText().trim();

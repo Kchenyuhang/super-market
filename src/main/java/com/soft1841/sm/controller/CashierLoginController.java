@@ -9,7 +9,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
@@ -42,11 +41,11 @@ public class CashierLoginController {
             //登陆成功后跳转到收银界面
             Stage cashierStage = new Stage();
             //读入布局文件
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/boundary.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/cashier.fxml"));
             AnchorPane root = fxmlLoader.load();
             Scene scene = new Scene(root);
             //读入样式
-            scene.getStylesheets().add("/css/manage.css");
+            scene.getStylesheets().add("/css/cashier.css");
             cashierStage.setTitle("收银系统");
             cashierStage.setMaximized(true);
             cashierStage.setScene(scene);

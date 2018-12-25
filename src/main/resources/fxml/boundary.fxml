@@ -1,223 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="937.0" prefWidth="1305.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <HBox layoutX="328.0" prefHeight="146.0" prefWidth="978.0">
-         <children>
-            <Label prefHeight="146.0" prefWidth="974.0" text="   星辰超市收银系统">
-               <font>
-                  <Font name="STXingkai" size="71.0" />
-               </font>
-            </Label>
-         </children>
-      </HBox>
-      <VBox layoutX="-2.0" layoutY="5.0" prefHeight="937.0" prefWidth="130.0" spacing="95.0">
-         <children>
-            <HBox prefHeight="65.0" prefWidth="130.0">
-               <children>
-                  <ImageView fitHeight="66.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                         <Image url="/img/tools.png" />
-                     </image>
-                  </ImageView>
-                  <Label prefHeight="67.0" prefWidth="78.0" text="  帮助">
-                     <font>
-                        <Font name="STXingkai" size="27.0" />
-                     </font>
-                  </Label>
-               </children>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.soft1841.sm.controller.BoundaryController"
+           fx:id="syContainer">
+    <top>
+        <AnchorPane>
+            <VBox spacing="150">
+            <ImageView AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0">
+                <Image url="/img/tools.png"/>
+            </ImageView>
+                <ImageView AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0">
+                    <Image url="/img/bill.png"/>
+                </ImageView>
+                <ImageView AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0">
+                    <Image url="/img/people.png"/>
+                </ImageView>
+                <ImageView AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0">
+                    <Image url="/img/dianna.png"/>
+                </ImageView>
+                <ImageView AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0">
+                    <Image url="/img/shezhi.png"/>
+                </ImageView>
+                <ImageView AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0">
+                    <Image url="/img/YY_kaiguan.png"/>
+                </ImageView>
+            </VBox>
+            <ImageView AnchorPane.topAnchor="0" AnchorPane.leftAnchor="200">
+                <Image url="/img/star.png"/>
+            </ImageView>
+            <Label text="星辰超市系统" styleClass="sss" AnchorPane.leftAnchor="280" AnchorPane.topAnchor="10"/>
+            <HBox spacing="80">
+                <Label text="订单编号"/>
+                <Label text="商品条码"/>
+                <Label text="数量"/>
+                <Label text="小计"/>
+                <Label text="时间"/>
+                <padding>
+                    <Insets top="100" left="300"/>
+                </padding>
             </HBox>
-            <HBox prefHeight="77.0" prefWidth="130.0">
-               <children>
-                  <ImageView fitHeight="77.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="/img/bill.png" />
-                     </image>
-                  </ImageView>
-                  <VBox prefHeight="73.0" prefWidth="68.0">
-                     <children>
-                        <Label prefHeight="41.0" prefWidth="73.0" text="销售">
-                           <font>
-                              <Font name="STXingkai" size="25.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="39.0" prefWidth="72.0" text="单据">
-                           <font>
-                              <Font name="STXingkai" size="24.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
+            <HBox spacing="80">
+                <Label text="商品名称"/>
+                <Label text="商品单数"/>
+                <Label text="购买数量"/>
+                <Label text="小计"/>
+                <Label text="总计"/>
+                <padding>
+                    <Insets top="780" left="300"/>
+                </padding>
             </HBox>
-            <HBox prefHeight="74.0" prefWidth="130.0">
-               <children>
-                  <ImageView fitHeight="77.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="/img/people.png" />
-                     </image>
-                  </ImageView>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <Label prefHeight="43.0" prefWidth="71.0" text="新增">
-                           <font>
-                              <Font name="STXingkai" size="25.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="37.0" prefWidth="67.0" text="会员">
-                           <font>
-                              <Font name="STXingkai" size="25.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children></HBox>
-            <HBox prefHeight="72.0" prefWidth="130.0">
-               <children>
-                  <ImageView fitHeight="72.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="/img/dianna.png" />
-                     </image>
-                  </ImageView>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <Label prefHeight="40.0" prefWidth="72.0" text="后台">
-                           <font>
-                              <Font name="STXingkai" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="34.0" prefWidth="66.0" text="管理">
-                           <font>
-                              <Font name="STXingkai" size="25.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
+            <HBox spacing="25">
+                <Label text="商品条码"/>
+                <TextField/>
+                <Button text="确定"/>
+                <padding>
+                    <Insets top="830" left="300"/>
+                </padding>
             </HBox>
-            <HBox prefHeight="74.0" prefWidth="130.0">
-               <children>
-                  <ImageView fitHeight="79.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="/img/shezhi.png" />
-                     </image>
-                  </ImageView>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <Label prefHeight="85.0" prefWidth="70.0" text="设置">
-                           <font>
-                              <Font name="STXingkai" size="25.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
+            <HBox spacing="25">
+                <Label text="当前用户"/>
+                <Label text="登陆时间"/>
+                <Label text="当前时间"/>
+                <padding>
+                    <Insets left="300" top="890"/>
+                </padding>
             </HBox>
-            <HBox prefHeight="72.0" prefWidth="130.0">
-               <children>
-                  <ImageView fitHeight="77.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="/img/YY_kaiguan.png" />
-                     </image>
-                  </ImageView>
-                  <Label prefHeight="74.0" prefWidth="69.0" text="退出">
-                     <font>
-                        <Font name="STXingkai" size="25.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-         </children></VBox>
-      <Separator layoutX="129.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="946.0" prefWidth="0.0" />
-      <ImageView fitHeight="146.0" fitWidth="194.0" layoutX="181.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-             <Image url="/img/star.png" />
-         </image>
-      </ImageView>
-      <Separator layoutX="132.0" layoutY="146.0" prefHeight="0.0" prefWidth="1171.0" />
-      <HBox layoutX="186.0" layoutY="149.0" prefHeight="42.0" prefWidth="1121.0" spacing="120.0">
-         <children>
-            <Label prefHeight="43.0" prefWidth="76.0" text="订单编号" />
-            <Label prefHeight="47.0" prefWidth="85.0" text="商品条码" />
-            <Label prefHeight="51.0" prefWidth="54.0" text="数量" />
-            <Label prefHeight="45.0" prefWidth="57.0" text="小计" />
-            <Label prefHeight="44.0" prefWidth="57.0" text="时间" />
-         </children></HBox>
-      <Separator layoutX="124.0" layoutY="729.0" prefHeight="10.0" prefWidth="1179.0" />
-      <HBox layoutX="132.0" layoutY="749.0" prefHeight="26.0" prefWidth="1171.0">
-         <children>
-            <Label prefHeight="34.0" prefWidth="78.0" text="商品名称：" />
-            <Label prefHeight="39.0" prefWidth="147.0" />
-            <Label prefHeight="31.0" prefWidth="82.0" text="商品单价：" />
-            <Label prefHeight="51.0" prefWidth="114.0" />
-            <Label prefHeight="32.0" prefWidth="83.0" text="购买数量：" />
-            <Label prefHeight="62.0" prefWidth="138.0" />
-            <Label prefHeight="33.0" prefWidth="49.0" text="小计：" />
-            <Label prefHeight="55.0" prefWidth="114.0" />
-            <Label prefHeight="42.0" prefWidth="171.0" text="          总计：" styleClass="green-theme">
-               <font>
-                  <Font size="27.0" />
-               </font>
-            </Label>
-            <Label prefHeight="48.0" prefWidth="101.0" />
-         </children>
-      </HBox>
-      <VBox layoutX="131.0" layoutY="805.0" prefHeight="77.0" prefWidth="417.0">
-         <children>
-            <HBox prefHeight="42.0" prefWidth="437.0">
-               <children>
-                  <Label prefHeight="46.0" prefWidth="78.0" text="商品条码：" />
-                  <TextField prefHeight="37.0" prefWidth="214.0" />
-                  <Label prefHeight="37.0" prefWidth="52.0" />
-                  <Button mnemonicParsing="false" text="确定" />
-               </children>
-            </HBox>
-            <HBox prefHeight="40.0" prefWidth="417.0">
-               <children>
-                  <Label prefHeight="57.0" prefWidth="99.0" text="       快捷键：" />
-                  <Label prefHeight="43.0" prefWidth="136.0" text="F5：删除商品" />
-                  <Label prefHeight="50.0" prefWidth="134.0" text="F6：修改数量" />
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-      <Label layoutX="798.0" layoutY="805.0" prefHeight="34.0" prefWidth="72.0" text="收款：" styleClass="red-theme">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Label>
-      <Label layoutX="798.0" layoutY="844.0" text="实收：" styleClass="red-theme">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="798.0" layoutY="882.0" text="找零：" styleClass="red-theme">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <TextField layoutX="870.0" layoutY="807.0" prefHeight="35.0" prefWidth="214.0" />
-      <TextField layoutX="870.0" layoutY="845.0" prefHeight="35.0" prefWidth="214.0" />
-      <TextField layoutX="870.0" layoutY="883.0" prefHeight="37.0" prefWidth="214.0" />
-      <Button layoutX="1137.0" layoutY="833.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="101.0" text="结算打印" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="1137.0" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="833.0">
-         <rotationAxis>
-            <Point3D />
-         </rotationAxis>
-      </Button>
-      <Label layoutX="135.0" layoutY="904.0" prefHeight="34.0" prefWidth="82.0" text="当前用户：" />
-      <Label layoutX="221.0" layoutY="908.0" prefHeight="30.0" prefWidth="67.0" />
-      <Label layoutX="252.0" layoutY="903.0" prefHeight="33.0" prefWidth="78.0" text="登录时间：" />
-      <Label layoutX="320.0" layoutY="903.0" prefHeight="36.0" prefWidth="82.0" />
-      <Label layoutX="351.0" layoutY="903.0" prefHeight="36.0" prefWidth="78.0" text="当前时间：" />
-      <Label layoutX="426.0" layoutY="905.0" prefHeight="33.0" prefWidth="99.0" />
-   </children>
-</AnchorPane>
+            <VBox spacing="10">
+                <Label text="收款"/>
+                <Label text="实收"/>
+                <Label text="找零"/>
+                <padding>
+                    <Insets top="830" left="840"/>
+                </padding>
+            </VBox>
+            <VBox>
+                <TextField/>
+                <TextField/>
+                <TextField/>
+                <padding>
+                    <Insets left="900" top="820"/>
+                </padding>
+            </VBox>
+            <TextField text="结算打印" AnchorPane.topAnchor="870" AnchorPane.leftAnchor="1300" styleClass="yyy"/>
+            <VBox spacing="145">
+                <Button text="帮助" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0" onAction="#showCard"/>
+                <Button text="销售单据" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0"/>
+                <Button text="新增会员" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0"/>
+                <Button text="后台管理" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0"/>
+                <Button text="帮设置" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0"/>
+                <Button text="退出" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0"/>
+                <padding>
+                    <Insets left="40"/>
+                </padding>
+            </VBox>
+        </AnchorPane>
+    </top>
+</BorderPane>

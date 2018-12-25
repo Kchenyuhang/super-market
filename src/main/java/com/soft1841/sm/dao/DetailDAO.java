@@ -1,5 +1,6 @@
 package com.soft1841.sm.dao;
 
+import com.soft1841.sm.entity.Cashier;
 import com.soft1841.sm.entity.Detail;
 
 import java.sql.SQLException;

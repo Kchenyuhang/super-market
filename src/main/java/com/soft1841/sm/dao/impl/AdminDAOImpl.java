@@ -13,6 +13,12 @@ import java.sql.SQLException;
  */
 public class AdminDAOImpl implements AdminDAO {
 
+    /**
+     * 管理员查询方法
+     * @param account
+     * @return
+     * @throws SQLException
+     */
     @Override
     public Admin getAdminByAccount(String account) throws SQLException {
         Entity entity = Db.use().queryOne("SELECT * FROM t_manager WHERE account = ? ", account);

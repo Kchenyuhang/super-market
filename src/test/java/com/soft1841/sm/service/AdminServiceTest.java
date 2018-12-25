@@ -14,7 +14,7 @@ public class AdminServiceTest {
 
     @Test
     public void login() {
-        boolean flag = adminService.login("1802343303","123456");
+        boolean flag = adminService.login("chenyuhang","123456");
         assertEquals(true,flag);
     }
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="675.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.ManageLoginController">
+   <children>
+      <ImageView fitHeight="675.0" fitWidth="956.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="/img/shine.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="124.0" fitWidth="153.0" layoutX="20" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="/img/star.png" />
+         </image>
+      </ImageView>
+      <Label  layoutX="190.0" layoutY="15.0" prefHeight="75.0" prefWidth="400.0" text="星辰超市商品管理系统" styleClass="white-theme " >
+         <font>
+            <Font name="YouYuan" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="270.0" layoutY="75.0" prefHeight="38.0" prefWidth="202.0" text="智 能 收 银 系 统" styleClass="white-theme ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField layoutX="240.0" layoutY="195.0" fx:id="accountField" />
+      <PasswordField layoutX="240.0" layoutY="275.0" fx:id="passwordField"/>
+      <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="190.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="/img/account.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="40.0" layoutX="190.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="/img/mima.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="295.0" layoutY="400.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="78.0" text="登陆" onAction="#login"/>
+   </children>
+</AnchorPane>

@@ -6,17 +6,16 @@ import org.junit.Test;
 
 import java.sql.SQLException;
 
-import static org.junit.Assert.*;
 
 /**
  * @author 陈宇航
  * 2018.12.
  */
 public class AdminDAOTest {
-    private AdminDAO adminDAO = (AdminDAO) DAOFactory.getAdminDAOInstance();
+    private AdminDAO adminDAO = DAOFactory.getAdminDAOInstance();
     @Test
     public void getAdminByAccount() throws SQLException {
-        Admin admin = adminDAO.getAdminByAccount("1802343303");
+        Admin admin = adminDAO.getAdminByAccount("chenyuhang");
         System.out.println(admin);
     }
 

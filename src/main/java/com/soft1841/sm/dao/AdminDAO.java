@@ -12,7 +12,7 @@ import java.sql.SQLException;
 public interface AdminDAO {
 
     /**
-     * 根据账号
+     * 根据账号查询管理员
      * @param account
      * @return
      * @throws SQLException

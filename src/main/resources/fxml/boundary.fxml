@@ -12,8 +12,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
-    <FlowPane hgap="15" prefHeight="78.0" prefWidth="396.0" style="-fx-background-color: rgb(230,221,219)" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="638.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8.0.172-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.CashierLoginController">
+    <FlowPane hgap="15" prefHeight="78.0" prefWidth="396.0" style="-fx-background-color: rgb(230,221,219)"
+              AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
     </FlowPane>
     <ImageView fitHeight="50.0" fitWidth="53.0" AnchorPane.leftAnchor="15">
         <Image url="/img/tools.png" />
@@ -54,7 +57,7 @@
 
     </HBox>
     <Separator prefHeight="9.0" prefWidth="890.0" AnchorPane.topAnchor="450" />
-    <HBox prefHeight="30" prefWidth="830.0" spacing="0" AnchorPane.topAnchor="465.0">
+    <HBox prefHeight="30" prefWidth="830.0" spacing="5" AnchorPane.topAnchor="465.0">
         <Label text="商品名称:" />
       <Label prefHeight="33.0" prefWidth="135.0" />
         <Label text="商品单价:" />
@@ -87,10 +90,7 @@
        <Label text="当前时间：" />
       <Label prefHeight="31.0" prefWidth="95.0" />
    </HBox>
-    <Button text="结算打印" AnchorPane.topAnchor="530" AnchorPane.rightAnchor="300" prefWidth="100" prefHeight="50"
-    style="-fx-background-color: rgb(232,223,221)"/>
-
-
-
-
+    <Button text="结算打印" AnchorPane.topAnchor="530"
+            AnchorPane.rightAnchor="300" prefWidth="100" prefHeight="50"
+            style="-fx-background-color: rgb(232,223,221)"/>
 </AnchorPane>

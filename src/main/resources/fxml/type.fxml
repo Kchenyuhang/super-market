@@ -8,6 +8,7 @@
     <HBox AnchorPane.topAnchor="10" AnchorPane.leftAnchor="20" spacing="20">
         <Button text="添加商品类别" styleClass="green-theme" onAction="#addType"/>
     </HBox>
+
     <TableView fx:id="typeTable" prefWidth="700"
                AnchorPane.leftAnchor="20" AnchorPane.topAnchor="50">
         <columns>

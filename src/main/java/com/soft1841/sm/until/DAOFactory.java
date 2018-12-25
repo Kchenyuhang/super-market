@@ -20,6 +20,5 @@ public class DAOFactory {
 
         return new TypeDAOImpl() {
         };
-
     }
 }

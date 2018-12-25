@@ -21,4 +21,6 @@ public class ServiceFactory {
     public static TypeDAO getTypeDAOInstance(){
         return new TypeDAOImpl();
     }
+
 }
+

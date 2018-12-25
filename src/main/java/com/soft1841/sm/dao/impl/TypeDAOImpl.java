@@ -24,7 +24,6 @@ public class TypeDAOImpl implements TypeDAO {
                         .set("type_name",type.getTypeName())
         );
     }
-
     @Override
     public int deleteTypeById(long id) throws SQLException {
         return Db.use().del(

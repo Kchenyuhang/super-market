@@ -96,7 +96,6 @@ public class TypeController implements Initializable {
 
         }
     }
-
     private void showTypeData(List<Entity> entityList) {
         for (Entity entity : entityList) {
             Type type = new Type();

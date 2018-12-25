@@ -25,7 +25,6 @@ public interface TypeDAO {
      * @param id
      * @return
      */
-
     int deleteTypeById(long id) throws SQLException;
 
     /**

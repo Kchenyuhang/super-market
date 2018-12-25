@@ -11,6 +11,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+/**
+ * 收银登录控制器
+ * @author 陈宇航
+ * 2018.12.25
+ */
 public class CashierLoginController {
     @FXML
     private TextField accountField1;
@@ -19,6 +24,10 @@ public class CashierLoginController {
 
     private CashierService cashierService = ServiceFactory.getCashierServiceInstance();
 
+    /**
+     * 登录方法
+     * @throws Exception
+     */
     public void login() throws Exception {
         String account1 = accountField1.getText().trim();
         String password1 = passwordField1.getText().trim();

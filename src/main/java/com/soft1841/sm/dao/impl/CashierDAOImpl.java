@@ -12,6 +12,13 @@ import java.sql.SQLException;
  * 2018.12.24
  */
 public class CashierDAOImpl implements CashierDAO{
+
+    /**
+     * 收银员查询方法
+     * @param account
+     * @return
+     * @throws SQLException
+     */
     @Override
     public Cashier getCashierByAccount(String account) throws SQLException {
         Entity entity = Db.use().queryOne("SELECT * FROM t_cashiers WHERE account = ? ",account);

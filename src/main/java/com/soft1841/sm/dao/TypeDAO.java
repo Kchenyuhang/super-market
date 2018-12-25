@@ -7,7 +7,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * 类别DAO接口
+ * @auther 柳磊磊
+ * 2018 12.24
  */
 public interface TypeDAO {
     /**
@@ -33,5 +34,22 @@ public interface TypeDAO {
      * @return
      * @throws SQLException
      */
-    Entity getTypeById(int id) throws SQLException;
+    Entity getTypeById(long id) throws SQLException;
+
+
+    /**
+     * 根据书名关键词模糊查询图书
+     * @param  keywords
+     * @return
+     * @throws SQLException
+     */
+    List<Entity> selectTypesLike(String keywords) throws SQLException;
+
+    /**
+     * 根据图书类别查询图书
+     * @param typeID
+     * @return
+     * throws SQLException
+     */
+    List<Entity> selectTypesByType(long typeID) throws SQLException;
 }

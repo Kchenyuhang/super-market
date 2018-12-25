@@ -10,5 +10,12 @@ import java.sql.SQLException;
  * 2018.12.24
  */
 public interface AdminDAO {
+
+    /**
+     * 根据账号
+     * @param account
+     * @return
+     * @throws SQLException
+     */
     Admin getAdminByAccount(String account) throws SQLException;
 }

@@ -1,7 +1,6 @@
 package com.soft1841.sm.controller;
 
 import com.soft1841.sm.service.AdminService;
-import com.soft1841.sm.service.CashierService;
 import com.soft1841.sm.until.ServiceFactory;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +15,7 @@ import javafx.stage.Stage;
  * @author 陈宇航
  * 2018.12.24
  */
-public class ManageLoginController {
+public class AdminLoginController {
     @FXML
     private TextField accountField;
     @FXML
@@ -41,7 +40,7 @@ public class ManageLoginController {
             //登陆成功后跳转到商品管理界面
             Stage managerStage = new Stage();
             //读入布局文件
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/manage.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/admin.fxml"));
             BorderPane root = fxmlLoader.load();
             Scene scene = new Scene(root);
             //读入样式

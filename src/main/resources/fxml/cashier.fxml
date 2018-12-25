@@ -12,52 +12,48 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="638.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8.0.172-ea"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.CashierLoginController">
-    <FlowPane hgap="15" prefHeight="78.0" prefWidth="396.0" style="-fx-background-color: rgb(230,221,219)"
-              AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.CashierLoginController"
+styleClass="green-theme">
+    <FlowPane hgap="15" prefHeight="90.0" prefWidth="396.0" styleClass="white-theme" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
     </FlowPane>
-    <ImageView fitHeight="50.0" fitWidth="53.0" AnchorPane.leftAnchor="15">
+    <ImageView fitHeight="50.0" fitWidth="53.0" AnchorPane.leftAnchor="25">
         <Image url="/img/tools.png" />
     </ImageView>
     <Button text="帮助说明" AnchorPane.leftAnchor="5" AnchorPane.topAnchor="50" />
-    <ImageView fitHeight="50.0" fitWidth="53.0" AnchorPane.leftAnchor="100">
+    <ImageView fitHeight="50.0" fitWidth="53.0" AnchorPane.leftAnchor="150">
         <Image url="/img/bill.png" />
     </ImageView>
-    <Button text="销售单据" AnchorPane.leftAnchor="90" AnchorPane.topAnchor="50" />
+    <Button text="销售单据" AnchorPane.leftAnchor="120" AnchorPane.topAnchor="50" />
 
-    <ImageView fitHeight="50.0" fitWidth="53.0" AnchorPane.leftAnchor="185">
+    <ImageView fitHeight="50.0" fitWidth="53.0" AnchorPane.leftAnchor="320">
         <Image url="/img/people.png" />
     </ImageView>
-    <Button text="新增会员" AnchorPane.leftAnchor="175" AnchorPane.topAnchor="50" />
+    <Button text="新增会员" AnchorPane.leftAnchor="300" AnchorPane.topAnchor="50" />
 
-    <ImageView fitHeight="50.0" fitWidth="53.0" AnchorPane.leftAnchor="270">
+    <ImageView fitHeight="50.0" fitWidth="53.0" AnchorPane.leftAnchor="480">
         <Image url="/img/dianna.png" />
     </ImageView>
-    <Button text="后台管理" AnchorPane.leftAnchor="260" AnchorPane.topAnchor="50" />
+    <Button text="后台管理" AnchorPane.leftAnchor="465" AnchorPane.topAnchor="50" />
 
-    <ImageView fitHeight="50.0" fitWidth="53.0" AnchorPane.leftAnchor="355">
+    <ImageView fitHeight="50.0" fitWidth="53.0" AnchorPane.leftAnchor="650">
         <Image url="/img/shezhi.png" />
     </ImageView>
-    <Button text="设置" AnchorPane.leftAnchor="360" AnchorPane.topAnchor="50" />
+    <Button text="设置" AnchorPane.leftAnchor="650" AnchorPane.topAnchor="50" />
 
-    <ImageView fitHeight="80.0" fitWidth="70.0" AnchorPane.rightAnchor="350">
+    <ImageView fitHeight="80.0" fitWidth="70.0" AnchorPane.rightAnchor="500">
         <Image url="/img/star.png" />
     </ImageView>
-    <Label text="星辰超市收银界面" AnchorPane.rightAnchor="100" AnchorPane.topAnchor="25">
-        <font>
-            <Font name="STXingkai" size="32.0" />
-        </font></Label>
-    <HBox prefHeight="40.0" prefWidth="840.0" spacing="150" AnchorPane.leftAnchor="50" AnchorPane.topAnchor="82">
+    <Label text="星辰超市收银界面" AnchorPane.rightAnchor="100" AnchorPane.topAnchor="5" styleClass="pink-theme">
+        </Label>
+    <HBox prefHeight="40.0" prefWidth="2000" spacing="450" AnchorPane.leftAnchor="50" AnchorPane.topAnchor="88">
         <Label text="订单编号" />
         <Label text="商品条码" />
         <Label text="小计" />
         <Label text="时间" />
 
     </HBox>
-    <Separator prefHeight="9.0" prefWidth="890.0" AnchorPane.topAnchor="450" />
-    <HBox prefHeight="30" prefWidth="830.0" spacing="5" AnchorPane.topAnchor="465.0">
+    <Separator prefHeight="9.0" prefWidth="2000" AnchorPane.topAnchor="700" />
+    <HBox prefHeight="30" prefWidth="2000" spacing="50" AnchorPane.topAnchor="750" AnchorPane.leftAnchor="20">
         <Label text="商品名称:" />
       <Label prefHeight="33.0" prefWidth="135.0" />
         <Label text="商品单价:" />
@@ -70,27 +66,25 @@
       <Label prefHeight="40.0" prefWidth="113.0" />
         
     </HBox>
-   <VBox prefHeight="67.0" prefWidth="317.0" AnchorPane.topAnchor="510">
-         <HBox prefHeight="36.0" prefWidth="322.0" spacing="20">
+   <VBox prefHeight="67.0" prefWidth="1500" AnchorPane.topAnchor="830" AnchorPane.leftAnchor="300" spacing="30">
+         <HBox prefHeight="36.0" prefWidth="1500" spacing="20">
              <Label text="商品条码:" />
-             <TextField prefWidth="110" />
-             <Button text="确定" style="-fx-background-color: rgb(232,223,221)" />
+             <TextField prefHeight="29.0" prefWidth="238.0" />
+             <Button styleClass="dark-theme" text="确定" />
          </HBox>
-         <HBox prefHeight="34.0" prefWidth="304.0" spacing="40">
+         <HBox prefHeight="34.0" prefWidth="1500" spacing="40">
              <Label text="快捷键：" />
              <Label text="F5:删除商品" />
              <Label text="F6:修改数量" />
          </HBox>
    </VBox>
-   <HBox prefHeight="40.0" prefWidth="457.0" AnchorPane.topAnchor="600">
+   <HBox prefHeight="40.0" prefWidth="1000" AnchorPane.topAnchor="1000" AnchorPane.leftAnchor="20">
        <Label text="当前用户：" />
-      <Label prefHeight="26.0" prefWidth="58.0" />
+      <Label prefHeight="30.0" prefWidth="185.0" />
        <Label text="登陆时间：" />
-      <Label prefHeight="26.0" prefWidth="61.0" />
+      <Label prefHeight="35.0" prefWidth="219.0" />
        <Label text="当前时间：" />
-      <Label prefHeight="31.0" prefWidth="95.0" />
+      <Label prefHeight="45.0" prefWidth="257.0" />
    </HBox>
-    <Button text="结算打印" AnchorPane.topAnchor="530"
-            AnchorPane.rightAnchor="300" prefWidth="100" prefHeight="50"
-            style="-fx-background-color: rgb(232,223,221)"/>
+    <Button prefHeight="100" prefWidth="200" styleClass="dark-theme" text="结算打印" AnchorPane.rightAnchor="300" AnchorPane.topAnchor="850" />
 </AnchorPane>

@@ -1,0 +1,14 @@
+.pink-theme{
+   -fx-font-size: 50;
+    -fx-font-family: STXingkai;
+}
+.green-theme{
+    -fx-background-image: url(/img/change.jpg);
+}
+.white-theme{
+    -fx-background-color: rgb(230,221,219);
+}
+.dark-theme{
+    -fx-background-color: rgb(230,221,219);
+
+}

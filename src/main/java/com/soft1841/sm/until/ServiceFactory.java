@@ -1,5 +1,7 @@
 package com.soft1841.sm.until;
 
+import com.soft1841.sm.dao.TypeDAO;
+import com.soft1841.sm.dao.impl.TypeDAOImpl;
 import com.soft1841.sm.service.AdminService;
 import com.soft1841.sm.service.CashierService;
 import com.soft1841.sm.service.impl.AdminServiceImpl;
@@ -15,5 +17,8 @@ public class ServiceFactory {
     }
     public static AdminService getAdminServiceInstance() {
         return new AdminServiceImpl();
+    }
+    public static TypeDAO getTypeDAOInstance(){
+        return new TypeDAOImpl();
     }
 }

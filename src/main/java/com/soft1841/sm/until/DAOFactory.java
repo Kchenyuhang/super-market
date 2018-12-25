@@ -16,38 +16,9 @@ public class DAOFactory {
     public static AdminDAO getAdminDAOInstance() {
         return new AdminDAOImpl();
     }
-
-    public static TypeDAO getTypeDAOInstance() {
-        return new TypeDAO() {
-            @Override
-            public Long insertType(Type type) throws SQLException {
-                return null;
-            }
-
-            @Override
-            public int deleteTypeById(long id) throws SQLException {
-                return 0;
-            }
-
-            @Override
-            public List<Entity> selectAllTypes() throws SQLException {
-                return null;
-            }
-
-            @Override
-            public Entity getTypeById(long id) throws SQLException {
-                return null;
-            }
-
-            @Override
-            public List<Entity> selectTypesLike(String keywords) throws SQLException {
-                return null;
-            }
-
-            @Override
-            public List<Entity> selectTypesByType(long typeID) throws SQLException {
-                return null;
-            }
+    public static TypeDAO getTypeDAOInstance    () {
+        return new TypeDAOImpl() {
         };
+
     }
 }

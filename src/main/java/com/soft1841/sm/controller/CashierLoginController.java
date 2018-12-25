@@ -46,7 +46,7 @@ public class CashierLoginController {
             AnchorPane root = fxmlLoader.load();
             Scene scene = new Scene(root);
             //读入样式
-            scene.getStylesheets().add("/css/manage.css");
+            scene.getStylesheets().add("/css/cashier.css");
             cashierStage.setTitle("收银系统");
             cashierStage.setMaximized(true);
             cashierStage.setScene(scene);

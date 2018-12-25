@@ -10,12 +10,12 @@
 
 <?import javafx.scene.effect.Reflection?>
 <BorderPane  xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
-             fx:controller="com.soft1841.sm.controller.ManageLoginController">
+             fx:controller="com.soft1841.sm.controller.AdminLoginController">
 
        <top>
            <AnchorPane prefHeight="80.0">
                <!--点击这个文字显示默认主页数据-->
-               <Label text="超市管理系统" styleClass="font-gray"
+               <Label text="星辰超市管理系统" styleClass="font-gray"
                       AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
                    <!--字体特效-->
                    <effect>
@@ -40,44 +40,34 @@
                               AnchorPane.topAnchor="0.0">
                        <panes>
                            <!--由标题面板组成，里面嵌入VBox，实现一级目录和二级目录效果-->
-                           <TitledPane alignment="TOP_LEFT" text="类别管理">
+                           <TitledPane alignment="TOP_LEFT" text="商品类别管理">
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
-                                   <!--点击该按钮，右侧切换图书类别数据-->
+                                   <!--点击该按钮，右侧切换商品类别数据-->
                                    <Button styleClass="menu-btn" text="食品类别"  />
                                    <Button styleClass="menu-btn" text="分类统计" />
                                </VBox>
                            </TitledPane>
-                           <TitledPane alignment="TOP_LEFT" text="商品管理">
+                           <TitledPane alignment="TOP_LEFT" text="商品信息管理">
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
-                                   <!--点击该按钮，右侧切换图书数据-->
+                                   <!--点击该按钮，右侧切换商品数据-->
                                    <Button styleClass="menu-btn" text="商品信息" />
                                    <Button styleClass="menu-btn" text="统计分析" />
                                </VBox>
                            </TitledPane>
-                           <TitledPane alignment="TOP_LEFT" text="用户管理">
+                           <TitledPane alignment="TOP_LEFT" text="管理员管理">
                                <VBox minHeight="130" spacing="10" styleClass="dark-theme">
                                    <Button styleClass="menu-btn" text="管理员信息" />
-                                   <Button styleClass="menu-btn" text="用户信息" />
-                                   <Button styleClass="menu-btn" text="统计分析" />
-                               </VBox>
-                           </TitledPane>
-                           <TitledPane alignment="TOP_LEFT" text="销售管理">
-                               <VBox minHeight="130" spacing="10" styleClass="dark-theme">
-                                   <Button styleClass="menu-btn" text="购买查询" />
                                    <Button styleClass="menu-btn" text="统计分析" />
                                </VBox>
                            </TitledPane>
                            <TitledPane alignment="TOP_LEFT" text="收银员管理">
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
-                                   <Button styleClass="menu-btn" text="管理员信息" />
-                                   <!--点击该按钮，右侧切换图书类别数据-->
-
+                                   <Button styleClass="menu-btn" text="会员信息" />
+                                   <Button styleClass="menu-btn" text="会员统计"  />
                                </VBox>
                            </TitledPane>
-                           <TitledPane alignment="TOP_LEFT" text="统计">
+                           <TitledPane alignment="TOP_LEFT" text="统计管理">
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
-                                   <!--点击该按钮，右侧切换图书类别数据-->
-                                   <Button text="商品统计" styleClass="menu-btn" />
                                    <Button text="销售统计" styleClass="menu-btn"/>
                                </VBox>
                            </TitledPane>
@@ -92,7 +82,6 @@
                        </panes>
                    </Accordion>
                </AnchorPane>
-
 
                <!--右侧的主体内容部分，采用StackPane实现一种卡片切换效果-->
                <ScrollPane fitToWidth="true" hbarPolicy="NEVER"

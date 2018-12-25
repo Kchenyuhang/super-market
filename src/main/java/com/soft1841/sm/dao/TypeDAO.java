@@ -20,6 +20,11 @@ public interface TypeDAO {
      */
     Long insertType(Type type) throws SQLException;
 
+    /**
+     * 根据id删除类别
+     * @param id
+     * @return
+     */
     int deleteTypeById(long id) throws SQLException;
 
     /**

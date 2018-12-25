@@ -17,6 +17,7 @@ public class DAOFactory {
         return new AdminDAOImpl();
     }
     public static TypeDAO getTypeDAOInstance    () {
+
         return new TypeDAOImpl() {
         };
 

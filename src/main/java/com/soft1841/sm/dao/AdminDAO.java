@@ -1,8 +1,10 @@
 package com.soft1841.sm.dao;
 
+import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Admin;
 
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * 收银员DAO接口
@@ -18,4 +20,5 @@ public interface AdminDAO {
      * @throws SQLException
      */
     Admin getAdminByAccount(String account) throws SQLException;
+
 }

@@ -6,7 +6,6 @@ import com.soft1841.sm.dao.CashierDAO;
 import com.soft1841.sm.entity.Cashier;
 
 import java.sql.SQLException;
-import java.util.List;
 
 /**
  * @author 陈宇航

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane prefHeight="675.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.LoginController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.CashierLoginController">
    <children>
       <ImageView fitHeight="675.0" fitWidth="956.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -28,10 +28,8 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <RadioButton layoutX="200.0" layoutY="130.0" mnemonicParsing="false" text="收银员" styleClass="white-theme " />
-      <RadioButton layoutX="410.0" layoutY="130.0" mnemonicParsing="false" text="管理员" styleClass="white-theme " />
-      <TextField layoutX="240.0" layoutY="195.0" fx:id="accountField" />
-      <PasswordField layoutX="240.0" layoutY="275.0" fx:id="passwordField"/>
+      <TextField layoutX="240.0" layoutY="195.0" fx:id="accountField1" />
+      <PasswordField layoutX="240.0" layoutY="275.0" fx:id="passwordField1"/>
       <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="190.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
          <image>
              <Image url="/img/account.png" />

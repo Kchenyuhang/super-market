@@ -11,8 +11,7 @@
 <?import javafx.geometry.Insets?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.sm.controller.BoundaryController"
-           fx:id="syContainer">
+            fx:controller="com.soft1841.sm.controller.CashierLoginController">
     <top>
         <AnchorPane>
             <VBox spacing="150">
@@ -38,7 +37,7 @@
             <ImageView AnchorPane.topAnchor="0" AnchorPane.leftAnchor="200">
                 <Image url="/img/star.png"/>
             </ImageView>
-            <Label text="星辰超市系统" styleClass="sss" AnchorPane.leftAnchor="280" AnchorPane.topAnchor="10"/>
+            <Label text="星辰超市系统" AnchorPane.leftAnchor="280" AnchorPane.topAnchor="10"/>
             <HBox spacing="80">
                 <Label text="订单编号"/>
                 <Label text="商品条码"/>
@@ -91,9 +90,9 @@
                     <Insets left="900" top="820"/>
                 </padding>
             </VBox>
-            <TextField text="结算打印" AnchorPane.topAnchor="870" AnchorPane.leftAnchor="1300" styleClass="yyy"/>
+            <TextField text="结算打印" AnchorPane.topAnchor="870" AnchorPane.leftAnchor="1300" />
             <VBox spacing="145">
-                <Button text="帮助" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0" onAction="#showCard"/>
+                <Button text="帮助" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0"/>
                 <Button text="销售单据" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0"/>
                 <Button text="新增会员" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0"/>
                 <Button text="后台管理" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0"/>

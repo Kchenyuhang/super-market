@@ -10,6 +10,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商品类别实现
+ * @auther 柳磊磊
+ * 2018 12.26
+ */
+
 public class TypeDAOImpl implements TypeDAO {
 
     @Override

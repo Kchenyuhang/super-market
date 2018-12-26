@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 /**
  * 商品DAO接口
- * @ author 汤萌慧
+ * @ author 老汤
  * 2018.12.26
  */
 public interface GoodsDAO {

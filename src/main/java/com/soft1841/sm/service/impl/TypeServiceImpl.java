@@ -10,6 +10,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商品种类服务层重构
+ * @auther 柳磊磊
+ * 2018 12.26
+ */
+
 public class TypeServiceImpl implements TypeService {
     private TypeDAO typeDAO = DAOFactory.getTypeDAOInstance();
 

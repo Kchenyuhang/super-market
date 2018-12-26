@@ -17,6 +17,13 @@ import javafx.stage.Stage;
  */
 public class AdminLoginController {
     @FXML
+    private javafx.scene.control.Button closeButton;
+    @FXML
+    private void closeButtonAction(){
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
+    }
+    @FXML
     private TextField accountField;
     @FXML
     private PasswordField passwordField;

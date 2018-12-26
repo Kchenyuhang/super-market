@@ -1,5 +1,6 @@
 package com.soft1841.sm.controller;
 
+
 import com.soft1841.sm.entity.ComponentUtil;
 import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.service.TypeService;
@@ -15,6 +16,12 @@ import java.net.URL;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
+
+/**
+ * 商品种类控制台
+ * @auther 柳磊磊
+ * 2018 12.26
+ */
 
 public class TypeController implements Initializable {
     //获得布局文件中的表格对象
@@ -35,7 +42,6 @@ public class TypeController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //水平方向不显示滚动条
         typeTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         //在表格最后加入删除按钮
         delCol.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));

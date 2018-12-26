@@ -5,6 +5,7 @@ import com.soft1841.sm.dao.impl.*;
 
 /**
  * 工厂类，用静态方法来生成各个DAO实例
+ * @auther 小组成员
  */
 public class DAOFactory {
     /**

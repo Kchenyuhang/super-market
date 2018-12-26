@@ -1,7 +1,9 @@
 package com.soft1841.sm.dao;
+/**
+ * @ author 柳磊磊
+ * 2018.12.26
+ */
 
-
-import cn.hutool.db.Entity;
 import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.until.DAOFactory;
 import org.junit.Test;

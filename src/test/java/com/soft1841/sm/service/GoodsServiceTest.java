@@ -6,6 +6,8 @@ import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.until.ServiceFactory;
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class GoodsServiceTest{
@@ -35,21 +37,34 @@ public class GoodsServiceTest{
 
     @Test
     public void getAllGoods() {
+        List<Goods> goodsList = goodsService.getAllGoods();
+
+        goodsList.forEach(goods -> System.out.println(goods.getName()));
     }
 
     @Test
     public void getGoods() {
+        System.out.println(goodsService.getGoods(1));
     }
 
     @Test
     public void getGoodsLike() {
+        List<Goods> goodsList = goodsService.getGoodsLike ( "少" );
+
+        goodsList.forEach(goods -> System.out.println(goods.getName()));
     }
 
     @Test
     public void getGoodsByTypeId() {
+        List<Goods> goodsList = goodsService.getGoodsByTypeId ( 1 );
+
+        goodsList.forEach(goods -> System.out.println(goods.getName()));
     }
 
     @Test
     public void countByType() {
+        int n = goodsService.countByType(1);
+
+        System.out.println(n);
     }
 }

@@ -203,7 +203,7 @@ public class GoodsController  implements Initializable{
     //弹出新增商品界面方法
     public void newGoodsStage() throws Exception {
         Stage addGoodsStage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/add_book.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/add_goods.fxml"));
         AnchorPane root = fxmlLoader.load();
         Scene scene = new Scene(root);
         scene.getStylesheets().add( "/css/style.css" );

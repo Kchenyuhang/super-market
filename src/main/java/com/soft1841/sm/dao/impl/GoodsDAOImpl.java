@@ -69,11 +69,12 @@ public class GoodsDAOImpl implements GoodsDAO {
     }
 
     @Override
-    public Goods getGoodById(Long id) throws SQLException {
+    public Goods getGoodsById(Long id) throws SQLException {
         Entity entity = Db.use().queryOne("SELECT * FROM t_goods WHERE id = ? ", id);
 
         return convertGoods(entity);
     }
+
 
     @Override
     public List<Goods> selectGoodsByTypeId(long typeId) throws SQLException {

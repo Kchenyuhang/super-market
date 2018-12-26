@@ -22,9 +22,9 @@
 
     <HBox alignment="BOTTOM_CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" spacing="10">
 
-        <Button styleClass="green-theme,btn-radius" text="添加商品" onAction="#newGoodsStage"/>
+        <Button text="添加商品" onAction="#newGoodsStage"/>
 
-        <Button styleClass="blue-theme,btn-radius" text="导出数据" onAction="#export"/>
+        <Button  text="导出数据" onAction="#export"/>
 
     </HBox>
 
@@ -34,7 +34,7 @@
 
         <TextField promptText="请输入关键词" fx:id="keywordsField"/>
 
-        <Button styleClass="green-theme" text="搜索" onAction="#search"/>
+        <Button  text="搜索" onAction="#search"/>
 
     </HBox>
 

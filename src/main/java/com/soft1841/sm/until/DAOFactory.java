@@ -24,6 +24,21 @@ public class DAOFactory {
     public static AdminDAO getAdminDAOInstance() {
         return new AdminDAOImpl();
     }
+    /**
+
+     * 静态方法，返回GoodsDAO实现类的对象
+
+     *
+
+     * @return
+
+     */
+
+    public static GoodsDAO getGoodsDAOInstance() {
+
+        return new GoodsDAOImpl();
+
+    }
 
     /**
      * 静态方法，返回TypeDAO实现类的对象

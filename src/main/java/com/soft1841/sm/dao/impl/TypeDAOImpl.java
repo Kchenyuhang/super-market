@@ -6,53 +6,44 @@ import com.soft1841.sm.dao.TypeDAO;
 import com.soft1841.sm.entity.Type;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
-public class TypeDAOImpl implements TypeDAO {
-
+public class TypeDAOImpl implements TypeDAO{
     @Override
     public Long insertType(Type type) throws SQLException {
+        //采用了另一种新增方法，可以返回插入记录的主键（Long类型）
+
         return Db.use().insertForGeneratedKey(
+
                 Entity.create("t_type")
-                        .set("type", type.getTypeName())
+
+                        .set("type_Name", type.getTypeName())
+
         );
     }
 
     @Override
     public int deleteTypeById(long id) throws SQLException {
-        return Db.use().del(
-                Entity.create("t_type").set("id", id)
-        );
+        return 0;
     }
-
 
     @Override
     public List<Type> selectAllTypes() throws SQLException {
-        List<Entity> entityList =  Db.use().query("SELECT * FROM t_type ");
-        List<Type> typeList = new ArrayList<>();
-        for (Entity entity:entityList) {
-            typeList.add(convertType(entity));
-        }
-        return typeList;
+        return null;
     }
 
     @Override
     public Type getTypeById(long id) throws SQLException {
-        Entity entity = Db.use().queryOne("SELECT * FROM t_type WHERE id = ? ", id);
-        return convertType(entity);
+        return null;
     }
 
-    /**
-     * 将Entity转换为Type类型
-     *
-     * @param entity
-     * @return Type
-     */
-    private Type convertType(Entity entity) {
-        Type type = new Type();
-        type.setId(entity.getLong("id"));
-        type.setTypeName(entity.getStr("type_name"));
-        return type;
+    @Override
+    public List<Entity> selectTypesLike(String keywords) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public List<Entity> selectTypesByType(long typeID) throws SQLException {
+        return null;
     }
 }

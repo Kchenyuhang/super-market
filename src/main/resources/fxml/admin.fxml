@@ -16,7 +16,8 @@
            <AnchorPane prefHeight="80.0">
                <!--点击这个文字显示默认主页数据-->
                <Label text="星辰超市管理系统" styleClass="font-gray"
-                      AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
+                      AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10"
+               onMouseClicked="#listDefault">
                    <!--字体特效-->
                    <effect>
                        <Reflection bottomOpacity="0.2" fraction="0.5" topOffset="-5.0"/>
@@ -44,15 +45,15 @@
                            <TitledPane alignment="TOP_LEFT" text="商品类别管理">
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
                                    <!--点击该按钮，右侧切换商品类别数据-->
-                                   <Button styleClass="menu-btn" text="食品类别" />
+                                   <Button styleClass="menu-btn" text="食品类别" onAction="#listType"/>
                                    <Button styleClass="menu-btn" text="分类统计" />
                                </VBox>
                            </TitledPane>
                            <TitledPane alignment="TOP_LEFT" text="商品信息管理">
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
                                    <!--点击该按钮，右侧切换商品数据-->
-                                   <Button styleClass="menu-btn" text="商品信息" />
-                                   <Button styleClass="menu-btn" text="统计分析" />
+                                   <Button styleClass="menu-btn" text="商品信息" onAction="#listGoods" />
+                                   <Button styleClass="menu-btn" text="统计分析" onAction="#listGoodsAnalysis" />
                                </VBox>
                            </TitledPane>
                            <TitledPane alignment="TOP_LEFT" text="管理员管理">

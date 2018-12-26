@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -42,11 +43,24 @@ public class AdminMainController implements Initializable {
     public void listType() throws Exception {
         switchView("type.fxml");
     }
+    public void listGoods() throws Exception {
+
+        switchView("goods.fxml");
+
+    }
+
+    public void listGoodsAnalysis() throws Exception {
+
+        switchView("goods_analysis.fxml");
+
+    }
+
+
 
     private void switchView(String fileName) throws Exception {
         //清空原有内容
         mainContainer.getChildren().clear();
-        AnchorPane anchorPane = new FXMLLoader(getClass().getResource("/fxml/" + fileName)).load();
-        mainContainer.getChildren().add(anchorPane);
+        BorderPane borderPane = new FXMLLoader(getClass().getResource("/fxml/" + fileName)).load();
+        mainContainer.getChildren().add(borderPane);
     }
 }

@@ -46,7 +46,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-    Goods getGoodById(Long id) throws SQLException;
+    Goods getGoodsById(Long id) throws SQLException;
 
     /**
      * 根据类别查商品

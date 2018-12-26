@@ -23,12 +23,4 @@ public class DAOFactory {
         return new AdminDAOImpl();
     }
 
-    /**
-     * 静态方法，返回TypeDAO实现类的对象
-     * @return
-     */
-    public static TypeDAO getTypeDAOInstance    () {
-
-        return new TypeDAOImpl();
-    }
 }

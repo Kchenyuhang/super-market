@@ -25,7 +25,6 @@ public class ServiceFactory {
     }
 
     public static GoodsService getGoodsServiceInstance() {
-
         return new GoodsServiceImpl ();
 
     }

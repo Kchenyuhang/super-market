@@ -15,7 +15,7 @@ public class TypeDAOImpl implements TypeDAO {
     public Long insertType(Type type) throws SQLException {
         return Db.use().insertForGeneratedKey(
                 Entity.create("t_type")
-                        .set("type_name", type.getTypeName())
+                        .set("type", type.getTypeName())
         );
     }
 

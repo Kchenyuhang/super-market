@@ -150,24 +150,24 @@ public class GoodsController  implements Initializable{
                     goodsInfoStage.setTitle("商品详情界面");
                     //用VBox显示具体商品信息
                     VBox vBox = new VBox();
-                    vBox.setSpacing(10);
+                    vBox.setSpacing(20);
                     vBox.setAlignment( Pos.CENTER);
                     vBox.setPrefSize(600, 400);
-                    vBox.setPadding(new Insets (10, 10, 10, 10));
-                    Label nameLabel = new Label("商品名称：" + goods.getName());
+                    vBox.setPadding(new Insets (0, 10, 0, 10));
+                    Label nameLabel = new Label("        商品名称：\n" + goods.getName());
                     nameLabel.getStyleClass().add("font-title");
                     Label priceLabel = new Label("价格:" + goods.getPrice());
                     ImageView goodsImgView = new ImageView(new Image (goods.getPicture ()));
                     goodsImgView.setFitHeight(150);
-                    goodsImgView.setFitWidth(120);
+                    goodsImgView.setFitWidth(200);
                     Label descriptionLabel = new Label(goods.getDescription ());
-                    descriptionLabel.setPrefWidth(400);
+                    descriptionLabel.setPrefWidth(200);
                     descriptionLabel.setWrapText(true);
                     descriptionLabel.getStyleClass().add("box");
                     vBox.getChildren().addAll(nameLabel,priceLabel, goodsImgView, descriptionLabel);
                     Scene scene = new Scene(vBox, 640, 480);
                     //因为是一个新的窗口，需要重新读入一下样式表，这个界面就可以使用style.css样式表中的样式了
-                    scene.getStylesheets().add( "/css/style.css" );
+                    scene.getStylesheets().add( "/css/manage.css" );
                     goodsInfoStage.setScene(scene);
                     goodsInfoStage.show();
                 }

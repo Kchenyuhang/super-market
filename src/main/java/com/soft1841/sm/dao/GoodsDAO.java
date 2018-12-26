@@ -7,6 +7,8 @@ import java.util.List;
 
 /**
  * 商品DAO接口
+ * @ author 汤萌慧
+ * 2018.12.26
  */
 public interface GoodsDAO {
     /**
@@ -15,7 +17,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-   Long insertGoods(Goods goods) throws SQLException;
+    Long insertGoods(Goods goods) throws SQLException;
 
     /**
      * 根据id删除商品
@@ -23,7 +25,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-   int deleteGoodsById(long id) throws SQLException;
+    int deleteGoodsById(long id) throws SQLException;
 
     /**
      * 更新商品信息
@@ -31,14 +33,14 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-   int updateGoods(Goods goods) throws SQLException;
+    int updateGoods(Goods goods) throws SQLException;
 
     /**
      * 查询所有商品
      * @return
      * @throws SQLException
      */
-   List<Goods> selectAllGoods() throws SQLException;
+    List<Goods> selectAllGoods() throws SQLException;
 
     /**\
      * 根据id查商品
@@ -46,7 +48,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-   Goods getGoodById(Long id) throws SQLException;
+    Goods getGoodsById(Long id) throws SQLException;
 
     /**
      * 根据类别查商品
@@ -54,7 +56,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-   List<Goods> selectGoodsByTypeId(long typeId) throws SQLException;
+    List<Goods> selectGoodsByTypeId(long typeId) throws SQLException;
 
     /**
      * 根据关键词查商品
@@ -62,7 +64,7 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-   List<Goods> selectGoodsLike(String keywords) throws SQLException;
+    List<Goods> selectGoodsLike(String keywords) throws SQLException;
 
     /**
      * 根据类别统计商品数量
@@ -70,5 +72,5 @@ public interface GoodsDAO {
      * @return
      * @throws SQLException
      */
-   int countByType(long typeId) throws SQLException;
+    int countByType(long typeId) throws SQLException;
 }

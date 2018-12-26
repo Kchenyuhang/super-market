@@ -9,6 +9,7 @@ import com.soft1841.sm.dao.impl.*;
 public class DAOFactory {
     /**
      * 静态方法，返回CashierDAO实现类的对象
+     *
      * @return
      */
     public static CashierDAO getCashierDAOInstance() {
@@ -17,10 +18,37 @@ public class DAOFactory {
 
     /**
      * 静态方法，返回AdminDAO实现类的对象
+     *
      * @return
      */
     public static AdminDAO getAdminDAOInstance() {
         return new AdminDAOImpl();
+    }
+    /**
+
+     * 静态方法，返回GoodsDAO实现类的对象
+
+     *
+
+     * @return
+
+     */
+
+    public static GoodsDAO getGoodsDAOInstance() {
+
+        return new GoodsDAOImpl();
+
+    }
+
+    /**
+     * 静态方法，返回TypeDAO实现类的对象
+     *
+     * @return
+     */
+
+
+    public static TypeDAO getTypeDAOInstance() {
+        return new TypeDAOImpl();
     }
 
 }

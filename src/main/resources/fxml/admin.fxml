@@ -82,7 +82,13 @@
                <!--右侧的主体内容部分，采用StackPane实现一种卡片切换效果-->
                <ScrollPane fitToWidth="true" hbarPolicy="NEVER"
                            vbarPolicy="AS_NEEDED" styleClass="default-theme">
-                   <StackPane fx:id="mainContainer" styleClass="default-theme" minWidth="1080"/>
+                   <StackPane fx:id="mainContainer" styleClass="default-theme" minWidth="1080">
+                       <!--加载外部的fxml文件，显示默认的主体内容-->
+                       <fx:include source="default.fxml"/>
+                       <padding>
+                           <Insets top="10" left="30" bottom="5" right="10"/>
+                       </padding>
+                   </StackPane>
                </ScrollPane >
                <padding>
                    <Insets top="10"/>

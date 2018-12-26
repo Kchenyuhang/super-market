@@ -47,4 +47,5 @@ public interface TicketDAO {
      * @throws SQLException
      */
     Ticket getTicketByCashierId(long CashierId) throws SQLException;
+
 }

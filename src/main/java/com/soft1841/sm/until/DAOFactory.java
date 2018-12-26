@@ -51,5 +51,13 @@ public class DAOFactory {
     public static TypeDAO getTypeDAOInstance() {
         return new TypeDAOImpl();
     }
+    public static TicketDAO getTicketDAOInstance(){ return  new TicketDAOImpl();}
+    public static VIPDAO  getVIPDAOInstance(){
+        return new VIPDAOImpl();
+    }
+    public static DetailDAO getDetailDAOInstance(){
+        return new DetailDAOImpl();
+
+    }
 
 }

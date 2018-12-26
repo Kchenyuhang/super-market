@@ -1,4 +1,9 @@
 package com.soft1841.sm.controller;
+/**
+ * 新增商品控制器
+ * @atuhor 汤萌慧
+ * 2018.12.26
+ */
 
 import com.soft1841.sm.entity.Goods;
 import com.soft1841.sm.entity.Type;

@@ -8,16 +8,18 @@ import com.soft1841.sm.service.impl.AdminServiceImpl;
 import com.soft1841.sm.service.impl.CashierServiceImpl;
 
 /**
- * @author 陈宇航
- * 2018.12.24
+ * 业务逻辑类工厂
  */
 public class ServiceFactory {
+
     public static CashierService getCashierServiceInstance() {
         return new CashierServiceImpl();
     }
+
     public static AdminService getAdminServiceInstance() {
         return new AdminServiceImpl();
     }
+
     public static TypeDAO getTypeDAOInstance(){
         return new TypeDAOImpl();
     }

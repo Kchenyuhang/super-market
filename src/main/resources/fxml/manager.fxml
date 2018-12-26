@@ -10,8 +10,7 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.soft1841.sm.controller.AdminController"
             prefHeight="400.0" prefWidth="600.0">
-    <ListView fx:id="adminListView" prefHeight="500" prefWidth="600"
-              AnchorPane.leftAnchor="50" AnchorPane.topAnchor="10">
+    <ListView fx:id="adminListView" prefHeight="500" prefWidth="600.0" AnchorPane.leftAnchor="50"
+              AnchorPane.topAnchor="10">
     </ListView>
-
 </AnchorPane>

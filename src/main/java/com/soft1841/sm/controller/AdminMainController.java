@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
  * @author 陈宇航
  * 2018.12.25
  */
-public class MainController implements Initializable {
+public class AdminMainController implements Initializable {
     @FXML
     private StackPane mainContainer;
     @FXML

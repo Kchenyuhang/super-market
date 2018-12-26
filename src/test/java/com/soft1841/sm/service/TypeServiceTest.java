@@ -1,4 +1,5 @@
 package com.soft1841.sm.service;
+
 import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.until.ServiceFactory;
 import org.junit.Test;

@@ -2,6 +2,7 @@ package com.soft1841.sm.controller;
 
 import com.soft1841.sm.service.AdminService;
 import com.soft1841.sm.until.ServiceFactory;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -62,5 +63,8 @@ public class AdminLoginController {
             alert.setContentText("账号或密码错误，登录失败！");
             alert.showAndWait();
         }
+    }
+
+    public void listType(ActionEvent actionEvent) {
     }
 }

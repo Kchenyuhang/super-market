@@ -1,42 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.cell.PropertyValueFactory?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.sm.controller.GoodsController">
+<AnchorPane prefHeight="1000" styleClass="gride-theme" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.GoodsController">
 
-    <HBox alignment="BOTTOM_CENTER" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" spacing="10">
-        <Button text="添加商品" onAction="#newGoodsStage"/>
-        <Button  text="导出数据" onAction="#export"/>
+    <HBox alignment="BOTTOM_CENTER" spacing="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10">
+        <Button onAction="#newGoodsStage" text="添加商品" />
+        <Button onAction="#export" styleClass="black-theme" text="导出数据" />
     </HBox>
-    <HBox alignment="CENTER" AnchorPane.topAnchor="60" AnchorPane.leftAnchor="10" spacing="10">
-        <ComboBox promptText="选择商品类别" fx:id="typeComboBox" prefWidth="150"/>
-        <TextField promptText="请输入关键词" fx:id="keywordsField"/>
-        <Button  text="搜索" onAction="#search"/>
+    <HBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="60">
+        <ComboBox fx:id="typeComboBox" prefHeight="28.0" prefWidth="225.0" promptText="选择商品类别" styleClass="orange-theme" />
+        <TextField fx:id="keywordsField" promptText="请输入关键词" />
+        <Button onAction="#search" text="搜索" />
     </HBox>
-    <TableView fx:id="goodsTable" prefWidth="1000"
-               AnchorPane.topAnchor="110" AnchorPane.leftAnchor="10">
+    <TableView fx:id="goodsTable" prefWidth="1000" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="110">
         <columns>
             <TableColumn text="ID">
                 <cellValueFactory>
-                    <PropertyValueFactory property="id"/>
+                    <PropertyValueFactory property="id" />
                 </cellValueFactory>
             </TableColumn>
             <TableColumn text="商品名称">
                 <cellValueFactory>
-                    <PropertyValueFactory property="name"/>
+                    <PropertyValueFactory property="name" />
                 </cellValueFactory>
             </TableColumn>
             <TableColumn text="价格">
                 <cellValueFactory>
-                    <PropertyValueFactory property="price"/>
+                    <PropertyValueFactory property="price" />
                 </cellValueFactory>
             </TableColumn>
         </columns>

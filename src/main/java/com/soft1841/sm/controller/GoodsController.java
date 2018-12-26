@@ -76,7 +76,7 @@ public class GoodsController  implements Initializable{
         editCol.setCellValueFactory(param -> new ReadOnlyObjectWrapper<> (param.getValue()));
         editCol.setCellFactory(param -> new TableCell<Goods,Goods> () {
             //通过ComponentUtil工具类的静态方法，传入按钮文字和样式，获得一个按钮对象
-            private final Button editButton = ComPonentutil.getButton("编辑", "blue-theme");
+            private final Button editButton = ComPonentutil.getButton("编辑", "black-theme");
             @Override
             protected void updateItem(Goods goods, boolean empty) {
                 super.updateItem(goods, empty);
@@ -228,7 +228,7 @@ public class GoodsController  implements Initializable{
         ExcelExport.export(goodsList);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("提示信息");
-        alert.setHeaderText("商品数据已导出!请到D盘根目录查看!");
+        alert.setHeaderText("商品数据已导出!请到F盘根目录查看!");
         alert.showAndWait();
     }
 }

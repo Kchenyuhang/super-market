@@ -7,7 +7,7 @@ import java.util.List;
 public class ExcelExport{
     public static void export(List<Goods> goodsList) {
         // 通过工具类创建writer
-        ExcelWriter writer = ExcelUtil.getWriter("d:/books.xlsx");
+        ExcelWriter writer = ExcelUtil.getWriter("f：/goods.xlsx");
         // 合并单元格后的标题行，使用默认标题样式
         writer.merge(7, "商品信息表");
         // 一次性写出内容，使用默认样式

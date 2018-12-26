@@ -1,5 +1,5 @@
 .root{
-    -fx-background-color: #7DD4BB;
+    -fx-background-color: rgb(195,220,242);
     -fx-font-size: 22px;
 }
 .button {
@@ -16,6 +16,12 @@
     /*边框圆角*/
     -fx-border-radius: 2px;
     -fx-background-radius: 2px;
+    -fx-background-color: rgb(141,189,225);
+    -fx-text-fill:rgb(161,119,69);
+}
+.warning-theme{
+    -fx-background-color: rgb(242,74,25);
+    -fx-text-fill: #fff;
 }
 
 
@@ -46,17 +52,17 @@
 
 /*深灰色主题*/
 .dark-gray-theme {
-    -fx-background-color: rgb(58, 61, 73);
+    -fx-background-color: rgb(141,189,225);
 }
 
 /*深色主题*/
 .dark-theme {
-    -fx-background-color: rgb(40, 43, 51);
+    -fx-background-color: rgb(141,189,225);
 }
 
 /*绿色主题*/
 .green-theme {
-    -fx-background-color: #009688;
+    -fx-background-color: rgb(141,189,225);
     -fx-text-fill: #fff;
 }
 
@@ -71,13 +77,13 @@
 
 /*灰色字体*/
 .font-gray {
-    -fx-text-fill: rgb(121, 111, 118);
+    -fx-text-fill: rgb(161,119,69);
     -fx-font-size: 35px;
 }
 
 /*绿色字体*/
 .font-green {
-    -fx-text-fill: rgb(0, 150, 136)
+    -fx-text-fill: rgb(189,207,205)
 }
 
 /*标题字体*/
@@ -98,7 +104,7 @@
 
 /*单选按钮选中后背景色*/
 .radio-button:selected .radio {
-    -fx-background-color: rgb(95, 184, 120);
+    -fx-background-color: rgb(189,207,205);
 }
 
 /*表格内容居中显示*/
@@ -110,13 +116,13 @@
 .menu-btn {
     -fx-pref-width: 300px;
     -fx-pref-height: 35px;
-    -fx-background-color: rgb(40, 43, 51);
-    -fx-text-fill: rgb(191, 192, 194);
+    -fx-background-color: rgb(141,189,225);
+    -fx-text-fill: #ffffff;
 }
 
 /*左侧导航菜单按钮鼠标悬停效果*/
 .menu-btn:hover {
-    -fx-background-color: rgb(95, 184, 120);
+    -fx-background-color: rgb(195,220,242);
     -fx-text-fill: #fff;
 }
 
@@ -127,12 +133,12 @@
 
 /*风琴标题面板字体颜色*/
 .titled-pane {
-    -fx-text-fill: rgb(174, 175, 180);
+    -fx-text-fill: #ffffff;
 }
 
 /*风琴标题面板背景色*/
 .titled-pane > .title {
-    -fx-background-color: rgb(58, 61, 73);
+    -fx-background-color: rgb(141,189,225);
     -fx-padding: 30 10 10 10;
 }
 
@@ -141,4 +147,19 @@
 .list-view .scroll-bar:horizontal .increment-button,
 .list-view .scroll-bar:horizontal .decrement-button {
     -fx-padding: 0;
+}
+.black-theme{
+    -fx-background-color: rgb(254,184,0);
+    -fx-text-fill: #fff;
+}
+.orange-theme{
+    -fx-background-color: rgb(195,220,245);
+
+}
+.gride-theme{
+    -fx-background-image: url(/img/bg.jpg);
+
+}
+.pride-theme{
+    -fx-background-image: url(/img/gb.jpg);
 }

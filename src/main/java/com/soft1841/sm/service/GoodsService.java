@@ -1,7 +1,10 @@
 package com.soft1841.sm.service;
+/**
+ * @ author 汤萌慧
+ * 2018.12.26
+ */
 
 import com.soft1841.sm.entity.Goods;
-import com.soft1841.sm.entity.Type;
 
 import java.util.List;
 

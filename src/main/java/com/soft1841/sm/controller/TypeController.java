@@ -35,7 +35,6 @@ public class TypeController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //水平方向不显示滚动条
         typeTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         //在表格最后加入删除按钮
         delCol.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));

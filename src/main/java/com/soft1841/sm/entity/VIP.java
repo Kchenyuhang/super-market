@@ -2,27 +2,10 @@ package com.soft1841.sm.entity;
 
 public class VIP {
     private Long id;
+    private  String phone;
     private String name;
+    private String province;
     private String number;
-    private String sexuality;
-    private String age;
-    private String picture;
-    private String account;
-    private String password;
-
-    public VIP() {
-    }
-
-    public VIP(Long id, String name, String number, String sexuality, String age, String picture, String account, String password) {
-        this.id = id;
-        this.name = name;
-        this.number = number;
-        this.sexuality = sexuality;
-        this.age = age;
-        this.picture = picture;
-        this.account = account;
-        this.password = password;
-    }
 
     public Long getId() {
         return id;
@@ -30,6 +13,14 @@ public class VIP {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getName() {
@@ -40,6 +31,14 @@ public class VIP {
         this.name = name;
     }
 
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
     public String getNumber() {
         return number;
     }
@@ -48,58 +47,14 @@ public class VIP {
         this.number = number;
     }
 
-    public String getSexuality() {
-        return sexuality;
-    }
-
-    public void setSexuality(String sexuality) {
-        this.sexuality = sexuality;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
-    public String getPicture() {
-        return picture;
-    }
-
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
-
-    public String getAccount() {
-        return account;
-    }
-
-    public void setAccount(String account) {
-        this.account = account;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     @Override
     public String toString() {
-        return "Cashier{" +
+        return "VIP{" +
                 "id=" + id +
+                ", phone='" + phone + '\'' +
                 ", name='" + name + '\'' +
+                ", province='" + province + '\'' +
                 ", number='" + number + '\'' +
-                ", sexuality='" + sexuality + '\'' +
-                ", age='" + age + '\'' +
-                ", picture='" + picture + '\'' +
-                ", account='" + account + '\'' +
-                ", password='" + password + '\'' +
                 '}';
     }
-
 }

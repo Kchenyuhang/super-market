@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
@@ -15,7 +13,7 @@
        <top>
            <AnchorPane prefHeight="80.0">
                <!--点击这个文字显示默认主页数据-->
-               <Label text="星辰超市管理系统" styleClass="font-gray"
+               <Label text="星辰超市管理系统" onMouseClicked="#listDefault" styleClass="font-gray"
                       AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10">
                    <!--字体特效-->
                    <effect>
@@ -25,7 +23,6 @@
                        <Font name="System Bold" size="26.0"/>
                    </font>
                </Label>
-
                <Button fx:id="closeButton" text="退出系统" onAction="#closeButtonAction"
                        styleClass="btn-radius" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="20"/>
            </AnchorPane>
@@ -44,14 +41,14 @@
                            <TitledPane alignment="TOP_LEFT" text="商品类别管理">
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
                                    <!--点击该按钮，右侧切换商品类别数据-->
-                                   <Button styleClass="menu-btn" text="食品类别" />
+                                   <Button styleClass="menu-btn" text="商品类别" onAction="#listType"/>
                                    <Button styleClass="menu-btn" text="分类统计" />
                                </VBox>
                            </TitledPane>
                            <TitledPane alignment="TOP_LEFT" text="商品信息管理">
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
                                    <!--点击该按钮，右侧切换商品数据-->
-                                   <Button styleClass="menu-btn" text="商品信息" />
+                                   <Button styleClass="menu-btn" text="商品信息" onAction="#listGoods"/>
                                    <Button styleClass="menu-btn" text="统计分析" />
                                </VBox>
                            </TitledPane>
@@ -72,7 +69,6 @@
                                    <Button text="销售统计" styleClass="menu-btn"/>
                                </VBox>
                            </TitledPane>
-
                            <TitledPane alignment="TOP_LEFT" text="系统维护">
                                <VBox minHeight="130" spacing="10" styleClass="dark-theme">
                                    <Button text="系统初始化" styleClass="menu-btn"/>
@@ -83,14 +79,17 @@
                        </panes>
                    </Accordion>
                </AnchorPane>
-
                <!--右侧的主体内容部分，采用StackPane实现一种卡片切换效果-->
                <ScrollPane fitToWidth="true" hbarPolicy="NEVER"
                            vbarPolicy="AS_NEEDED" styleClass="default-theme">
-                   <StackPane fx:id="mainContainer" styleClass="default-theme" minWidth="1080"/>
-
+                   <StackPane fx:id="mainContainer" styleClass="default-theme" minWidth="1080">
+                       <!--加载外部的fxml文件，显示默认的主体内容-->
+                       <fx:include source="default.fxml"/>
+                       <padding>
+                           <Insets top="10" left="30" bottom="5" right="10"/>
+                       </padding>
+                   </StackPane>
                </ScrollPane >
-
                <padding>
                    <Insets top="10"/>
                </padding>

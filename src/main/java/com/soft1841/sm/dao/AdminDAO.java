@@ -21,4 +21,10 @@ public interface AdminDAO {
      */
     Admin getAdminByAccount(String account) throws SQLException;
 
+    /**
+     * 查询所有管理员
+     * @return
+     * @throws SQLException
+     */
+    List<Admin> selectAdmin() throws SQLException;
 }

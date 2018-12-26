@@ -1,7 +1,7 @@
 package com.soft1841.sm.controller;
 /**
  * 商品信息管理控制器
- * @author 老汤
+ * @author 汤萌慧
  * 2018.12.26
  */
 

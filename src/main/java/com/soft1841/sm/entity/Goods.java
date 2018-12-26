@@ -1,7 +1,7 @@
 package com.soft1841.sm.entity;
 /**
  * 商品实体类
- * @author 老汤
+ * @author 汤萌慧
  * 2018.12.26
  */
 

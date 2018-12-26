@@ -1,4 +1,8 @@
 package com.soft1841.sm.dao;
+/**
+ * @ author 汤萌慧
+ * 2018.12.26
+ */
 
 import com.soft1841.sm.entity.Goods;
 import com.soft1841.sm.until.DAOFactory;
@@ -7,7 +11,6 @@ import org.junit.Test;
 import java.sql.SQLException;
 import java.util.List;
 
-import static org.junit.Assert.*;
 
 public class GoodsDAOTest{
     private GoodsDAO goodsDAO = DAOFactory.getGoodsDAOInstance();

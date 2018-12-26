@@ -1,11 +1,14 @@
 package com.soft1841.sm.service.impl;
+/**
+ * @author 汤萌慧
+ * 2018.12.26
+ */
 
 import com.soft1841.sm.dao.GoodsDAO;
 import com.soft1841.sm.entity.Goods;
 import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.service.GoodsService;
 import com.soft1841.sm.until.DAOFactory;
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

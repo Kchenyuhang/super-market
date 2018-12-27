@@ -40,6 +40,7 @@
 .btn-radius {
     -fx-border-radius: 50px;
     -fx-background-radius: 50px;
+    -fx-cursor: hand;
 }
 
 .avatar {
@@ -85,6 +86,10 @@
     -fx-font-size: 35px;
 }
 
+.font-gray:hover {
+    -fx-cursor: hand;
+}
+
 /*绿色字体*/
 .font-green {
     -fx-text-fill: rgb(189,207,205)
@@ -128,6 +133,7 @@
 .menu-btn:hover {
     -fx-background-color: rgb(195,220,242);
     -fx-text-fill: #fff;
+    -fx-cursor: hand;
 }
 
 .menu-btn:selected {

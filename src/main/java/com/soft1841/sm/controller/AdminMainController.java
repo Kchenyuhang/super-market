@@ -55,6 +55,10 @@ public class AdminMainController implements Initializable {
         switchView("shouyin.fxml");
     }
 
+    public void listCashierAnalysis() throws Exception {
+        switchView("shouyin_analysis.fxml");
+    }
+
 
     private void switchView(String fileName) throws Exception {
         //清空原有内容

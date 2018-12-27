@@ -68,8 +68,8 @@
                            </TitledPane>
                            <TitledPane alignment="TOP_LEFT" text="收银员管理">
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
-                                   <Button styleClass="menu-btn" text="收银员信息"  onAction="#listCashier"/>
-                                   <Button styleClass="menu-btn" text="收银员统计" />
+                                   <Button styleClass="menu-btn" text="收银员信息" onAction="#listCashier"/>
+                                   <Button styleClass="menu-btn" text="收银员统计" onAction="#listCashierAnalysis"/>
                                </VBox>
                            </TitledPane>
                            <TitledPane alignment="TOP_LEFT" text="统计管理">

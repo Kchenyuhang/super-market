@@ -10,6 +10,7 @@ import javafx.beans.property.SimpleStringProperty;
  */
 public class Type {
 
+    private String type;
     private final SimpleLongProperty id = new SimpleLongProperty();
     private final SimpleStringProperty typeName = new SimpleStringProperty("");
 
@@ -19,6 +20,14 @@ public class Type {
     public Type(long id, String typeName) {
         setId(id);
         setTypeName(typeName);
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public long getId() {
@@ -47,6 +56,10 @@ public class Type {
 
     @Override
     public String toString() {
-        return  typeName.get();
+        return "Type{" +
+                "type='" + type + '\'' +
+                ", id=" + id +
+                ", typeName=" + typeName +
+                '}';
     }
 }

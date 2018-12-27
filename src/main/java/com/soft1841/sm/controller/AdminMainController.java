@@ -43,6 +43,10 @@ public class AdminMainController implements Initializable {
     public void listType() throws Exception {
         switchView("type.fxml");
     }
+
+//    private void listTypeAnalysis() throws Exception {
+//        switchView("type_analysis.fxml");
+//    }
     public void listGoods() throws Exception {
         switchView("goods.fxml");
     }

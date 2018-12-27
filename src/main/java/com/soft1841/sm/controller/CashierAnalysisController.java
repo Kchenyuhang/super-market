@@ -12,6 +12,11 @@ import javafx.scene.layout.StackPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * 收银员信息统计控制器
+ * @author 陈宇航
+ * 2018.12.27
+ */
 public class CashierAnalysisController implements Initializable {
     @FXML
     private StackPane departmentPieChart,rolePieChart;

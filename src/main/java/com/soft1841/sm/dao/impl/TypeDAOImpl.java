@@ -55,7 +55,6 @@ public class TypeDAOImpl implements TypeDAO {
         //将Entity转换为Type类型返回
         return convertType(entity);
     }
-
     /**
      * 将Entity转换为Type类型
      *

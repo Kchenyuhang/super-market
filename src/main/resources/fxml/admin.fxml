@@ -57,7 +57,7 @@
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
                                    <!--点击该按钮，右侧切换商品数据-->
                                    <Button onAction="#listGoods" styleClass="menu-btn" text="商品信息" />
-                                   <Button styleClass="menu-btn" text="统计分析" />
+                                   <Button styleClass="menu-btn" text="统计分析"  onAction="#listGoodsAnalysis"/>
                                </VBox>
                            </TitledPane>
                            <TitledPane alignment="TOP_LEFT" text="会员管理">

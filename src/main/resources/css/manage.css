@@ -22,6 +22,8 @@
 .warning-theme{
     -fx-background-color: rgb(242,74,25);
     -fx-text-fill: #fff;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
 }
 
 
@@ -64,6 +66,8 @@
 .green-theme {
     -fx-background-color: rgb(141,189,225);
     -fx-text-fill: #fff;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
 }
 
 /*灰色主题*/
@@ -151,9 +155,12 @@
 .black-theme{
     -fx-background-color: rgb(254,184,0);
     -fx-text-fill: #fff;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
 }
 .orange-theme{
     -fx-background-color: rgb(195,220,245);
+
 
 }
 .gride-theme{
@@ -174,4 +181,8 @@
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
     -fx-padding: 5 5 5 5;
+    -fx-background-image: url(/img/box.jpg);
+}
+.fruit-theme{
+    -fx-background-image: url(/img/bg1.jpg);
 }

@@ -26,40 +26,45 @@ import java.util.ResourceBundle;
 public class GoodsAnalysisController implements Initializable{
     @FXML
     private StackPane pieChartPane, barChartPane;
-    private TypeService typeService = ServiceFactory.getTypeServiceInstance();
-    private GoodsService goodsService = ServiceFactory.getGoodsServiceInstance();
-    private ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
+    private TypeService typeService = ServiceFactory.getTypeServiceInstance ();
+    private GoodsService goodsService = ServiceFactory.getGoodsServiceInstance ();
+    private ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList ();
+
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        initPieChart();
-        initBarChart();
+    public void initialize(URL location , ResourceBundle resources) {
+        //初始化饼图的方法
+        initPieChart ();
+        //初始化柱状图
+        initBarChart ();
     }
+
     private void initPieChart() {
-        List<Type> typeList = typeService.getAllTypes();
+        List<Type> typeList = typeService.getAllTypes ();
         for (Type type : typeList) {
-            int count = goodsService.countByType(type.getId());
-            pieChartData.add(new PieChart.Data(type.getTypeName(), count));
+            int count = goodsService.countByType ( type.getId () );
+            pieChartData.add ( new PieChart.Data ( type.getTypeName () , count ) );
         }
-        final PieChart chart = new PieChart(pieChartData);
-        chart.setTitle("按商品类别统计饼图");
-        pieChartPane.getChildren().add(chart);
+        final PieChart chart = new PieChart ( pieChartData );
+        chart.setTitle ( "按商品类别统计饼图" );
+        pieChartPane.getChildren ().add ( chart );
     }
+
     private void initBarChart() {
-        final CategoryAxis xAxis = new CategoryAxis();
-        final NumberAxis yAxis = new NumberAxis();
+        final CategoryAxis x = new CategoryAxis ();
+        final NumberAxis y = new NumberAxis ();
         final BarChart<String, Number> bc =
-                new BarChart<>(xAxis, yAxis);
-        bc.setTitle("根据类别统计柱形图");
-        xAxis.setLabel("商品类别");
-        yAxis.setLabel("商品数量");
-        XYChart.Series series1 = new XYChart.Series();
-        series1.setName("2018年统计数据");
-        List<Type> typeList = typeService.getAllTypes();
+                new BarChart<> ( x , y );
+        bc.setTitle ( "根据类别统计柱形图" );
+        x.setLabel ( "商品类别" );
+        y.setLabel ( "商品数量" );
+        XYChart.Series series1 = new XYChart.Series ();
+        series1.setName ( "2018年统计数据" );
+        List<Type> typeList = typeService.getAllTypes ();
         for (Type type : typeList) {
-            int count = goodsService.countByType(type.getId());
-            series1.getData().add(new XYChart.Data(type.getTypeName(), count));
+            int count = goodsService.countByType ( type.getId () );
+            series1.getData ().add ( new XYChart.Data ( type.getTypeName () , count ) );
         }
-        bc.getData().addAll(series1);
-        barChartPane.getChildren().add(bc);
+        bc.getData ().addAll ( series1 );
+        barChartPane.getChildren ().add ( bc );
     }
 }

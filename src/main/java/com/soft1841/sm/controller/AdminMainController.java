@@ -44,17 +44,16 @@ public class AdminMainController implements Initializable {
         switchView("type.fxml");
     }
     public void listGoods() throws Exception {
-
         switchView("goods.fxml");
-
     }
 
     public void listGoodsAnalysis() throws Exception {
-
         switchView("goods_analysis.fxml");
-
     }
 
+    public void listCashier() throws Exception {
+        switchView("shouyin.fxml");
+    }
 
 
     private void switchView(String fileName) throws Exception {

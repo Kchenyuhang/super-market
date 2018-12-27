@@ -54,7 +54,6 @@ public class GoodsServiceTest{
     @Test
     public void getGoodsLike() {
         List<Goods> goodsList = goodsService.getGoodsLike ( "少" );
-
         goodsList.forEach(goods -> System.out.println(goods.getName()));
     }
 

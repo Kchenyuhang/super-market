@@ -6,6 +6,8 @@ import com.soft1841.sm.service.CashierService;
 import com.soft1841.sm.until.DAOFactory;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author 陈宇航
@@ -30,5 +32,59 @@ public class CashierServiceImpl implements CashierService{
             }
         }
         return false;
+    }
+
+    @Override
+    public List<Cashier> getAllCashiers() {
+        List<Cashier> cashierList = new ArrayList<>();
+        try {
+            cashierList = cashierDAO.selectCashiers();
+        } catch (SQLException e) {
+            //友好处理
+            System.err.println("查询所有收银员信息出现异常");
+        }
+        return cashierList;
+    }
+
+    @Override
+    public void deleteCashier(long id) {
+        try {
+            cashierDAO.deleteById(id);
+        } catch (SQLException e) {
+            System.err.println("删除收银员信息出现异常");
+        }
+    }
+
+    @Override
+    public Long insertCashier(Cashier cashier) {
+        long result = 0;
+        try {
+            result = cashierDAO.insertCashier(cashier);
+        } catch (SQLException e) {
+            System.err.println("新增收银员信息出现异常");
+        }
+        return result;
+    }
+
+    @Override
+    public int countByRole(String role) {
+        int result = 0;
+        try {
+            result = cashierDAO.countByRole(role);
+        } catch (SQLException e) {
+            System.err.println("根据角色统计收银员信息出现异常");
+        }
+        return result;
+    }
+
+    @Override
+    public int countByDepartment(String department) {
+        int result = 0;
+        try {
+            result = cashierDAO.countByDepartment(department);
+        } catch (SQLException e) {
+            System.err.println("根据部门统计收银员信息出现异常");
+        }
+        return result;
     }
 }

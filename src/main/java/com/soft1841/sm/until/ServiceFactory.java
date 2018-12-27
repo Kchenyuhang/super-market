@@ -24,9 +24,11 @@ public class ServiceFactory {
     public static AdminService getAdminServiceInstance() {
         return new AdminServiceImpl();
     }
+
     public static TypeService getTypeServiceInstance(){
         return new TypeServiceImpl();
     }
+
     public static GoodsService getGoodsServiceInstance(){
         return new GoodsServiceImpl();
     }

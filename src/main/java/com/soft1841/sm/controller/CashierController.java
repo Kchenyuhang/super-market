@@ -66,7 +66,7 @@ public class CashierController implements Initializable {
             leftBox.getChildren().addAll(imageView,roleLabel);
             //右边垂直布局放姓名、年龄、性别、部门
             VBox rightBox = new VBox();
-            rightBox.setSpacing(15);
+            rightBox.setSpacing(10);
             Label nameLabel = new Label(cashier.getName());
             nameLabel.getStyleClass().add("font-title");
             Label ageLabel = new Label(cashier.getAge());
@@ -76,7 +76,7 @@ public class CashierController implements Initializable {
             Label accountLabel = new Label(cashier.getAccount());
             Label passwordLabel = new Label(cashier.getPassword());
             Button delBtn = new Button("删除");
-            delBtn.getStyleClass().add("warning-btn-theme");
+            delBtn.getStyleClass().add("warning-theme");
             //左右两个垂直布局加入水平布局
             hBox.getChildren().addAll(leftBox,rightBox);
             //水平布局加入大的内容容器

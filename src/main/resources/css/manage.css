@@ -1,3 +1,32 @@
+.root{
+    -fx-background-color: rgb(195,220,242);
+    -fx-font-size: 22px;
+}
+.button {
+    /*文本对齐方式*/
+    -fx-text-alignment: center;
+    /*合适高度*/
+    -fx-pref-height: 38px;
+    /*内边距*/
+    -fx-padding: 0 18px;
+    /*无边框*/
+    -fx-border-style: none;
+    /*鼠标样式*/
+    -fx-cursor: pointer;
+    /*边框圆角*/
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-background-color: rgb(141,189,225);
+    -fx-text-fill:rgb(161,119,69);
+}
+.warning-theme{
+    -fx-background-color: rgb(242,74,25);
+    -fx-text-fill: #fff;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+}
+
+
 /*鼠标覆盖按钮效果*/
 .button:hover {
     /*粗体*/
@@ -5,12 +34,155 @@
     /*透明度*/
     -fx-opacity: 0.8;
 }
-.green-theme{
-    -fx-background-color: rgb(134,210,247);
+
+
+/*边框圆角按钮*/
+.btn-radius {
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
 }
-.bg-theme{
-    -fx-background-image: url(/img/login.jpg);
+
+.avatar {
+    -fx-border-radius: 80px;
+    -fx-background-radius: 80px;
 }
-.root{
-    -fx-background-image: url(/img/bgf.jpg);
+.default-theme {
+    -fx-background-color: #fff;
+    -fx-border-color: rgb(230, 230, 230);
+    -fx-text-fill: rgb(110, 110, 110);
+}
+
+/*深灰色主题*/
+.dark-gray-theme {
+    -fx-background-color: rgb(141,189,225);
+}
+
+/*深色主题*/
+.dark-theme {
+    -fx-background-color: rgb(141,189,225);
+}
+
+/*绿色主题*/
+.green-theme {
+    -fx-background-color: rgb(141,189,225);
+    -fx-text-fill: #fff;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+}
+
+/*灰色主题*/
+.gray-theme {
+    -fx-background-color: rgb(210, 210, 210);
+    -fx-text-fill: #fff;
+}
+.font-white {
+    -fx-text-fill: #fff;
+}
+
+/*灰色字体*/
+.font-gray {
+    -fx-text-fill: rgb(161,119,69);
+    -fx-font-size: 35px;
+}
+
+/*绿色字体*/
+.font-green {
+    -fx-text-fill: rgb(189,207,205)
+}
+
+/*标题字体*/
+.font-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+.radio-button .radio {
+    -fx-background-color: #fff;
+    -fx-border-color: rgb(230, 230, 230);
+    -fx-border-radius: 100;
+}
+
+/*单选按钮中间点的颜色*/
+.radio-button:selected .dot {
+    -fx-background-color: #fff;
+}
+
+/*单选按钮选中后背景色*/
+.radio-button:selected .radio {
+    -fx-background-color: rgb(189,207,205);
+}
+
+/*表格内容居中显示*/
+.table-view .table-column {
+    -fx-alignment: center;
+}
+
+/*左侧导航菜单按钮样式*/
+.menu-btn {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 35px;
+    -fx-background-color: rgb(141,189,225);
+    -fx-text-fill: #ffffff;
+}
+
+/*左侧导航菜单按钮鼠标悬停效果*/
+.menu-btn:hover {
+    -fx-background-color: rgb(195,220,242);
+    -fx-text-fill: #fff;
+}
+
+.menu-btn:selected {
+    -fx-background-color: rgb(95, 184, 120);
+    -fx-text-fill: #fff;
+}
+
+/*风琴标题面板字体颜色*/
+.titled-pane {
+    -fx-text-fill: #ffffff;
+}
+
+/*风琴标题面板背景色*/
+.titled-pane > .title {
+    -fx-background-color: rgb(141,189,225);
+    -fx-padding: 30 10 10 10;
+}
+
+.list-view .scroll-bar:horizontal .increment-arrow,
+.list-view .scroll-bar:horizontal .decrement-arrow,
+.list-view .scroll-bar:horizontal .increment-button,
+.list-view .scroll-bar:horizontal .decrement-button {
+    -fx-padding: 0;
+}
+.black-theme{
+    -fx-background-color: rgb(254,184,0);
+    -fx-text-fill: #fff;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+}
+.orange-theme{
+    -fx-background-color: rgb(195,220,245);
+
+
+}
+.gride-theme{
+    -fx-background-image: url(/img/bg.jpg);
+
+}
+.pride-theme{
+    -fx-background-image: url(/img/gb.jpg);
+}
+/*标题字体*/
+.font-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+/*内容盒子样式，设置一下圆角和内边距*/
+.box {
+    -fx-border-color: rgb(162, 162, 162);
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5 5 5 5;
+    -fx-background-image: url(/img/box.jpg);
+}
+.fruit-theme{
+    -fx-background-image: url(/img/bg1.jpg);
 }

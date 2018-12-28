@@ -54,7 +54,7 @@ public class AdminMainController implements Initializable {
     }
 
     public void listCashierAnalysis() throws Exception {
-        switchView("shouyin_analysis");
+        switchView("shouyin_analysis.fxml");
     }
     public void listGoodsAnalysis() throws Exception {
 

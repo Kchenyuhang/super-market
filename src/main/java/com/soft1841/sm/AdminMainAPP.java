@@ -20,7 +20,7 @@ public class AdminMainAPP extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("星辰超市后台系统");
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/admin.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/admins.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         primaryStage.setMaximized(true);

@@ -124,7 +124,7 @@ public class CashierController implements Initializable {
         TextField pictureField = new TextField();
         pictureField.setPromptText("请输入头像地址");
         pictureField.setFocusTraversable(false);
-        //性别，两个单选按钮为一个组，收银员单选按钮默认选中
+        //类别，两个单选按钮为一个组，收银员单选按钮默认选中
         HBox roleBox = new HBox();
         roleBox.setSpacing(20);
         ToggleGroup group = new ToggleGroup();

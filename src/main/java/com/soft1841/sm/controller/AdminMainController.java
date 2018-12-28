@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 
 /**
  * 主控制器
- * @author 陈宇航
+ * @author 小组成员
  * 2018.12.25
  */
 public class AdminMainController implements Initializable {
@@ -43,16 +43,10 @@ public class AdminMainController implements Initializable {
     public void listType() throws Exception {
         switchView("type.fxml");
     }
-
-//    private void listTypeAnalysis() throws Exception {
-//        switchView("type_analysis.fxml");
-//    }
     public void listGoods() throws Exception {
-        switchView("goods.fxml");
-    }
 
-    public void listGoodsAnalysis() throws Exception {
-        switchView("goods_analysis.fxml");
+        switchView("goods.fxml");
+
     }
 
     public void listCashier() throws Exception {
@@ -60,8 +54,18 @@ public class AdminMainController implements Initializable {
     }
 
     public void listCashierAnalysis() throws Exception {
-        switchView("shouyin_analysis.fxml");
+        switchView("shouyin_analysis");
     }
+    public void listGoodsAnalysis() throws Exception {
+
+        switchView("goods_analysis.fxml");
+
+    }
+
+    public void listVIP() throws Exception {
+        switchView("vip.fxml");
+    }
+
 
 
     private void switchView(String fileName) throws Exception {

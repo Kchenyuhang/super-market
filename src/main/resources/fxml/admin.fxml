@@ -8,6 +8,7 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -15,14 +16,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.image.Image?>
 <BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.AdminMainController">
 
        <top>
            <AnchorPane prefHeight="80.0">
                <!--点击这个文字显示默认主页数据-->
-               <Label onMouseClicked="#listDefault" styleClass="font-gray"
-                      text="星辰超市管理系统" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="20">
+               <Label onMouseClicked="#listDefault" styleClass="font-gray" text="星辰超市管理系统" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="20">
                    <!--字体特效-->
                    <effect>
                        <Reflection bottomOpacity="0.2" fraction="0.5" topOffset="-5.0" />
@@ -31,22 +30,29 @@
                        <Font name="STXingkai" size="26.0" />
                    </font>
                </Label>
-               <Button fx:id="closeButton" onAction="#closeButtonAction" styleClass="btn-radius" text="退出系统"
-                       AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20" />
-         <ImageView fitWidth="60"  pickOnBounds="true" preserveRatio="true"
-                    AnchorPane.rightAnchor="200" AnchorPane.topAnchor="10">
-             <Image url="/img/me.png"/>
+               <Button fx:id="closeButton" onAction="#closeButtonAction" styleClass="btn-radius" text="退出系统" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20" />
+         <ImageView fitWidth="60" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="200" AnchorPane.topAnchor="10">
+             <Image url="/img/me.png" />
          </ImageView>
 
-         <ImageView AnchorPane.rightAnchor="300" AnchorPane.topAnchor="10"
-                    fitHeight="60" fitWidth="60" >
-             <Image url="/img/musics.png"/>
+         <ImageView fitHeight="60" fitWidth="60" AnchorPane.rightAnchor="300" AnchorPane.topAnchor="10">
+             <Image url="/img/musics.png" />
          </ImageView>
            </AnchorPane>
        </top>
        <center>
            <!--分割面板-->
            <SplitPane dividerPositions="0.5">
+               <!--右侧的主体内容部分，采用StackPane实现一种卡片切换效果-->
+               <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="default-theme" vbarPolicy="AS_NEEDED">
+                   <StackPane fx:id="mainContainer" minWidth="1080" styleClass="default-theme">
+                       <!--加载外部的fxml文件，显示默认的主体内容-->
+                       <fx:include source="default.fxml" />
+                       <padding>
+                           <Insets bottom="5" left="30" right="10" top="10" />
+                       </padding>
+                   </StackPane>
+               </ScrollPane>
                <!--左侧的导航菜单部分-->
                <AnchorPane maxWidth="200" minWidth="200" styleClass="dark-gray-theme">
                    <!--采用风琴面板实现-->
@@ -64,19 +70,19 @@
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
                                    <!--点击该按钮，右侧切换商品数据-->
                                    <Button onAction="#listGoods" styleClass="menu-btn" text="商品信息" />
-                                   <Button styleClass="menu-btn" text="统计分析"  onAction="#listGoodsAnalysis"/>
+                                   <Button onAction="#listGoodsAnalysis" styleClass="menu-btn" text="统计分析" />
                                </VBox>
                            </TitledPane>
                            <TitledPane alignment="TOP_LEFT" text="会员管理">
                                <VBox minHeight="130" spacing="10" styleClass="dark-theme">
-                                   <Button styleClass="menu-btn" text="会员信息" onAction="#listVIP"/>
+                                   <Button onAction="#listVIP" styleClass="menu-btn" text="会员信息" />
                                    <Button styleClass="menu-btn" text="会员分析" />
                                </VBox>
                            </TitledPane>
                            <TitledPane alignment="TOP_LEFT" text="收银员管理">
                                <VBox minHeight="100" spacing="10" styleClass="dark-theme">
-                                   <Button styleClass="menu-btn" text="收银员信息" onAction="#listCashier"/>
-                                   <Button styleClass="menu-btn" text="收银员统计" onAction="#listCashierAnalysis"/>
+                                   <Button onAction="#listCashier" styleClass="menu-btn" text="收银员信息" />
+                                   <Button onAction="#listCashierAnalysis" styleClass="menu-btn" text="收银员统计" />
                                </VBox>
                            </TitledPane>
                            <TitledPane alignment="TOP_LEFT" text="统计管理">
@@ -94,16 +100,6 @@
                        </panes>
                    </Accordion>
                </AnchorPane>
-               <!--右侧的主体内容部分，采用StackPane实现一种卡片切换效果-->
-               <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="default-theme" vbarPolicy="AS_NEEDED">
-                   <StackPane fx:id="mainContainer" minWidth="1080" styleClass="default-theme">
-                       <!--加载外部的fxml文件，显示默认的主体内容-->
-                       <fx:include source="default.fxml" />
-                       <padding>
-                           <Insets bottom="5" left="30" right="10" top="10" />
-                       </padding>
-                   </StackPane>
-               </ScrollPane>
                <padding>
                    <Insets top="10" />
                </padding>

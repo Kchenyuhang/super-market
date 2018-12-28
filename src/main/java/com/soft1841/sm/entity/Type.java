@@ -17,10 +17,7 @@ public class Type {
     public Type() {
     }
 
-    public Type(long id, String typeName) {
-        setId(id);
-        setTypeName(typeName);
-    }
+
 
     public String getType() {
         return type;

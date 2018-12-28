@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea"
             xmlns:fx="http://javafx.com/fxml/1"
@@ -22,21 +21,21 @@
 
        <top>
            <AnchorPane prefHeight="80.0">
-               点击这个文字显示默认主页数据
-               <Label onMouseClicked="#listDefault" styleClass="text-basic" text="星辰超市管理系统" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="20">
+               <!--点击这个文字显示默认主页数据-->
+               <Label onMouseClicked="#listDefault" styleClass="font-gray" text="星辰超市管理系统"
+                      AnchorPane.leftAnchor="10" AnchorPane.topAnchor="20">
                    <!--字体特效-->
                    <effect>
                        <Reflection bottomOpacity="0.2" fraction="0.5" topOffset="-5.0" />
                    </effect>
                </Label>
-               <Button fx:id="closeButton" onAction="#closeButtonAction" styleClass="blue-btn" text="退出系统" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20" />
-         <ImageView fitWidth="60" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="200" AnchorPane.topAnchor="10">
+               <Button fx:id="closeButton" onAction="#closeButtonAction" styleClass="blue-btn" text="退出系统"
+                       AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20" />
+         <ImageView fitWidth="60" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="350" AnchorPane.topAnchor="10">
              <Image url="/img/me.png" />
          </ImageView>
-
-         <ImageView fitHeight="60" fitWidth="60" AnchorPane.rightAnchor="300" AnchorPane.topAnchor="10">
-             <Image url="/img/musics.png" />
-         </ImageView>
+         <Button fx:id="a" onAction="#playMusic" styleClass="blue-btn" text="PlayMusic"
+                 AnchorPane.rightAnchor="170" AnchorPane.topAnchor="20" />
            </AnchorPane>
        </top>
        <center>

@@ -80,4 +80,16 @@ public class Goods extends Entity{
     public void setDescription(String description) {
         this.description.set(description);
     }
+
+    @Override
+    public String toString() {
+        return "Goods{" +
+                "id=" + id +
+                ", typeId=" + typeId +
+                ", name=" + name +
+                ", price=" + price +
+                ", picture=" + picture +
+                ", description=" + description +
+                '}';
+    }
 }

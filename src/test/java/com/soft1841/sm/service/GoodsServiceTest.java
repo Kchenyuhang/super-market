@@ -34,15 +34,12 @@ public class GoodsServiceTest{
         Goods goods = new Goods (  );
         goods.setId ( 161 );
         goods.setPrice(11.1);
-
-
         goodsService.updateGoods(goods);
     }
 
     @Test
     public void getAllGoods() {
         List<Goods> goodsList = goodsService.getAllGoods();
-
         goodsList.forEach(goods -> System.out.println(goods.getName()));
     }
 
@@ -59,8 +56,7 @@ public class GoodsServiceTest{
 
     @Test
     public void getGoodsByTypeId() {
-        List<Goods> goodsList = goodsService.getGoodsByTypeId ( 1 );
-
+        List<Goods> goodsList = goodsService.getGoodsByTypeId (1);
         goodsList.forEach(goods -> System.out.println(goods.getName()));
     }
 

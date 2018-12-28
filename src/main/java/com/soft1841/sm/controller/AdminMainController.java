@@ -12,8 +12,12 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -27,11 +31,13 @@ public class AdminMainController implements Initializable {
     private StackPane mainContainer;
     @FXML
     private javafx.scene.control.Button closeButton;
+
     @FXML
-    private void closeButtonAction(){
+    private void closeButtonAction() {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
+
     @FXML
     private Button a;
     @FXML
@@ -80,12 +86,6 @@ public class AdminMainController implements Initializable {
 //        Image btnImg8 = new Image("/img/main.png");
 //        ImageView imageView8 = new ImageView(btnImg8); //给按钮设置图标
 //        i.setGraphic(imageView8);
-//
-//
-//
-//
-//
-
     }
 
     //显示默认主页数据
@@ -97,6 +97,7 @@ public class AdminMainController implements Initializable {
     public void listType() throws Exception {
         switchView("type.fxml");
     }
+
     public void listGoods() throws Exception {
 
         switchView("goods.fxml");
@@ -110,6 +111,7 @@ public class AdminMainController implements Initializable {
     public void listCashierAnalysis() throws Exception {
         switchView("shouyin_analysis.fxml");
     }
+
     public void listGoodsAnalysis() throws Exception {
 
         switchView("goods_analysis.fxml");
@@ -121,11 +123,17 @@ public class AdminMainController implements Initializable {
     }
 
 
-
     private void switchView(String fileName) throws Exception {
         //清空原有内容
         mainContainer.getChildren().clear();
         AnchorPane anchorPane = new FXMLLoader(getClass().getResource("/fxml/" + fileName)).load();
         mainContainer.getChildren().add(anchorPane);
+    }
+
+    public void playMusic() throws Exception {
+        InputStream in = new FileInputStream("D:\\shixun\\super-market\\src\\main\\resources\\img\\GEM.wav");
+        AudioStream as = new AudioStream(in);
+        AudioPlayer.player.start(as);
+
     }
 }

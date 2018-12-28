@@ -12,3 +12,21 @@
     -fx-background-color: rgb(230,221,219);
 
 }
+#bg{
+    -fx-background-image: url(/img/login.jpg);
+}
+.bg1{
+    -fx-background-color: rgb(60,131,161);
+}
+.bg2{
+    -fx-background-color:rgb(51,153,204);
+}
+.bg3{
+    -fx-text-fill: #ffffff;
+}
+.root{
+   -fx-background-image: url(/img/bgf.jpg);
+}
+.bg5{
+    -fx-background-color: rgb(173,236,253);
+}

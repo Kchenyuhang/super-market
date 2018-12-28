@@ -1,8 +1,9 @@
 package com.soft1841.sm.entity;
 
+
 public class VIP {
     private Long id;
-    private  String phone;
+    private String phone;
     private String name;
     private String province;
     private String number;

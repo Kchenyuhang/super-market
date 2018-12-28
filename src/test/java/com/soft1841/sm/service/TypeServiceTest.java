@@ -28,12 +28,12 @@ public class TypeServiceTest {
     @Test
     public void addType() {
         Type type = new Type();
-        type.setTypeName("测试新类别");
+        type.setTypeName("测试类别");
         typeService.addType(type);
     }
 
     @Test
     public void deleteType() {
-        typeService.deleteType(9);
+        typeService.deleteType(2);
     }
 }

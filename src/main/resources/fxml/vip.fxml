@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.soft1841.sm.controller.VIPController">
+    <Button text="添加会员" styleClass="green-theme" onAction="#insertVIP"
+            AnchorPane.topAnchor="5" AnchorPane.leftAnchor="10"/>
+    <FlowPane fx:id="vipPane" hgap="200" vgap="50"
+              AnchorPane.topAnchor="80" AnchorPane.leftAnchor="10"
+              AnchorPane.rightAnchor="10"/>
+</AnchorPane>

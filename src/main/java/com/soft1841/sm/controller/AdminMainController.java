@@ -4,6 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
@@ -29,9 +32,60 @@ public class AdminMainController implements Initializable {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
+    @FXML
+    private Button a;
+    @FXML
+    private Button b;
+    @FXML
+    private Button c;
+    @FXML
+    private Button d;
+    @FXML
+    private Button e;
+    @FXML
+    private Button f;
+    @FXML
+    private Button g;
+    @FXML
+    private Button h;
+    @FXML
+    private Button i;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        Image btnImg = new Image("/img/leibie.png");
+        ImageView imageView = new ImageView(btnImg); //给按钮设置图标
+        a.setGraphic(imageView);
+        Image btnImg1 = new Image("/img/xinxi.png");
+        ImageView imageView1 = new ImageView(btnImg1); //给按钮设置图标
+        b.setGraphic(imageView1);
+        Image btnImg2 = new Image("/img/people2.png");
+        ImageView imageView2 = new ImageView(btnImg2); //给按钮设置图标
+        c.setGraphic(imageView2);
+        Image btnImg3 = new Image("/img/shouyin2.png");
+        ImageView imageView3 = new ImageView(btnImg3); //给按钮设置图标
+        d.setGraphic(imageView3);
+        Image btnImg4 = new Image("/img/tong_ji.png");
+        ImageView imageView4 = new ImageView(btnImg4); //给按钮设置图标
+        e.setGraphic(imageView4);
+        Image btnImg5 = new Image("/img/xiaoshou.png");
+        ImageView imageView5 = new ImageView(btnImg5); //给按钮设置图标
+        f.setGraphic(imageView5);
+        Image btnImg6 = new Image("/img/xitong.png");
+        ImageView imageView6 = new ImageView(btnImg6); //给按钮设置图标
+        g.setGraphic(imageView6);
+        Image btnImg7 = new Image("/img/shujujiazaishibai.png");
+        ImageView imageView7 = new ImageView(btnImg7); //给按钮设置图标
+        h.setGraphic(imageView7);
+        Image btnImg8 = new Image("/img/main.png");
+        ImageView imageView8 = new ImageView(btnImg8); //给按钮设置图标
+        i.setGraphic(imageView8);
+
+
+
+
+
+
     }
 
     //显示默认主页数据

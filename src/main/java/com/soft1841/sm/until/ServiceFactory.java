@@ -27,7 +27,11 @@ public class ServiceFactory {
     public static GoodsService getGoodsServiceInstance(){
         return new GoodsServiceImpl();
     }
+<<<<<<< Updated upstream
 
+=======
+    
+>>>>>>> Stashed changes
 }
 
 

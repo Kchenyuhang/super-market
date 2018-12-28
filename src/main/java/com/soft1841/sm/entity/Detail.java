@@ -1,9 +1,10 @@
 package com.soft1841.sm.entity;
 
+import cn.hutool.db.Entity;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 
-public class Detail {
+public class Detail extends Entity {
     private final SimpleLongProperty id = new SimpleLongProperty();
     private final SimpleLongProperty ticket_id = new SimpleLongProperty();
     private final SimpleStringProperty goods_code = new SimpleStringProperty();

@@ -10,34 +10,37 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1174.0" prefWidth="1956.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.AdminMainController">
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+<AnchorPane prefHeight="1174.0" prefWidth="1956.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.soft1841.sm.controller.AdminMainController"  >
       <HBox prefHeight="85.0" prefWidth="2000.0" styleClass="bg-theme">
             <ImageView fitHeight="107.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="/img/star.png" />
             </ImageView>
             <Label prefHeight="90.0" prefWidth="408.0" text="星辰超市后台管理">
-               <font>
+                <font>
                   <Font name="STXingkai" size="50.0" />
                </font>
             </Label>
             <HBox prefHeight="103.0" prefWidth="1059.0" />
       <Label prefHeight="114.0" prefWidth="117.0" text="version:1.0">
-         <font>
+          <font>
             <Font name="STXingkai" size="25.0" />
          </font>
       </Label>
       <VBox prefHeight="108.0" prefWidth="166.0">
          <children>
             <HBox prefHeight="38.0" prefWidth="167.0" />
-            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="136.0" styleClass="green-theme ,button:hover" text="退出系统" />
+            <Button  fx:id="closeButton" onAction="#closeButtonAction" mnemonicParsing="false" prefHeight="45.0" prefWidth="136.0" styleClass="green-theme ,button:hover" text="退出系统" />
          </children>
       </VBox>
       </HBox>
    <VBox layoutX="1696.0" layoutY="108.0" prefHeight="915.0" prefWidth="228.0" spacing="65">
          <Button fx:id="a" mnemonicParsing="false" prefHeight="70.0" prefWidth="225.0" styleClass="green-theme ,button:hover" text="商品类别" />
          <Button fx:id="b" mnemonicParsing="false" prefHeight="71.0" prefWidth="224.0" styleClass="green-theme ,button:hover " text="商品信息" />
-         <Button fx:id="c" mnemonicParsing="false" prefHeight="72.0" prefWidth="227.0" styleClass="green-theme ,button:hover " text="会员信息" />
-         <Button fx:id="d" mnemonicParsing="false" prefHeight="70.0" prefWidth="221.0" styleClass="green-theme ,button:hover " text="收银员信息" />
+         <Button fx:id="c" mnemonicParsing="false" prefHeight="72.0" prefWidth="227.0" styleClass="green-theme ,button:hover " text="会员信息" onAction="#listVIP"/>
+         <Button fx:id="d" mnemonicParsing="false" prefHeight="70.0" prefWidth="221.0" styleClass="green-theme ,button:hover " text="收银员信息" onAction="#listCashier"/>
          <Button fx:id="e" mnemonicParsing="false" prefHeight="74.0" prefWidth="222.0" styleClass="green-theme ,button:hover" text="收银员统计" />
          <Button fx:id="f" mnemonicParsing="false" prefHeight="71.0" prefWidth="226.0" styleClass="green-theme ,button:hover " text="销售统计" />
          <Button fx:id="g" mnemonicParsing="false" prefHeight="71.0" prefWidth="226.0" styleClass="green-theme ,button:hover " text="系统初始化" />
@@ -49,4 +52,9 @@
    <ImageView fitHeight="915.0" fitWidth="1393.0" layoutX="270.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true" >
        <Image url="/img/fruit.jpg"/>
    </ImageView>
+    <StackPane fx:id="mainContainer" styleClass="default-theme" minWidth="1060" minHeight="600">
+        <padding>
+            <Insets top="10" left="30" bottom="5" right="10"/>
+        </padding>
+    </StackPane>
 </AnchorPane>

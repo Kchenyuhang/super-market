@@ -1,9 +1,11 @@
 package com.soft1841.sm.controller;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -82,10 +84,6 @@ public class AdminMainController implements Initializable {
         i.setGraphic(imageView8);
 
 
-
-
-
-
     }
 
     //显示默认主页数据
@@ -119,8 +117,6 @@ public class AdminMainController implements Initializable {
     public void listVIP() throws Exception {
         switchView("vip.fxml");
     }
-
-
 
     private void switchView(String fileName) throws Exception {
         //清空原有内容

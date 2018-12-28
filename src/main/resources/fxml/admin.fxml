@@ -31,11 +31,16 @@
                        <Font name="STXingkai" size="26.0" />
                    </font>
                </Label>
-               
                <Button fx:id="closeButton" onAction="#closeButtonAction" styleClass="btn-radius" text="退出系统"
                        AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20" />
-         <ImageView fitWidth="60"  pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="200" AnchorPane.topAnchor="10" >
+         <ImageView fitWidth="60"  pickOnBounds="true" preserveRatio="true"
+                    AnchorPane.rightAnchor="200" AnchorPane.topAnchor="10">
              <Image url="/img/me.png"/>
+         </ImageView>
+
+         <ImageView AnchorPane.rightAnchor="300" AnchorPane.topAnchor="10"
+                    fitHeight="60" fitWidth="60" >
+             <Image url="/img/musics.png"/>
          </ImageView>
            </AnchorPane>
        </top>

@@ -22,37 +22,40 @@
         <Reflection bottomOpacity="2.2" fraction="1.0" topOffset="-50.0" />
     </effect>
 </Label>
-<HBox prefHeight="107.0" prefWidth="996.0" />
-<Label prefHeight="100.0" prefWidth="200.0" styleClass="font-gray" text="version:1.0">
+<HBox prefHeight="107.0" prefWidth="977.0" />
+<Label prefHeight="107.0" prefWidth="236.0" styleClass="font-gray" text="version:1.0">
     <effect>
         <Reflection bottomOpacity="0.8" fraction="1.5" topOffset="-70.0" />
     </effect>
 </Label>
-<VBox prefHeight="108.0" prefWidth="166.0">
+<VBox prefHeight="107.0" prefWidth="177.0">
 <children>
 <HBox prefHeight="38.0" prefWidth="167.0" />
-<Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="45.0" prefWidth="136.0" styleClass="green-theme " text="退出系统" />
+      <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="45.0" prefWidth="126.0" styleClass="green-theme " text="退出系统" />
 </children>
 </VBox>
 </HBox>
-<Separator layoutX="-5.0" layoutY="106.0" prefHeight="4.0" prefWidth="2000.0" />
-<StackPane fx:id="mainContainer" layoutX="1.0" layoutY="186.0" maxHeight="1000" minWidth="1060" prefHeight="865.0" prefWidth="1938.0" styleClass="fruit-theme">
+<VBox layoutX="1696.0" layoutY="108.0" prefHeight="915.0" prefWidth="228.0" spacing="65">
+<Button fx:id="a" mnemonicParsing="false" onAction="#listType" prefHeight="70.0" prefWidth="225.0" styleClass="green-theme " text="商品类别" />
+<Button fx:id="b" mnemonicParsing="false" onAction="#listGoods" prefHeight="71.0" prefWidth="224.0" styleClass="green-theme " text="商品信息" />
+<Button fx:id="c" mnemonicParsing="false" onAction="#listVIP" prefHeight="72.0" prefWidth="227.0" styleClass="green-theme  " text="会员信息" />
+<Button fx:id="d" mnemonicParsing="false" onAction="#listCashier" prefHeight="70.0" prefWidth="221.0" styleClass="green-theme " text="收银员信息" />
+<Button fx:id="e" mnemonicParsing="false" onAction="#listCashierAnalysis" prefHeight="74.0" prefWidth="222.0" styleClass="green-theme " text="收银员统计" />
+<Button fx:id="f" mnemonicParsing="false" prefHeight="71.0" prefWidth="226.0" styleClass="green-theme  " text="销售统计" />
+<Button fx:id="g" mnemonicParsing="false" prefHeight="71.0" prefWidth="226.0" styleClass="green-theme  " text="系统初始化" />
+<Button fx:id="h" mnemonicParsing="false" prefHeight="71.0" prefWidth="226.0" styleClass="green-theme  " text="数据备份" />
+<Button fx:id="i" mnemonicParsing="false" prefHeight="71.0" prefWidth="226.0" styleClass="green-theme  " text="主题设置" />
+</VBox>
+<Separator layoutX="1678.0" layoutY="106.0" orientation="VERTICAL" prefHeight="1095.0" prefWidth="15.0" />
+<Separator layoutX="-5.0" layoutY="106.0" prefHeight="6.0" prefWidth="1691.0" />
+<ImageView fitHeight="915.0" fitWidth="1393.0" layoutX="270.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+<Image url="/img/fruit.jpg" />
+</ImageView>
+<StackPane fx:id="mainContainer" layoutY="109.0" maxHeight="1000" minWidth="1060" prefHeight="941.0" prefWidth="1683.0" styleClass="fruit-theme">
 
     <padding>
 <Insets bottom="5" left="30" right="10" top="10" />
 </padding>
-         <HBox prefHeight="851.0" prefWidth="1645.0" />
 </StackPane>
-   <HBox layoutY="106.0" prefHeight="72.0" prefWidth="2000.0" spacing="20">
-      <Button fx:id="a" mnemonicParsing="false" onAction="#listType" prefHeight="77.0" prefWidth="179.0" styleClass="green-theme " text="商品类别" />
-      <Button fx:id="b" mnemonicParsing="false" onAction="#listGoods" prefHeight="74.0" prefWidth="178.0" styleClass="green-theme " text="商品信息" />
-   <Button fx:id="c" mnemonicParsing="false" onAction="#listVIP" prefHeight="74.0" prefWidth="177.0" styleClass="green-theme  " text="会员信息" />
-         <Button fx:id="d" mnemonicParsing="false" onAction="#listCashier" prefHeight="78.0" prefWidth="204.0" styleClass="green-theme " text="收银员信息" />
-   <Button fx:id="e" mnemonicParsing="false" onAction="#listCashierAnalysis" prefHeight="76.0" prefWidth="210.0" styleClass="green-theme " text="收银员统计" />
-   <Button fx:id="f" mnemonicParsing="false" prefHeight="93.0" prefWidth="177.0" styleClass="green-theme  " text="销售统计" />
-   <Button fx:id="g" mnemonicParsing="false" prefHeight="84.0" prefWidth="224.0" styleClass="green-theme  " text="系统初始化" />
-   <Button fx:id="i" mnemonicParsing="false" prefHeight="85.0" prefWidth="163.0" styleClass="green-theme  " text="主题设置" />
-   <Button fx:id="h" mnemonicParsing="false" prefHeight="80.0" prefWidth="201.0" styleClass="green-theme  " text="数据备份" />
-   </HBox>
-   <Separator layoutX="-2.0" layoutY="178.0" prefHeight="14.0" prefWidth="2000.0" />
+   <HBox layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="167.0" />
 </AnchorPane>

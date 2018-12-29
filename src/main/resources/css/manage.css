@@ -83,7 +83,6 @@
 .font-gray {
     -fx-text-fill: rgb(161,119,69);
     -fx-font-size: 35px;
-    -fx-cursor: hand;
 }
 
 /*绿色字体*/
@@ -123,7 +122,6 @@
     -fx-pref-height: 35px;
     -fx-background-color: rgb(141,189,225);
     -fx-text-fill: #ffffff;
-    -fx-cursor: hand;
 }
 
 /*左侧导航菜单按钮鼠标悬停效果*/
@@ -186,19 +184,5 @@
     -fx-background-image: url(/img/box.jpg);
 }
 .fruit-theme{
-    -fx-background-image: url(/img/bg1.jpg);
-}
-
-.text-title {
-    -fx-font-family: "Javanese Text";
-}
-.blue-btn {
-    -fx-cursor: hand;
-    -fx-background-color: #2ab0f1;
-    -fx-text-fill: #000000;
-    -fx-border-radius: 50px;
-    -fx-background-radius: 50px;
-}
-.blue-btn:hover {
-    -fx-background-color: rgb(111, 226, 242);
+    -fx-background-image: url(/img/dongtu.gif);
 }

@@ -23,9 +23,9 @@
                <!--&lt;!&ndash;点击这个文字显示默认主页数据&ndash;&gt;-->
                <!--<Label onMouseClicked="#listDefault" styleClass="font-gray" text="星辰超市管理系统" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="20">-->
                    <!--&lt;!&ndash;字体特效&ndash;&gt;-->
-                   <!--<effect>-->
-                       <!--<Reflection bottomOpacity="0.2" fraction="0.5" topOffset="-5.0" />-->
-                   <!--</effect>-->
+                   <effect>
+                       <Reflection bottomOpacity="0.2" fraction="0.5" topOffset="-5.0" />
+                   </effect>
                    <!--<font>-->
                        <!--<Font name="STXingkai" size="26.0" />-->
                    <!--</font>-->

@@ -6,7 +6,7 @@ import com.soft1841.sm.entity.VIP;
 
 /**
  * 工厂类，用静态方法来生成各个DAO实例
- * @auther 小组成员
+ * @auther
  */
 public class DAOFactory {
     /**

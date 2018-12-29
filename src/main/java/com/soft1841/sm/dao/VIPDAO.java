@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * 会员DAO接口
+ * @auther
  */
 public interface VIPDAO {
     /**

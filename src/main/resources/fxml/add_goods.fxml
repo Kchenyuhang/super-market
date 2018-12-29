@@ -11,7 +11,7 @@
         <Label text="新增商品信息" styleClass="font-title,green-theme,font-white"/>
     </HBox>
     <VBox styleClass="default-theme" spacing="20" minHeight="400"
-          AnchorPane.topAnchor="55" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+          AnchorPane.topAnchor="55" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0">
         <ComboBox promptText="选择种类" fx:id="goodsType" prefWidth="120"/>
         <TextField promptText="商品名称" fx:id="goodsName"/>
 
@@ -26,5 +26,5 @@
     </VBox>
     <Button text="确认" onAction="#addGoods" styleClass="green-theme,btn-radius"
 
-            AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="180"/>
+            AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="180" AnchorPane.leftAnchor="180"/>
 </AnchorPane>

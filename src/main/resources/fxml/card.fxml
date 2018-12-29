@@ -17,7 +17,7 @@
         <Label text="贰"/>
         <Label text="贰"/>
         <padding>
-            <Insets top="100" left="100"/>
+            <Insets top="100" right="100"/>
         </padding>
     </VBox>
 

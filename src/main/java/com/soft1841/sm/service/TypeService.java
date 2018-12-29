@@ -22,6 +22,8 @@ public interface TypeService {
      */
     Type getType(long id);
 
+
+
     /**
      * 添加类别
      * @param type
@@ -33,4 +35,6 @@ public interface TypeService {
      * @param id
      */
     void deleteType(long id);
+
+
 }

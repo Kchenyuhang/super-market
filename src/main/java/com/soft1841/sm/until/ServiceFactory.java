@@ -7,7 +7,7 @@ import com.soft1841.sm.service.impl.*;
 
 /**
  * 业务逻辑类工厂
- * @auther 小组成员
+ * @auther
  */
 public class ServiceFactory {
 

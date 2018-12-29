@@ -48,6 +48,7 @@ public class VIPController implements Initializable {
         vipPane.getChildren().clear();
         for (VIP vip : vipList) {
             VBox rightBox = new VBox();
+            rightBox.getStyleClass().add("box");
             rightBox.setSpacing(10);
             Label nameLabel = new Label(vip.getName());
             nameLabel.getStyleClass().add("font-title");
@@ -113,6 +114,7 @@ public class VIPController implements Initializable {
         //新增按钮
         FlowPane flowPane = new FlowPane();
         Button insertBtn = new Button("新增");
+        provinceField.setFocusTraversable(true);
         insertBtn.setPrefWidth(110);
         insertBtn.getStyleClass().addAll("green-theme","btn-radius");
         flowPane.getChildren().add(insertBtn);

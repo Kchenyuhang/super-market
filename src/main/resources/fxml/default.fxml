@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.TilePane?>
 
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.sm.controller.AdminMainController">
-    <ImageView AnchorPane.topAnchor="10" AnchorPane.rightAnchor="10">
-        <Image url="/img/dongtu.gif"/>
-    </ImageView>
 
-</AnchorPane>
+<TilePane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" />

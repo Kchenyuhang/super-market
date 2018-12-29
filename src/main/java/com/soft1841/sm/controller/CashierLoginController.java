@@ -21,6 +21,13 @@ public class CashierLoginController {
     private TextField accountField1;
     @FXML
     private PasswordField passwordField1;
+    @FXML
+    private javafx.scene.control.Button closeButton;
+    @FXML
+    private void closeButtonAction(){
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
+    }
 
     private CashierService cashierService = ServiceFactory.getCashierServiceInstance();
 

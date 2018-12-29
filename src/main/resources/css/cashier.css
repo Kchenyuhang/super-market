@@ -30,3 +30,20 @@
 .bg5{
     -fx-background-color: rgb(173,236,253);
 }
+.button {
+    /*文本对齐方式*/
+    -fx-text-alignment: center;
+    /*合适高度*/
+    -fx-pref-height: 38px;
+    /*内边距*/
+    -fx-padding: 0 18px;
+    /*无边框*/
+    -fx-border-style: none;
+    /*鼠标样式*/
+    -fx-cursor: pointer;
+    /*边框圆角*/
+    -fx-border-radius: 2px;
+    -fx-background-radius: 2px;
+    -fx-background-color: rgb(141,189,225);
+    -fx-text-fill:rgb(161,119,69);
+}

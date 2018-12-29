@@ -22,16 +22,16 @@
         <Reflection bottomOpacity="2.2" fraction="1.0" topOffset="-50.0" />
     </effect>
 </Label>
-<HBox prefHeight="107.0" prefWidth="996.0" />
-<Label prefHeight="100.0" prefWidth="200.0" styleClass="font-gray" text="version:1.0">
+<HBox prefHeight="107.0" prefWidth="977.0" />
+<Label prefHeight="107.0" prefWidth="236.0" styleClass="font-gray" text="version:1.0">
     <effect>
         <Reflection bottomOpacity="0.8" fraction="1.5" topOffset="-70.0" />
     </effect>
 </Label>
-<VBox prefHeight="108.0" prefWidth="166.0">
+<VBox prefHeight="107.0" prefWidth="177.0">
 <children>
 <HBox prefHeight="38.0" prefWidth="167.0" />
-<Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="45.0" prefWidth="136.0" styleClass="green-theme " text="退出系统" />
+      <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="45.0" prefWidth="126.0" styleClass="green-theme " text="退出系统" />
 </children>
 </VBox>
 </HBox>
@@ -51,10 +51,11 @@
 <ImageView fitHeight="915.0" fitWidth="1393.0" layoutX="270.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
 <Image url="/img/fruit.jpg" />
 </ImageView>
-<StackPane fx:id="mainContainer" layoutY="110.0" maxHeight="1000" minWidth="1060" prefHeight="941.0" prefWidth="1684.0" styleClass="fruit-theme">
+<StackPane fx:id="mainContainer" layoutY="109.0" maxHeight="1000" minWidth="1060" prefHeight="941.0" prefWidth="1683.0" styleClass="fruit-theme">
 
     <padding>
 <Insets bottom="5" left="30" right="10" top="10" />
 </padding>
 </StackPane>
+   <HBox layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="167.0" />
 </AnchorPane>

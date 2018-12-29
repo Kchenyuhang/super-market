@@ -24,12 +24,12 @@
         <columns>
             <TableColumn text="ID">
                 <cellValueFactory>
-                    <PropertyValueFactory property="id" />
+                    <PropertyValueFactory property="id"/>
                 </cellValueFactory>
             </TableColumn>
             <TableColumn text="商品名称">
                 <cellValueFactory>
-                    <PropertyValueFactory property="name" />
+                    <PropertyValueFactory property="name"/>
                 </cellValueFactory>
             </TableColumn>
             <TableColumn text="价格">

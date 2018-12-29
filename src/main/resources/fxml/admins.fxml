@@ -22,16 +22,16 @@
         <Reflection bottomOpacity="2.2" fraction="1.0" topOffset="-40.0" />
     </effect>
 </Label>
-<HBox prefHeight="107.0" prefWidth="894.0" />
+<HBox prefHeight="107.0" prefWidth="878.0" />
 <Label prefHeight="107.0" prefWidth="204.0" styleClass="font-gray" text="version:1.0">
     <effect>
         <Reflection bottomOpacity="0.8" fraction="1.5" topOffset="-50.0" />
     </effect>
 </Label>
-<VBox prefHeight="107.0" prefWidth="176.0">
+<VBox prefHeight="107.0" prefWidth="171.0">
 <children>
 <HBox prefHeight="38.0" prefWidth="167.0" />
-            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="161.0" styleClass="green-theme" text="playMusic" onAction="#playVoice"/>
+            <Button mnemonicParsing="false" onAction="#playVoice" prefHeight="45.0" prefWidth="159.0" styleClass="green-theme" text="playMusic" />
 </children>
 </VBox>
       <VBox prefHeight="107.0" prefWidth="161.0">

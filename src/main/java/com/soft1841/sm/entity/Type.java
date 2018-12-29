@@ -10,53 +10,35 @@ import javafx.beans.property.SimpleStringProperty;
  */
 public class Type {
 
-    private String type;
-    private final SimpleLongProperty id = new SimpleLongProperty();
-    private final SimpleStringProperty typeName = new SimpleStringProperty("");
+    private String typeName;
+    private long id;
 
     public Type() {
     }
 
-
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public long getId() {
-        return id.get();
-    }
-
-    public SimpleLongProperty idProperty() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id.set(id);
+    public Type(String typeName , long id) {
+        this.typeName = typeName;
+        this.id = id;
     }
 
     public String getTypeName() {
-        return typeName.get();
-    }
-
-    public SimpleStringProperty typeNameProperty() {
         return typeName;
     }
 
     public void setTypeName(String typeName) {
-        this.typeName.set(typeName);
+        this.typeName = typeName;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
-        return "Type{" +
-                "type='" + type + '\'' +
-                ", id=" + id +
-                ", typeName=" + typeName +
-                '}';
+        return  typeName ;
     }
 }

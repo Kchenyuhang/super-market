@@ -166,7 +166,7 @@ public class AdminMainController implements Initializable {
     }
 
     public void playVoice() throws Exception {
-        InputStream in = new FileInputStream("D:\\shixun\\super-market\\src\\main\\resources\\img\\GEM.wav");
+        InputStream in = new FileInputStream("E:\\shixun\\super-market\\src\\main\\resources\\img\\GEM.wav");
         AudioStream as = new AudioStream(in);
         AudioPlayer.player.start(as);
     }

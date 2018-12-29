@@ -75,7 +75,7 @@ public class GoodsController  implements Initializable{
         editCol.setCellValueFactory(param -> new ReadOnlyObjectWrapper<> (param.getValue()));
         editCol.setCellFactory(param -> new TableCell<Goods,Goods> () {
             //通过ComponentUtil工具类的静态方法，传入按钮文字和样式，获得一个按钮对象
-            private final Button editButton = ComPonentutil.getButton("编辑", "black-theme");
+            private final Button editButton = ComPonentutil.getButton("点我，点我", "black-theme");
             @Override
             protected void updateItem(Goods goods, boolean empty) {
                 super.updateItem(goods, empty);
@@ -86,10 +86,10 @@ public class GoodsController  implements Initializable{
                 setGraphic(editButton);
                 //点击编辑按钮，弹出窗口，输入需要修改的商品价格
                 editButton.setOnAction(event -> {
-                    TextInputDialog dialog = new TextInputDialog("请输入价格");
-                    dialog.setTitle("商品修改界面");
-                    dialog.setHeaderText("商品名称：" + goods.getName());
-                    dialog.setContentText("请输入新的价格:");
+                    TextInputDialog dialog = new TextInputDialog("我的价值：");
+                    dialog.setTitle("你居然要改我！！");
+                    dialog.setHeaderText("说出你的名字：" + goods.getName());
+                    dialog.setContentText("慎重考虑本宝宝的价值:");
                     Optional<String> result = dialog.showAndWait();
                     //确认输入了内容，避免NPE
                     if (result.isPresent()) {
@@ -119,9 +119,9 @@ public class GoodsController  implements Initializable{
                 //点击删除按钮，需要将这一行从表格移除，同时从底层数据库真正删除
                 deleteButton.setOnAction(event -> {
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setTitle("确认对话框");
-                    alert.setHeaderText("商品名称 ：" + goods.getName());
-                    alert.setContentText("确定要删除这行记录吗?");
+                    alert.setTitle("你是要删我嘛");
+                    alert.setHeaderText("老衲名叫 ：" + goods.getName());
+                    alert.setContentText("你个小没良心的");
                     Optional<ButtonType> result = alert.showAndWait();
                     //点击了确认按钮，执行删除操作，同时移除一行模型数据
                     if (result.get() == ButtonType.OK) {

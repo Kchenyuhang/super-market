@@ -103,14 +103,18 @@ public class VIPController implements Initializable {
         TextField phoneField = new TextField();
         phoneField.setPromptText("请输入电话");
         phoneField.setFocusTraversable(true);
+
         //省份输入框
         TextField provinceField = new TextField();
         provinceField.setPromptText("请输入省份");
         provinceField.setFocusTraversable(true);
+
         //积分输入框
         TextField numberField = new TextField();
-        provinceField.setPromptText("请输入积分");
-        provinceField.setFocusTraversable(true);
+        numberField.setPromptText("请输入积分");
+        numberField.setFocusTraversable(true);
+
+
         //新增按钮
         FlowPane flowPane = new FlowPane();
         Button insertBtn = new Button("新增");

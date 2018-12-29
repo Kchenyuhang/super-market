@@ -18,7 +18,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 /**
- * 商品种类控制台
+ * 商品种类控制器
  * @auther 柳磊磊
  * 2018 12.26
  */

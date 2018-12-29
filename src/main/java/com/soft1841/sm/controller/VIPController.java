@@ -97,8 +97,6 @@ public class VIPController implements Initializable {
         nameField.setPromptText("请输入姓名");
         //输入框无焦点
         nameField.setFocusTraversable(true);
-        TextField pictureField = new TextField();
-
         //电话输入框
         TextField phoneField = new TextField();
         phoneField.setPromptText("请输入电话");
@@ -109,8 +107,8 @@ public class VIPController implements Initializable {
         provinceField.setFocusTraversable(true);
         //积分输入框
         TextField numberField = new TextField();
-        provinceField.setPromptText("请输入积分");
-        provinceField.setFocusTraversable(true);
+        numberField.setPromptText("请输入积分");
+        numberField.setFocusTraversable(true);
         //新增按钮
         FlowPane flowPane = new FlowPane();
         Button insertBtn = new Button("新增");
@@ -119,7 +117,7 @@ public class VIPController implements Initializable {
         insertBtn.getStyleClass().addAll("green-theme","btn-radius");
         flowPane.getChildren().add(insertBtn);
         flowPane.setAlignment(Pos.CENTER);
-        vBox.getChildren().addAll(infoLabel,nameField,phoneField,provinceField,numberField);
+        vBox.getChildren().addAll(infoLabel,nameField,phoneField,provinceField,numberField,insertBtn);
         Scene scene = new Scene(vBox,450,300);
         scene.getStylesheets().add("/css/style.css");
         stage.getIcons().add(new Image("/img/star.png"));

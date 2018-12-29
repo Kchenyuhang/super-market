@@ -125,4 +125,8 @@ public class AdminMainController implements Initializable {
         AnchorPane anchorPane = new FXMLLoader(getClass().getResource("/fxml/" + fileName)).load();
         mainContainer.getChildren().add(anchorPane);
     }
+
+    public void listtype_Analysis() throws Exception {
+        switchView("type_analysis.fxml");
+    }
 }

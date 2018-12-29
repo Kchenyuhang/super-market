@@ -8,10 +8,10 @@
 <?import javafx.scene.layout.HBox?>
 
 <AnchorPane prefHeight="992.0" prefWidth="1223.0" styleClass="fruit-theme" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.TypeController">
-    <HBox spacing="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="10">
+    <HBox spacing="20" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="10">
         <Button onAction="#addType" styleClass="green-theme" text="添加商品类别"  />
     </HBox>
-    <TableView fx:id="typeTable" prefHeight="556.0" prefWidth="800.0" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="70">
+    <TableView fx:id="typeTable" prefHeight="556.0" prefWidth="800.0" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="70">
         <columns>
             <TableColumn text="ID">
                 <cellValueFactory>

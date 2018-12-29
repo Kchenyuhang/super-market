@@ -14,26 +14,36 @@
 
 <AnchorPane prefHeight="1174.0" prefWidth="1956.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.AdminMainController">
 <HBox prefHeight="85.0" prefWidth="2000.0">
-<ImageView fitHeight="107.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+<ImageView fitHeight="107.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
 <Image url="/img/star.png" />
 </ImageView>
-<Label prefHeight="90.0" prefWidth="408.0" styleClass="font-gray" text="星辰超市后台管理">
+<Label prefHeight="90.0" prefWidth="406.0" styleClass="font-gray" text="星辰超市后台管理">
     <effect>
-        <Reflection bottomOpacity="2.2" fraction="1.0" topOffset="-50.0" />
+        <Reflection bottomOpacity="2.2" fraction="1.0" topOffset="-40.0" />
     </effect>
 </Label>
-<HBox prefHeight="107.0" prefWidth="977.0" />
-<Label prefHeight="107.0" prefWidth="236.0" styleClass="font-gray" text="version:1.0">
+<HBox prefHeight="107.0" prefWidth="894.0" />
+<Label prefHeight="107.0" prefWidth="204.0" styleClass="font-gray" text="version:1.0">
     <effect>
-        <Reflection bottomOpacity="0.8" fraction="1.5" topOffset="-70.0" />
+        <Reflection bottomOpacity="0.8" fraction="1.5" topOffset="-50.0" />
     </effect>
 </Label>
-<VBox prefHeight="107.0" prefWidth="177.0">
+<VBox prefHeight="107.0" prefWidth="176.0">
 <children>
 <HBox prefHeight="38.0" prefWidth="167.0" />
-      <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="45.0" prefWidth="126.0" styleClass="green-theme " text="退出系统" />
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="161.0" styleClass="green-theme" text="playMusic" onAction="#playVoice"/>
 </children>
 </VBox>
+      <VBox prefHeight="107.0" prefWidth="161.0">
+         <children>
+            <HBox prefHeight="38.0" prefWidth="100.0" />
+            <HBox prefHeight="45.0" prefWidth="100.0">
+               <children>
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="45.0" prefWidth="126.0" styleClass="green-theme " text="退出系统" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
 </HBox>
 <VBox layoutX="1696.0" layoutY="108.0" prefHeight="915.0" prefWidth="228.0" spacing="65">
 <Button fx:id="a" mnemonicParsing="false" onAction="#listType" prefHeight="70.0" prefWidth="225.0" styleClass="green-theme " text="商品类别" />
@@ -57,5 +67,4 @@
 <Insets bottom="5" left="30" right="10" top="10" />
 </padding>
 </StackPane>
-   <HBox layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="167.0" />
 </AnchorPane>

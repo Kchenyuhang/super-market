@@ -14,8 +14,12 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -29,11 +33,13 @@ public class AdminMainController implements Initializable {
     private StackPane mainContainer;
     @FXML
     private javafx.scene.control.Button closeButton;
+
     @FXML
-    private void closeButtonAction(){
+    private void closeButtonAction() {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
     }
+
     @FXML
     private Button a;
     @FXML
@@ -55,12 +61,12 @@ public class AdminMainController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-       Image btnImg = new Image("/img/leibie.png");
-       ImageView imageView = new ImageView(btnImg); //给按钮设置图标
+        Image btnImg = new Image("/img/leibie.png");
+        ImageView imageView = new ImageView(btnImg); //给按钮设置图标
         a.setGraphic(imageView);
-       Image btnImg1 = new Image("/img/xinxi.png");
+        Image btnImg1 = new Image("/img/xinxi.png");
         ImageView imageView1 = new ImageView(btnImg1); //给按钮设置图标
-       b.setGraphic(imageView1);
+        b.setGraphic(imageView1);
         Image btnImg2 = new Image("/img/people2.png");
         ImageView imageView2 = new ImageView(btnImg2); //给按钮设置图标
         c.setGraphic(imageView2);
@@ -68,7 +74,7 @@ public class AdminMainController implements Initializable {
         ImageView imageView3 = new ImageView(btnImg3); //给按钮设置图标
         d.setGraphic(imageView3);
         Image btnImg4 = new Image("/img/tong_ji.png");
-       ImageView imageView4 = new ImageView(btnImg4); //给按钮设置图标
+        ImageView imageView4 = new ImageView(btnImg4); //给按钮设置图标
         e.setGraphic(imageView4);
         Image btnImg5 = new Image("/img/xiaoshou.png");
         ImageView imageView5 = new ImageView(btnImg5); //给按钮设置图标
@@ -80,8 +86,8 @@ public class AdminMainController implements Initializable {
         ImageView imageView7 = new ImageView(btnImg7); //给按钮设置图标
         h.setGraphic(imageView7);
         Image btnImg8 = new Image("/img/main.png");
-       ImageView imageView8 = new ImageView(btnImg8); //给按钮设置图标
-       i.setGraphic(imageView8);
+        ImageView imageView8 = new ImageView(btnImg8); //给按钮设置图标
+        i.setGraphic(imageView8);
     }
 
     //显示默认主页数据
@@ -93,6 +99,7 @@ public class AdminMainController implements Initializable {
     public void listType() throws Exception {
         switchView("type.fxml");
     }
+
     public void listGoods() throws Exception {
 
         switchView("goods.fxml");
@@ -106,6 +113,7 @@ public class AdminMainController implements Initializable {
     public void listCashierAnalysis() throws Exception {
         switchView("shouyin_analysis.fxml");
     }
+
     public void listGoodsAnalysis() throws Exception {
 
         switchView("goods_analysis.fxml");
@@ -117,16 +125,21 @@ public class AdminMainController implements Initializable {
     }
 
 
-
     private void switchView(String fileName) throws Exception {
         //清空原有内容
-        ObservableList<Node> list = mainContainer.getChildren ();
-        mainContainer.getChildren().removeAll ( list );
+        ObservableList<Node> list = mainContainer.getChildren();
+        mainContainer.getChildren().removeAll(list);
         AnchorPane anchorPane = new FXMLLoader(getClass().getResource("/fxml/" + fileName)).load();
         mainContainer.getChildren().add(anchorPane);
     }
 
     public void listtype_Analysis() throws Exception {
         switchView("type_analysis.fxml");
+    }
+
+    public void playVoice() throws Exception {
+        InputStream in = new FileInputStream("D:\\shixun\\super-market\\src\\main\\resources\\img\\GEM.wav");
+        AudioStream as = new AudioStream(in);
+        AudioPlayer.player.start(as);
     }
 }

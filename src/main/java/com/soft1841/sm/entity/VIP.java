@@ -1,5 +1,10 @@
 package com.soft1841.sm.entity;
 
+/**
+ * 会员管理实体类
+ * @auther
+ */
+
 
 public class VIP {
     private Long id;

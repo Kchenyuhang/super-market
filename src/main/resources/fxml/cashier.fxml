@@ -8,9 +8,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1078.0" prefWidth="2041.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.CashierLoginController">
+<AnchorPane prefHeight="1078.0" prefWidth="2041.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.CashierLoginController">
 
    <HBox layoutY="100.0" prefHeight="57.0" prefWidth="2000.0" styleClass="bg1" AnchorPane.topAnchor="100.0">
       <HBox prefHeight="50.0" prefWidth="844.0" styleClass="bg1" />
@@ -23,15 +24,16 @@
          </font>
       </Label>
    </HBox>
-   <HBox styleClass="bg2" prefHeight="44.0" prefWidth="2000.0" AnchorPane.topAnchor="157">
+
+   <HBox prefHeight="44.0" prefWidth="2000.0" styleClass="bg2" AnchorPane.topAnchor="157">
 
          <HBox prefHeight="51.0" prefWidth="128.0" />
-         <Label prefHeight="35.0" styleClass="bg3" prefWidth="108.0" text="输入商品条码：" />
+         <Label prefHeight="35.0" prefWidth="108.0" styleClass="bg3" text="输入商品条码：" />
          <TextField AnchorPane.topAnchor="60" />
       <Label prefHeight="26.0" prefWidth="36.0" />
       <Button mnemonicParsing="false" text="查询商品" />
       <HBox prefHeight="25.0" prefWidth="188.0" />
-      <Label styleClass="bg3" prefHeight="31.0" prefWidth="52.0" text="数量：" />
+      <Label prefHeight="31.0" prefWidth="52.0" styleClass="bg3" text="数量：" />
       <TextField />
       <Label prefHeight="30.0" prefWidth="59.0" />
       <Button mnemonicParsing="false" text="删除商品" />
@@ -55,7 +57,7 @@
    <Separator prefHeight="4.0" prefWidth="2000.0" AnchorPane.topAnchor="750" />
    <Label styleClass="bg3" text="会员卡号：" AnchorPane.leftAnchor="50" AnchorPane.topAnchor="780" />
    <TextField AnchorPane.leftAnchor="140" AnchorPane.topAnchor="775" />
-   <HBox  prefHeight="35.0" prefWidth="1200.0" spacing="50" AnchorPane.leftAnchor="400" AnchorPane.topAnchor="780">
+   <HBox prefHeight="35.0" prefWidth="1200.0" spacing="50" AnchorPane.leftAnchor="400" AnchorPane.topAnchor="780">
        <Label styleClass="bg3" text="姓名：" />
       <Label prefHeight="22.0" prefWidth="131.0" />
        <Label styleClass="bg3" text="积分：" />
@@ -67,35 +69,47 @@
    <Separator layoutX="-8.0" layoutY="851.0" prefWidth="2000.0" />
     <Label styleClass="bg3" text="共计：" AnchorPane.leftAnchor="50" AnchorPane.topAnchor="880" />
     <Label layoutX="88.0" layoutY="873.0" prefHeight="35" prefWidth="138.0" />
-    <Label styleClass="bg3" layoutX="226.0" layoutY="881.0" text="元" AnchorPane.leftAnchor="226.0" AnchorPane.topAnchor="881.0" />
+    <Label layoutX="226.0" layoutY="881.0" styleClass="bg3" text="元" AnchorPane.leftAnchor="226.0" AnchorPane.topAnchor="881.0" />
     <Label styleClass="bg3" text="实收:" AnchorPane.leftAnchor="700" AnchorPane.topAnchor="880" />
    <Label layoutX="757.0" layoutY="881.0" prefHeight="31.0" prefWidth="108.0" />
     <Label styleClass="bg3" text="共有：" AnchorPane.leftAnchor="50" AnchorPane.topAnchor="950" />
     <Label layoutX="88.0" layoutY="943.0" prefHeight="35" prefWidth="138" AnchorPane.topAnchor="943.0" />
-    <Label  styleClass="bg3" layoutX="234.0" layoutY="950.0" text="种商品" AnchorPane.topAnchor="950.0" />
+    <Label layoutX="234.0" layoutY="950.0" styleClass="bg3" text="种商品" AnchorPane.topAnchor="950.0" />
     <Label styleClass="bg3" text="找零：" AnchorPane.leftAnchor="700" AnchorPane.topAnchor="950" />
     <Label layoutX="745.0" layoutY="945.0" prefHeight="31" prefWidth="108" />
-   <Button styleClass="bg5" layoutX="1137.0" layoutY="874.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="221.0" text="现金结账" />
+   <Button layoutX="1137.0" layoutY="874.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="221.0" styleClass="bg5" text="现金结账" />
    <HBox layoutX="1.0" layoutY="1035.0" prefHeight="35.0" prefWidth="2041.0" spacing="100">
-       <Label  styleClass="bg3" text="欢迎使用超市收银系统" />
+       <Label styleClass="bg3" text="欢迎使用超市收银系统" />
        <Label styleClass="bg3" text="登录时间：" />
-       <Label  styleClass="bg3" text="当前时间：" />
-       <Label  styleClass="bg3" text="用户登陆显示" />
+       <Label styleClass="bg3" text="当前时间：" />
+       <Label styleClass="bg3" text="用户登陆显示" />
    </HBox>
    <HBox fx:id="bg" layoutX="1.0" prefHeight="104.0" prefWidth="2041.0">
          <ImageView fitHeight="102.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
              <Image url="/img/star.png" />
          </ImageView>
-         <Label prefHeight="109.0" styleClass="bg3" prefWidth="1036.0" text="                                       星辰超市收银系统">
+         <Label prefHeight="109.0" prefWidth="1036.0" styleClass="bg3" text="                                       星辰超市收银系统">
             <font>
                <Font name="STXingkai" size="46.0" />
             </font>
          </Label>
-         <Label prefHeight="128.0" styleClass="bg3" prefWidth="531.0" text="                                                             version：1.0">
+         <Label prefHeight="128.0" prefWidth="531.0" styleClass="bg3" text="                                                             version：1.0">
             <font>
                <Font name="STXingkai" size="22.0" />
             </font>
          </Label>
+       <VBox>
+           
+       </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox prefHeight="32.0" prefWidth="100.0" />
+            <HBox prefHeight="41.0" prefWidth="100.0">
+                <Button fx:id="closeButton"  onAction="#closeButtonAction" text="退出系统" />
+            </HBox>
+         </children>
+      </VBox>
    </HBox>
+
 
 </AnchorPane>

@@ -20,7 +20,7 @@ public class DefaultController implements Initializable {
             public void run() {
                 while (true){
                     for (int i =0;i<imgPath.length;i++){
-                        Image image = new Image("/img/ + imgPath[i]");
+                        Image image = new Image("/img/"+ imgPath[i]);
                         Platform.runLater(new Runnable() {
                             @Override
                             public void run() {
@@ -28,7 +28,7 @@ public class DefaultController implements Initializable {
                             }
                         });
                         try {
-                            Thread.sleep(200);
+                            Thread.sleep(2000);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }

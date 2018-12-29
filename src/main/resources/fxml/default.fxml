@@ -11,7 +11,7 @@
             fx:controller="com.soft1841.sm.controller.DefaultController" >
     <HBox AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0"
           AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
-        <ImageView fx:id="bookImg" fitWidth="900" fitHeight="500">
+        <ImageView fx:id="bookImg" fitWidth="650" fitHeight="350">
         </ImageView>
     </HBox>
 </AnchorPane>

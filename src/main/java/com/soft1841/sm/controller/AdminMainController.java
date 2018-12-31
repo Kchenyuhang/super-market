@@ -133,7 +133,6 @@ public class AdminMainController implements Initializable {
         switchView("goods.fxml");
 
     }
-
     public void listCashier() throws Exception {
         switchView("shouyin.fxml");
     }
@@ -154,11 +153,15 @@ public class AdminMainController implements Initializable {
 
 
     private void switchView(String fileName) throws Exception {
+
         //清空原有内容
-        ObservableList<Node> list = mainContainer.getChildren();
-        mainContainer.getChildren().removeAll(list);
+
+        mainContainer.getChildren().clear();
+
         AnchorPane anchorPane = new FXMLLoader(getClass().getResource("/fxml/" + fileName)).load();
+
         mainContainer.getChildren().add(anchorPane);
+
     }
 
     public void listtype_Analysis() throws Exception {

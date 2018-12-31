@@ -84,4 +84,15 @@ public class GoodsServiceImpl implements GoodsService{
     public int countByType(long typeId) {
         return 0;
     }
+
+    @Override
+    public List<Goods> getAllgoods() {
+        List<Goods> goodsList = new ArrayList<> ();
+        try {
+            goodsList = goodsDAO.selectAllGoods();
+        } catch (SQLException e) {
+            System.err.println("查询所有商品信息出现异常");
+        }
+        return goodsList;
+    }
 }

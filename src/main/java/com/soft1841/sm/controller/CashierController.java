@@ -29,7 +29,7 @@ import java.util.*;
  * @author 陈宇航
  * 2018.12.27
  */
-public class CashierController implements Initializable {
+public class  CashierController implements Initializable {
     @FXML
     private FlowPane cashierPane;
     private CashierService cashierService = ServiceFactory.getCashierServiceInstance();

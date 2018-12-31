@@ -21,20 +21,28 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 import java.net.URL;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
 public class GoodsController  implements Initializable{
     @FXML
-    private TableView<Goods> goodsTable;
+    private FlowPane goodsPane;
     //布局文件中的下拉框组件对象，用来显示数据库中读取的所有商品种类
     @FXML
     private ComboBox<Type> typeComboBox;
@@ -53,126 +61,13 @@ public class GoodsController  implements Initializable{
     private List<Goods> goodsList = null;
     //类别集合，存放数据库类别表查询结果
     private List<Type> typeList = null;
-    //表格中的编辑列
-    private TableColumn<Goods,Goods> editCol = new TableColumn<>("操作");
-    //表格中的删除列
-    private TableColumn<Goods,Goods> delCol = new TableColumn<>("操作");
+
     //初始化方法，通过调用对商品表格和列表下拉框的两个封装方法，实现数据初始化
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        initTable();
-        initComBox();
-    }
-    //表格初始化方法
-    private void initTable() {
-        //水平方向不显示滚动条，表格的列宽会均匀分布
-        goodsTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-        //1.调用查询所有商品的方法，
         goodsList = goodsService.getAllGoods();
-        //将实体集合作为参数，调用显示数据的方法，可以在界面的表格中显示商品模型集合的值
-        showGoodsData(goodsList);
-        //2.编辑列的相关设置
-        editCol.setCellValueFactory(param -> new ReadOnlyObjectWrapper<> (param.getValue()));
-        editCol.setCellFactory(param -> new TableCell<Goods,Goods> () {
-            //通过ComponentUtil工具类的静态方法，传入按钮文字和样式，获得一个按钮对象
-            private final Button editButton = ComPonentutil.getButton("点我，点我", "black-theme");
-            @Override
-            protected void updateItem(Goods goods, boolean empty) {
-                super.updateItem(goods, empty);
-                if (goods == null) {
-                    setGraphic(null);
-                    return;
-                }
-                setGraphic(editButton);
-                //点击编辑按钮，弹出窗口，输入需要修改的商品价格
-                editButton.setOnAction(event -> {
-                    TextInputDialog dialog = new TextInputDialog("我的价值：");
-                    dialog.setTitle("你居然要改我！！");
-                    dialog.setHeaderText("说出你的名字：" + goods.getName());
-                    dialog.setContentText("慎重考虑本宝宝的价值:");
-                    Optional<String> result = dialog.showAndWait();
-                    //确认输入了内容，避免NPE
-                    if (result.isPresent()) {
-                        //获取输入的新价格并转化成Double数据
-                        String priceString = result.get();
-                        goods.setPrice(Double.parseDouble(priceString));
-                        //更新商品信息
-                        goodsService.updateGoods(goods);
-                    }
-                });
-            }
-        });
-        //将编辑列加入商品表格
-        goodsTable.getColumns().add(editCol);
-        //3.删除列的相关设置
-        delCol.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
-        delCol.setCellFactory(param -> new TableCell<Goods,Goods>() {
-            private final Button deleteButton = ComponentUtil.getButton("删除", "warning-theme");
-            @Override
-            protected void updateItem(Goods goods, boolean empty) {
-                super.updateItem(goods, empty);
-                if (goods == null) {
-                    setGraphic(null);
-                    return;
-                }
-                setGraphic(deleteButton);
-                //点击删除按钮，需要将这一行从表格移除，同时从底层数据库真正删除
-                deleteButton.setOnAction(event -> {
-                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setTitle("你是要删我嘛");
-                    alert.setHeaderText("老衲名叫 ：" + goods.getName());
-                    alert.setContentText("你个小没良心的");
-                    Optional<ButtonType> result = alert.showAndWait();
-                    //点击了确认按钮，执行删除操作，同时移除一行模型数据
-                    if (result.get() == ButtonType.OK) {
-                        goodsData.remove(goods);
-                        goodsService.deleteGoods(goods.getId());
-                    }
-                });
-            }
-        });
-        //将除列加入商品表格
-        goodsTable.getColumns().add(delCol);
-        //4.商品表格双击事件,双击弹出显示商品详情的界面
-        goodsTable.setRowFactory(tv ->
-        {
-            TableRow<Goods> row = new TableRow<>();
-            row.setOnMouseClicked(event -> {
-                //判断鼠标双击了一行
-                if (event.getClickCount() == 2 && (!row.isEmpty())) {
-                    //获得该行的商品ID属性
-                    long id = row.getItem().getId();
-                    //根据id查询到商品的完整信息
-                    Goods goods = goodsService.getGoods(id);
-                    //创建一个新的商品详情界面窗口
-                    Stage goodsInfoStage = new Stage();
-                    goodsInfoStage.setTitle("商品详情界面");
-                    //用VBox显示具体商品信息
-                    VBox vBox = new VBox();
-                    vBox.setSpacing(20);
-                    vBox.setAlignment( Pos.CENTER);
-                    vBox.setPrefSize(600, 400);
-                    vBox.setPadding(new Insets (0, 10, 0, 10));
-                    Label nameLabel = new Label("        商品名称：\n" + goods.getName());
-                    nameLabel.getStyleClass().add("font-title");
-                    Label priceLabel = new Label("价格:" + goods.getPrice());
-                    ImageView goodsImgView = new ImageView(new Image (goods.getPicture ()));
-                    goodsImgView.setFitHeight(150);
-                    goodsImgView.setFitWidth(200);
-                    Label descriptionLabel = new Label(goods.getDescription ());
-                    descriptionLabel.setPrefWidth(200);
-                    descriptionLabel.setWrapText(true);
-                    descriptionLabel.getStyleClass().add("box");
-                    vBox.getChildren().addAll(nameLabel,priceLabel, goodsImgView, descriptionLabel);
-                    Scene scene = new Scene(vBox, 640, 480);
-                    //因为是一个新的窗口，需要重新读入一下样式表，这个界面就可以使用style.css样式表中的样式了
-                    scene.getStylesheets().add( "/css/manage.css" );
-                    goodsInfoStage.setScene(scene);
-                    goodsInfoStage.show();
-                }
-            });
-            return row;
-        });
+        showGoods (goodsList);
+        initComBox();
     }
     //下拉框初始化方法
     private void initComBox() {
@@ -186,18 +81,109 @@ public class GoodsController  implements Initializable{
         typeComboBox.getSelectionModel().selectedItemProperty().addListener((options, oldValue, newValue) -> {
                     // System.out.println(newValue.getId() + "," + newValue.getTypeName());
                     //移除掉之前的数据
-                    goodsTable.getItems().removeAll(goodsData);
+                    goodsPane.getChildren().removeAll(goodsData);
                     //根据选中的类别查询该类别所有商品
-                   goodsList = goodsService.getGoodsByTypeId(newValue.getId());
+                    goodsList = goodsService.getGoodsByTypeId(newValue.getId());
                     //重新显示数据
-                    showGoodsData(goodsList);
+                    showGoods (goodsList);
                 }
         );
     }
-    //显示商品表格数据的方法
+    private void showGoods(List<Goods> goodsList) {
+        ObservableList<Node> observableList = goodsPane.getChildren();
+        goodsPane.getChildren().removeAll(Collections.singleton(observableList));
+        goodsPane.getChildren().clear();
+        //通过循环遍历readerList集合，创建HBox来显示每个商品信息
+        for (Goods goods : goodsList) {
+            VBox vBox = new VBox();
+
+            vBox.setPrefSize(320, 300);
+
+            vBox.setSpacing(10);
+
+            vBox.setPadding(new Insets(10, 10, 10, 10));
+
+            vBox.getStyleClass().add("box");
+            //创建左侧垂直布局
+            VBox topBox = new VBox();
+            topBox.setStyle("-fx-pref-width: 320;-fx-pref-height: 230");
+            topBox.setSpacing(10);
+            topBox.setAlignment(Pos.TOP_CENTER);
+            //创建右侧垂直布局
+            HBox bottomBox = new HBox();
+
+            bottomBox.setStyle("-fx-pref-width: 320;-fx-pref-height: 30");
+
+            bottomBox.setSpacing(10);
+
+            bottomBox.setAlignment(Pos.BOTTOM_LEFT);
+            //商品名
+            TextField nameLabel = new TextField(goods.getName());
+            nameLabel.getStyleClass().add("font-title");
+            nameLabel.setEditable(false);
+            //价格
+            TextField priceLabel = new TextField("价格：" + goods.getPrice());
+            priceLabel.getStyleClass().add("role-name");
+            priceLabel.setEditable(false);
+            //描述
+            TextField descriptionLabel = new TextField("描述："+goods.getDescription());
+            descriptionLabel.setEditable(false);
+            //删除按钮
+            Button delBtn = new Button("删除");
+            delBtn.setOnAction(event -> {
+                //弹出一个确认对话框
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("确认对话框");
+                alert.setContentText("确定要删除此纪录吗？");
+                //确认
+                Optional<ButtonType> result = alert.showAndWait();
+                if (result.get() == ButtonType.OK) {
+                    //得到id
+                    long id = goods.getId();
+                    goodsService.deleteGoods(id);
+                    //从流式面板删除
+                    goodsPane.getChildren().remove(vBox);
+                }
+            });
+            //编辑按钮
+            Button alterBtn = new Button("编辑");
+            alterBtn.setOnAction(event -> {
+                priceLabel.setEditable(true);
+                priceLabel.getStyleClass().add("blue-theme");
+                nameLabel.getStyleClass().add("blue-theme");
+                nameLabel.setEditable(true);
+            });
+            //确认按钮
+            Button yesBtn = new Button("确认");
+            alterBtn.setOnAction(event -> {
+            });
+            //加入
+            bottomBox.getChildren().addAll(alterBtn,delBtn,yesBtn);
+            topBox.getChildren().addAll(nameLabel, descriptionLabel, priceLabel);
+            //加入卡片
+            vBox.getChildren().addAll(topBox, bottomBox);
+            goodsPane.getChildren().add(vBox);
+            vBox.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 2) {
+                    vBox.getChildren().clear();
+                    ImageView avatarImg = new ImageView(new Image(goods.getPicture ()));
+                    avatarImg.setFitWidth(150);
+                    avatarImg.setFitHeight(150);
+                    vBox.getChildren().addAll(avatarImg);
+                    //再次双击返回
+                    vBox.setOnMouseClicked(event1 -> {
+                        if (event1.getClickCount() == 2) {
+                            vBox.getChildren().clear();
+                            vBox.getChildren().addAll(topBox,bottomBox);
+                        }
+                    });
+                }
+            });
+        }
+    }
     private void showGoodsData(List<Goods> goodsList) {
         goodsData.addAll(goodsList);
-        goodsTable.setItems(goodsData);
+        goodsPane.getChildren().add((Node) goodsData);
     }
     //弹出新增商品界面方法
     public void newGoodsStage() throws Exception {
@@ -205,7 +191,6 @@ public class GoodsController  implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/add_goods.fxml"));
         AnchorPane root = fxmlLoader.load();
         Scene scene = new Scene(root);
-        scene.getStylesheets().add( "/css/style.css" );
         AddGoodsController addGoodsController = fxmlLoader.getController();
         addGoodsController.setGoodsData(goodsData);
         addGoodsStage.setTitle("新增商品界面");
@@ -214,9 +199,14 @@ public class GoodsController  implements Initializable{
         addGoodsStage.setScene(scene);
         addGoodsStage.show();
     }
+    public void enter() {
+
+        keywordsField.setText("");
+
+    }
     //根据关键词搜索方法
-    public void search() {
-        goodsTable.getItems().removeAll(goodsData);
+    public void keywordsField() {
+        goodsPane.getChildren().removeAll(goodsData);
         //获得输入的查询关键字
         String keywords = keywordsField.getText().trim();
         goodsList =goodsService.getGoodsLike(keywords);
@@ -231,3 +221,4 @@ public class GoodsController  implements Initializable{
         alert.showAndWait();
     }
 }
+

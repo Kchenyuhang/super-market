@@ -70,4 +70,12 @@ public interface GoodsDAO {
      * @throws SQLException
      */
     int countByType(long typeId) throws SQLException;
+    List<Goods> getGoodsByTypeId(long typeId) throws SQLException;
+    List<Goods> selectBooksLike(String keywords) throws SQLException;
+    Goods getGoodsByBarCode(String barCode) throws SQLException;
+    int countGoods() throws SQLException;
+
+
+
+
 }

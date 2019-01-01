@@ -63,6 +63,8 @@ public class AdminMainController implements Initializable {
     @FXML
     private Button i;
     @FXML
+    private Button j;
+    @FXML
     private Label timeLabel;
 
     @Override
@@ -95,6 +97,9 @@ public class AdminMainController implements Initializable {
         Image btnImg8 = new Image("/img/main.png");
         ImageView imageView8 = new ImageView(btnImg8); //给按钮设置图标
         i.setGraphic(imageView8);
+        Image btnImg9  = new Image("/img/tong_ji.png");
+        ImageView imageView9 = new ImageView(btnImg9); //给按钮设置图标
+        j.setGraphic(imageView9);
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -133,7 +138,6 @@ public class AdminMainController implements Initializable {
         switchView("goods.fxml");
 
     }
-
     public void listCashier() throws Exception {
         switchView("shouyin.fxml");
     }
@@ -154,11 +158,15 @@ public class AdminMainController implements Initializable {
 
 
     private void switchView(String fileName) throws Exception {
+
         //清空原有内容
-        ObservableList<Node> list = mainContainer.getChildren();
-        mainContainer.getChildren().removeAll(list);
+
+        mainContainer.getChildren().clear();
+
         AnchorPane anchorPane = new FXMLLoader(getClass().getResource("/fxml/" + fileName)).load();
+
         mainContainer.getChildren().add(anchorPane);
+
     }
 
     public void listtype_Analysis() throws Exception {

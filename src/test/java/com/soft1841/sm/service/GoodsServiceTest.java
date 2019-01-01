@@ -66,4 +66,10 @@ public class GoodsServiceTest{
 
         System.out.println(n);
     }
+
+    @Test
+    public void GetAllgoods() {
+        List<Goods> goodsList = goodsService.getAllGoods();
+        goodsList.forEach(goods -> System.out.println(goods.getName()));
+    }
 }

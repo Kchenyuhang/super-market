@@ -17,7 +17,7 @@
 
     <Button onAction="#newGoodsStage" styleClass="green-theme" text="新增商品" AnchorPane.leftAnchor="50" AnchorPane.topAnchor="5" />
 
-    <ComboBox fx:id="typeComboBox" promptText="选择商品类别" AnchorPane.leftAnchor="50" AnchorPane.topAnchor="60" />
+    <ComboBox fx:id="typeComboBox" promptText="选择商品类别" AnchorPane.leftAnchor="50" AnchorPane.topAnchor="60" styleClass="dark-gray-theme"/>
 
 
 

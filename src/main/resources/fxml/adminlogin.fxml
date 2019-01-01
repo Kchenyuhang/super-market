@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="675.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.AdminLoginController" >
+<AnchorPane prefHeight="675.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.AdminLoginController">
    <children>
       <ImageView fitHeight="675.0" fitWidth="956.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -18,18 +21,18 @@
              <Image url="/img/star.png" />
          </image>
       </ImageView>
-      <Label  layoutX="190.0" layoutY="15.0" prefHeight="400" prefWidth="30" text="星辰超市商品管理系统" styleClass="white-theme " >
+      <Label layoutX="190.0" layoutY="15.0" prefHeight="400" prefWidth="30" styleClass="white-theme " text="星辰超市商品管理系统">
          <font>
             <Font name="YouYuan" size="39.0" />
          </font>
       </Label>
-      <Label layoutX="270.0" layoutY="75.0" prefHeight="38.0" prefWidth="202.0" text="智 能 收 银 系 统" styleClass="white-theme ">
+      <Label layoutX="270.0" layoutY="75.0" prefHeight="38.0" prefWidth="202.0" styleClass="white-theme " text="智 能 收 银 系 统">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <TextField layoutX="240.0" layoutY="195.0" fx:id="accountField" />
-      <PasswordField layoutX="240.0" layoutY="275.0" fx:id="passwordField"/>
+      <TextField fx:id="accountField" layoutX="240.0" layoutY="195.0" />
+      <PasswordField fx:id="passwordField" layoutX="240.0" layoutY="275.0" />
       <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="190.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
          <image>
              <Image url="/img/account.png" />
@@ -40,7 +43,7 @@
              <Image url="/img/mima.png" />
          </image>
       </ImageView>
-      <Button layoutX="220.0" layoutY="400.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="78.0" text="登陆" fx:id="loginButton" defaultButton="true" onAction="#login"/>
-      <Button fx:id="closeButton" onAction="#closeButtonAction" text="取消" AnchorPane.topAnchor="400" AnchorPane.leftAnchor="360" prefHeight="38.0" prefWidth="78.0" />
+      <Button fx:id="loginButton" defaultButton="true" layoutX="293.0" layoutY="396.0" mnemonicParsing="false" onAction="#login" prefHeight="38.0" prefWidth="78.0" text="登陆" />
+      <!--<Button fx:id="closeButton" onAction="#closeButtonAction" text="取消" AnchorPane.topAnchor="400" AnchorPane.leftAnchor="360" prefHeight="38.0" prefWidth="78.0" />-->
    </children>
 </AnchorPane>

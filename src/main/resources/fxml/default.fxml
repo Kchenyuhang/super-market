@@ -27,36 +27,40 @@
         <!--</GridPane>-->
     <!--</HBox>-->
 <!--</AnchorPane>-->
-    <HBox layoutX="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
-        <ImageView fx:id="bookImg" fitHeight="315.0" fitWidth="855.0" />
-      <HBox prefHeight="1114.0" prefWidth="259.0" />
-        <AnchorPane prefHeight="1119.0" prefWidth="482.0">
+    <HBox layoutX="7.0" layoutY="-1.0" prefHeight="1112.0" prefWidth="1370.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-1.0">
+        <ImageView fx:id="bookImg" fitHeight="268.0" fitWidth="578.0" />
+      <VBox prefHeight="1112.0" prefWidth="446.0">
+         <children>
+             <fx:include source="shouyin_analysis.fxml" />
+         </children>
+      </VBox>
+        <AnchorPane prefHeight="1112.0" prefWidth="486.0">
             <HBox>
                 <HBox prefHeight="314.0" prefWidth="0.0">
                 </HBox>
-             <VBox layoutX="-2.0" prefHeight="315.0" prefWidth="499.0" spacing="10.0" styleClass="box,default-theme">
+             <VBox layoutX="-2.0" prefHeight="311.0" prefWidth="506.0" spacing="10.0" styleClass="box,default-theme">
                   <HBox prefHeight="99.0" prefWidth="468.0" spacing="10.0">
-                        <ImageView fx:id="smImg" fitHeight="128.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="smImg" fitHeight="128.0" fitWidth="253.0" pickOnBounds="true" preserveRatio="true" />
                             <!--<Image url="/img/sample.png" />-->
                         <!--</ImageView>-->
-                        <VBox prefHeight="159.0" prefWidth="248.0">
+                        <VBox prefHeight="128.0" prefWidth="209.0">
                               <HBox prefHeight="41.0" prefWidth="250.0" />
                               <Label prefHeight="20.0" prefWidth="243.0" text="超值专区：每天十点更新" textFill="#0000007c" />
                         </VBox>
                   </HBox>
-                  <HBox prefHeight="37.0" prefWidth="426.0">
+                  <HBox prefHeight="32.0" prefWidth="468.0">
                         <Label prefHeight="27.0" prefWidth="72.0" text="特卖：" />
-                        <Label prefHeight="25.0" prefWidth="188.0" text="茵曼 文艺女装最高返12%" />
+                        <Label prefHeight="25.0" prefWidth="304.0" text="茵曼 文艺女装最高返12%" />
                   </HBox>
                   <HBox prefHeight="40.0" prefWidth="426.0">
                         <Label prefHeight="20.0" prefWidth="74.0" text="热卖：" />
-                        <Label text="法国牛肉首发 八折尝鲜" />
+                        <Label prefHeight="20.0" prefWidth="263.0" text="法国牛肉首发 八折尝鲜" />
                   </HBox>
                   <HBox prefHeight="37.0" prefWidth="426.0">
                         <Label prefHeight="20.0" prefWidth="76.0" text="活动：" />
                         <Label text="neiwai内衣旗舰店 年终狂欢 全场六折起" />
                   </HBox>
-                  <HBox prefHeight="56.0" prefWidth="434.0">
+                  <HBox prefHeight="51.0" prefWidth="444.0">
                         <Label prefHeight="20.0" prefWidth="75.0" text="活动：" />
                         <Label text="您有一个370元大礼包 代收取&gt;" />
                   </HBox>
@@ -100,7 +104,7 @@
                   <RowConstraints />
                </rowConstraints>
              </GridPane>
-         <Label layoutX="99.0" layoutY="323.0" prefHeight="37.0" prefWidth="121.0" text="优秀员工：">
+         <Label layoutY="324.0" prefHeight="37.0" prefWidth="121.0" text="优秀员工：">
             <font>
                <Font size="22.0" />
             </font>

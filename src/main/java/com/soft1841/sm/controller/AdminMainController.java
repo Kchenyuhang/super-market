@@ -164,7 +164,7 @@ public class AdminMainController implements Initializable {
 
     }
 
-    public void listtype_Analysis() throws Exception {
+    public void listype_Analysis() throws Exception {
         switchView("type_analysis.fxml");
     }
 
@@ -174,7 +174,7 @@ public class AdminMainController implements Initializable {
         AudioPlayer.player.start(as);
     }
     //退出系统
-    public void logout() throws Exception {
+    public void closeButtonAction() throws Exception {
         //关闭主界面
         Stage mainStage = (Stage) mainContainer.getScene().getWindow();
         mainStage.close();

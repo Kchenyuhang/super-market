@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane prefHeight="675.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.AdminLoginController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.AdminLoginController" onKeyPressed="#login_Enter">
    <children>
       <ImageView fitHeight="675.0" fitWidth="956.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -40,6 +40,6 @@
              <Image url="/img/mima.png" />
          </image>
       </ImageView>
-      <Button layoutX="295.0" layoutY="400.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="78.0" text="登陆" onAction="#login"/>
+      <Button layoutX="295.0" layoutY="400.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="78.0" text="登陆" fx:id="loginButton" defaultButton="true" onAction="#login"/>
    </children>
 </AnchorPane>

@@ -64,10 +64,6 @@ public class AdminLoginController {
             alert.showAndWait();
         }
     }
-
-    public void listType(ActionEvent actionEvent) {
-    }
-
     public void login_Enter(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
             try {

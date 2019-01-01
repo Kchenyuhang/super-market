@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -35,14 +37,7 @@ import java.util.ResourceBundle;
 public class AdminMainController implements Initializable {
     @FXML
     private StackPane mainContainer;
-    @FXML
-    private javafx.scene.control.Button closeButton;
 
-    @FXML
-    private void closeButtonAction() {
-        Stage stage = (Stage) closeButton.getScene().getWindow();
-        stage.close();
-    }
 
     @FXML
     private Button a;
@@ -177,5 +172,22 @@ public class AdminMainController implements Initializable {
         InputStream in = new FileInputStream("E:\\shixun\\super-market\\src\\main\\resources\\img\\GEM.wav");
         AudioStream as = new AudioStream(in);
         AudioPlayer.player.start(as);
+    }
+    //退出系统
+    public void logout() throws Exception {
+        //关闭主界面
+        Stage mainStage = (Stage) mainContainer.getScene().getWindow();
+        mainStage.close();
+        //弹出登录界面
+        Stage loginStage = new Stage();
+        loginStage.setTitle("Admin Login");
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/adminlogin.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/css/style.css");
+        loginStage.setMaximized(true);
+        loginStage.getIcons().add(new Image("/img/login.jpg"));
+        loginStage.setScene(scene);
+        loginStage.show();
     }
 }

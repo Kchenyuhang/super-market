@@ -5,8 +5,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="675.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.AdminLoginController" onKeyPressed="#login_Enter">
+<AnchorPane prefHeight="675.0" prefWidth="956.0"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.soft1841.sm.controller.AdminLoginController">
    <children>
       <ImageView fitHeight="675.0" fitWidth="956.0" pickOnBounds="true" preserveRatio="true">
          <image>

@@ -64,15 +64,6 @@ public class AdminLoginController {
             alert.showAndWait();
         }
     }
-    public void login_Enter(KeyEvent event) {
-        if (event.getCode() == KeyCode.ENTER) {
-            try {
-                login();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
     public void login(ActionEvent event){
         try {
             login();

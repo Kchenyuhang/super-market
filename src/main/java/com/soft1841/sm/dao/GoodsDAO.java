@@ -55,6 +55,8 @@ public interface GoodsDAO {
      */
     List<Goods> selectGoodsByTypeId(long typeId) throws SQLException;
 
+    List<Goods> selectGoodsByBarcode(Long barcode) throws SQLException;
+
     /**
      * 根据关键词查商品
      * @param keywords

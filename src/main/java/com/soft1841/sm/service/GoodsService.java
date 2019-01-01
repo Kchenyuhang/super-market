@@ -47,12 +47,19 @@ public interface GoodsService{
      */
     List<Goods> getGoodsLike(String keywords);
     /**
-     * 根据商品类别查询图书
+     * 根据商品类别查询商品
      *
      * @param typeId
      * @return List<Goods>
      */
     List<Goods> getGoodsByTypeId(long typeId);
+
+    /**
+     * 根据商品条码查询商品
+     * @param barcode
+     * @return
+     */
+    List<Goods> getGoodsByBarcode(long barcode);
     /**
      * 根据商品类别统计商品数量
      *

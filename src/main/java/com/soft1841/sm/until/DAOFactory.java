@@ -1,8 +1,8 @@
 package com.soft1841.sm.until;
 
+import com.soft1841.sm.controller.GoodsDAOImpl;
 import com.soft1841.sm.dao.*;
 import com.soft1841.sm.dao.impl.*;
-import com.soft1841.sm.entity.VIP;
 
 /**
  * 工厂类，用静态方法来生成各个DAO实例

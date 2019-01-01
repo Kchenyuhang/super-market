@@ -1,4 +1,4 @@
-package com.soft1841.sm.dao.impl;
+package com.soft1841.sm.controller;
 /**
  * @ author 汤萌慧
  * 2018.12.26
@@ -92,6 +92,16 @@ public class GoodsDAOImpl implements GoodsDAO {
 
         }
 
+        return goodsList;
+    }
+
+    @Override
+    public List<Goods> selectGoodsByBarcode(Long barcode) throws SQLException {
+        List<Entity> entityList = Db.use().query("SELECT * FROM t_goods WHERE barcode = ?",barcode);
+        List<Goods> goodsList = new ArrayList<>();
+        for (Entity entity : entityList) {
+            goodsList.add(convertGoods(entity));
+        }
         return goodsList;
     }
 

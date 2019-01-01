@@ -71,6 +71,12 @@ public class GoodsDAOTest{
     }
 
     @Test
+    public void selectGoodsByBarcode() throws SQLException {
+        List<Goods> goodsList = goodsDAO.selectGoodsByBarcode((long) 1001);
+        goodsList.forEach(goods -> System.out.println(goods.getName()));
+    }
+
+    @Test
     public void selectGoodsLike() throws SQLException {
         List<Goods> goodsList = goodsDAO.selectGoodsLike ( "少" );
 

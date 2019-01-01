@@ -10,6 +10,7 @@ import com.soft1841.sm.entity.Type;
 import com.soft1841.sm.until.ServiceFactory;
 import org.junit.Test;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -46,6 +47,11 @@ public class GoodsServiceTest{
     @Test
     public void getGoods() {
         System.out.println(goodsService.getGoods(1));
+    }
+
+    @Test
+    public void selectGoodsByBarcode() {
+        System.out.println(goodsService.getGoodsByBarcode(1001));
     }
 
     @Test

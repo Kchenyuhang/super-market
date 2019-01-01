@@ -32,15 +32,15 @@
       <HBox prefHeight="1114.0" prefWidth="259.0" />
         <AnchorPane prefHeight="1119.0" prefWidth="482.0">
             <HBox>
-                <HBox prefHeight="419.0" prefWidth="60.0">
+                <HBox prefHeight="314.0" prefWidth="0.0">
                 </HBox>
-             <VBox layoutX="-2.0" prefHeight="419.0" prefWidth="482.0" spacing="10.0" styleClass="box,default-theme">
-                  <HBox prefHeight="199.0" prefWidth="413.0" spacing="10.0">
-                        <ImageView fx:id="smImg" fitHeight="206.0" fitWidth="207.0" pickOnBounds="true" preserveRatio="true" />
+             <VBox layoutX="-2.0" prefHeight="315.0" prefWidth="499.0" spacing="10.0" styleClass="box,default-theme">
+                  <HBox prefHeight="99.0" prefWidth="468.0" spacing="10.0">
+                        <ImageView fx:id="smImg" fitHeight="128.0" fitWidth="188.0" pickOnBounds="true" preserveRatio="true" />
                             <!--<Image url="/img/sample.png" />-->
                         <!--</ImageView>-->
-                        <VBox prefHeight="211.0" prefWidth="268.0">
-                              <HBox prefHeight="79.0" prefWidth="222.0" />
+                        <VBox prefHeight="159.0" prefWidth="248.0">
+                              <HBox prefHeight="41.0" prefWidth="250.0" />
                               <Label prefHeight="20.0" prefWidth="243.0" text="超值专区：每天十点更新" textFill="#0000007c" />
                         </VBox>
                   </HBox>
@@ -62,26 +62,34 @@
                   </HBox>
              </VBox>
             </HBox>
-             <GridPane hgap="10" layoutX="125.0" layoutY="486.0" prefHeight="370.0" prefWidth="416.0" vgap="10" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="486.0">
+             <GridPane hgap="10" layoutX="99.0" layoutY="374.0" prefHeight="370.0" prefWidth="416.0" vgap="10" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="374.0">
                  <StackPane prefHeight="195" prefWidth="180" styleClass="box" GridPane.columnIndex="0" GridPane.rowIndex="0">
-                     <ImageView fitHeight="193" fitWidth="178">
-                         <Image url="/img/toux2.jpeg" />
-                     </ImageView>
+               <children>
+                        <ImageView fitHeight="193" fitWidth="178">
+                            <Image url="/img/toux2.jpeg" />
+                        </ImageView>
+               </children>
                  </StackPane>
                  <StackPane prefHeight="195" prefWidth="180" styleClass="box" GridPane.columnIndex="0" GridPane.rowIndex="1">
-                     <ImageView fitHeight="193" fitWidth="178">
-                         <Image url="/img/toux3.jpg" />
-                     </ImageView>
+               <children>
+                        <ImageView fitHeight="193" fitWidth="178">
+                            <Image url="/img/toux3.jpg" />
+                        </ImageView>
+               </children>
                  </StackPane>
                  <StackPane prefHeight="195" prefWidth="180" styleClass="box" GridPane.columnIndex="1" GridPane.rowIndex="0">
-                     <ImageView fitHeight="193" fitWidth="178">
-                         <Image url="/img/toux4.jpeg" />
-                     </ImageView>
+               <children>
+                        <ImageView fitHeight="193" fitWidth="178">
+                            <Image url="/img/toux4.jpeg" />
+                        </ImageView>
+               </children>
                  </StackPane>
                  <StackPane prefHeight="195" prefWidth="180" styleClass="box" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <ImageView fitHeight="193" fitWidth="178">
-                         <Image url="/img/toux1.jpeg" />
-                     </ImageView>
+               <children>
+                        <ImageView fitHeight="193" fitWidth="178">
+                            <Image url="/img/toux1.jpeg" />
+                        </ImageView>
+               </children>
                  </StackPane>
                <columnConstraints>
                   <ColumnConstraints />
@@ -92,7 +100,7 @@
                   <RowConstraints />
                </rowConstraints>
              </GridPane>
-         <Label layoutX="105.0" layoutY="426.0" prefHeight="37.0" prefWidth="121.0" text="优秀员工：">
+         <Label layoutX="99.0" layoutY="323.0" prefHeight="37.0" prefWidth="121.0" text="优秀员工：">
             <font>
                <Font size="22.0" />
             </font>
@@ -100,10 +108,10 @@
       </AnchorPane>
     </HBox>
     <GridPane prefHeight="170.0" prefWidth="243.0" styleClass="box" AnchorPane.leftAnchor="7" AnchorPane.rightAnchor="1158.0" AnchorPane.topAnchor="400">
-        <StackPane prefHeight="130" prefWidth="160" styleClass="box,green-theme,hover-change" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <StackPane prefHeight="130" prefWidth="160" styleClass="box,green-theme" GridPane.columnIndex="0" GridPane.rowIndex="0">
             <Label fx:id="typeCount" styleClass="font-title" text="类别" />
         </StackPane>
-        <StackPane prefHeight="130" prefWidth="160" styleClass="box,blue-theme,hover-change" GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <StackPane prefHeight="130" prefWidth="160" styleClass="box,blue-theme" GridPane.columnIndex="1" GridPane.rowIndex="0">
             <Label fx:id="goodsCount" styleClass="font-title" text="商品" />
         </StackPane>
       <columnConstraints>

@@ -180,12 +180,12 @@ public class AdminMainController implements Initializable {
         mainStage.close();
         //弹出登录界面
         Stage loginStage = new Stage();
-        loginStage.setTitle("Admin Login");
+        loginStage.setTitle("星辰超市商品管理登录界面");
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/adminlogin.fxml"));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/css/style.css");
-        loginStage.setMaximized(true);
+        Scene scene = new Scene(root,700,550);
+        scene.getStylesheets().add("/css/login.css");
+//        loginStage.setMaximized(true);
         loginStage.getIcons().add(new Image("/img/login.jpg"));
         loginStage.setScene(scene);
         loginStage.show();

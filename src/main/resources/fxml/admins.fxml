@@ -39,7 +39,7 @@
             <HBox prefHeight="38.0" prefWidth="100.0" />
             <HBox prefHeight="45.0" prefWidth="183.0">
                <children>
-            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="45.0" prefWidth="126.0" styleClass="green-theme " text="退出系统" />
+            <Button  prefHeight="45.0" prefWidth="126.0" styleClass="green-theme " text="退出系统" onAction="#logout"/>
                </children>
             </HBox>
          </children>

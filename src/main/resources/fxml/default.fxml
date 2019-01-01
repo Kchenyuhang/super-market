@@ -13,20 +13,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="1125.0" prefWidth="1367.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.DefaultController">
-    <!--<HBox AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0"-->
-          <!--AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">-->
-        <!--<StackPane styleClass="box">-->
-        <!--<ImageView fx:id="bookImg" fitWidth="650" fitHeight="350">-->
-        <!--</ImageView>-->
-        <!--</StackPane>-->
-        <!--<GridPane hgap="20" vgap="20" prefHeight="300" prefWidth="360" styleClass="box">-->
-            <!--<StackPane GridPane.columnIndex="0" GridPane.rowIndex="0"-->
-                       <!--styleClass="box,green-theme" prefWidth="150" prefHeight="130">-->
-            <!--</StackPane>-->
 
-        <!--</GridPane>-->
-    <!--</HBox>-->
-<!--</AnchorPane>-->
     <HBox layoutX="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
         <ImageView fx:id="bookImg" fitHeight="315.0" fitWidth="855.0" />
       <HBox prefHeight="1114.0" prefWidth="259.0" />
@@ -37,8 +24,7 @@
              <VBox layoutX="-2.0" prefHeight="419.0" prefWidth="482.0" spacing="10.0" styleClass="box,default-theme">
                   <HBox prefHeight="199.0" prefWidth="413.0" spacing="10.0">
                         <ImageView fx:id="smImg" fitHeight="206.0" fitWidth="207.0" pickOnBounds="true" preserveRatio="true"/>
-                            <!--<Image url="/img/sample.png" />-->
-                        <!--</ImageView>-->
+
                         <VBox prefHeight="211.0" prefWidth="268.0">
                               <HBox prefHeight="79.0" prefWidth="222.0" />
                               <Label prefHeight="20.0" prefWidth="243.0" text="超值专区：每天十点更新" textFill="#0000007c" />

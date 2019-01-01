@@ -1,5 +1,6 @@
 package com.soft1841.sm.controller;
 
+import com.soft1841.sm.entity.Admin;
 import com.soft1841.sm.service.AdminService;
 import com.soft1841.sm.until.ServiceFactory;
 import javafx.event.ActionEvent;
@@ -9,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -41,8 +43,8 @@ public class AdminLoginController {
                 //登陆成功后跳转到商品管理界面
                 Stage managerStage = new Stage();
                 //读入布局文件
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/admin.fxml"));
-                BorderPane root = fxmlLoader.load();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/admins.fxml"));
+               AnchorPane root = fxmlLoader.load();
                 Scene scene = new Scene(root);
                 //读入样式
                 scene.getStylesheets().add("/css/manage.css");
@@ -52,6 +54,7 @@ public class AdminLoginController {
                 managerStage.show();
                 Stage loginStage = (Stage) accountField.getScene().getWindow();
                 loginStage.close();
+
             } else {
                 alert.setContentText("账号或密码错误，登录失败！");
                 alert.showAndWait();

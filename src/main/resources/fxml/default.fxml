@@ -1,108 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1125.0" prefWidth="1367.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.DefaultController">
-
-    <HBox layoutX="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
-        <ImageView fx:id="bookImg" fitHeight="315.0" fitWidth="855.0" />
-      <HBox prefHeight="1114.0" prefWidth="259.0" />
-        <AnchorPane prefHeight="1119.0" prefWidth="482.0">
-            <HBox>
-                <HBox prefHeight="419.0" prefWidth="60.0">
-                </HBox>
-             <VBox layoutX="-2.0" prefHeight="419.0" prefWidth="482.0" spacing="10.0" styleClass="box,default-theme">
-                  <HBox prefHeight="199.0" prefWidth="413.0" spacing="10.0">
-                        <ImageView fx:id="smImg" fitHeight="206.0" fitWidth="207.0" pickOnBounds="true" preserveRatio="true"/>
-
-                        <VBox prefHeight="211.0" prefWidth="268.0">
-                              <HBox prefHeight="79.0" prefWidth="222.0" />
-                              <Label prefHeight="20.0" prefWidth="243.0" text="超值专区：每天十点更新" textFill="#0000007c" />
-                        </VBox>
-                  </HBox>
-                  <HBox prefHeight="37.0" prefWidth="426.0">
-                        <Label prefHeight="27.0" prefWidth="72.0" text="特卖：" />
-                        <Label prefHeight="25.0" prefWidth="188.0" text="茵曼 文艺女装最高返12%" />
-                  </HBox>
-                  <HBox prefHeight="40.0" prefWidth="426.0">
-                        <Label prefHeight="20.0" prefWidth="74.0" text="热卖：" />
-                        <Label text="法国牛肉首发 八折尝鲜" />
-                  </HBox>
-                  <HBox prefHeight="37.0" prefWidth="426.0">
-                        <Label prefHeight="20.0" prefWidth="76.0" text="活动：" />
-                        <Label text="neiwai内衣旗舰店 年终狂欢 全场六折起" />
-                  </HBox>
-                  <HBox prefHeight="56.0" prefWidth="434.0">
-                        <Label prefHeight="20.0" prefWidth="75.0" text="活动：" />
-                        <Label text="您有一个370元大礼包 代收取&gt;" />
-                  </HBox>
-             </VBox>
-            </HBox>
-             <GridPane hgap="10" layoutX="125.0" layoutY="486.0" prefHeight="402.0" prefWidth="428.0" vgap="10" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="486.0">
-                 <StackPane prefHeight="195" prefWidth="180" styleClass="box" GridPane.columnIndex="0" GridPane.rowIndex="0">
-                     <ImageView fitHeight="193" fitWidth="178">
-                         <Image url="/img/sample.png" />
-                     </ImageView>
-                 </StackPane>
-                 <StackPane prefHeight="195" prefWidth="180" styleClass="box" GridPane.columnIndex="0" GridPane.rowIndex="0">
-                     <ImageView fitHeight="194.0" fitWidth="177.0">
-                         <Image url="/img/toux2.jpeg" />
-                     </ImageView>
-                 </StackPane>
-                 <StackPane prefHeight="195" prefWidth="180" styleClass="box" GridPane.columnIndex="0" GridPane.rowIndex="1">
-                     <ImageView fitHeight="193" fitWidth="178">
-                         <Image url="/img/toux3.jpg" />
-                     </ImageView>
-                 </StackPane>
-                 <StackPane prefHeight="195" prefWidth="180" styleClass="box" GridPane.columnIndex="1" GridPane.rowIndex="0">
-                     <ImageView fitHeight="193" fitWidth="178">
-                         <Image url="/img/toux4.jpeg" />
-                     </ImageView>
-                 </StackPane>
-                 <StackPane prefHeight="195" prefWidth="180" styleClass="box" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <ImageView fitHeight="193" fitWidth="178">
-                         <Image url="/img/toux1.jpeg" />
-                     </ImageView>
-                 </StackPane>
-               <columnConstraints>
-                  <ColumnConstraints />
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-                  <RowConstraints />
-               </rowConstraints>
-             </GridPane>
-         <Label layoutX="105.0" layoutY="426.0" prefHeight="37.0" prefWidth="121.0" text="优秀员工：">
-            <font>
-               <Font size="22.0" />
-            </font>
-         </Label>
-      </AnchorPane>
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.DefaultController">
+    <HBox prefHeight="378.0" prefWidth="754.0" AnchorPane.bottomAnchor="491.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="455.0" AnchorPane.topAnchor="0.0">
+        <ImageView fx:id="bookImg" fitHeight="277.0" fitWidth="449.0">
+        </ImageView>
+        <fx:include source="shouyin_analysis.fxml" />
     </HBox>
-    <GridPane prefHeight="170.0" prefWidth="243.0" styleClass="box" AnchorPane.leftAnchor="7" AnchorPane.rightAnchor="1158.0" AnchorPane.topAnchor="400">
-        <StackPane prefHeight="130" prefWidth="160" styleClass="box,green-theme,hover-change" GridPane.columnIndex="0" GridPane.rowIndex="0">
-            <Label fx:id="typeCount" styleClass="font-title" text="类别" />
-        </StackPane>
-        <StackPane prefHeight="130" prefWidth="160" styleClass="box,blue-theme,hover-change" GridPane.columnIndex="1" GridPane.rowIndex="0">
-            <Label fx:id="goodsCount" styleClass="font-title" text="商品" />
-        </StackPane>
-      <columnConstraints>
-         <ColumnConstraints />
-         <ColumnConstraints />
-      </columnConstraints>
-      <rowConstraints>
-         <RowConstraints />
-      </rowConstraints>
-    </GridPane>
 </AnchorPane>

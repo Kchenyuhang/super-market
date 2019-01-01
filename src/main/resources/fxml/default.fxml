@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.TilePane?>
-
-
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.GridPane?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.soft1841.sm.controller.DefaultController" >
-    <HBox AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0"
-          AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
-        <StackPane styleClass="box">
-        <ImageView fx:id="bookImg" fitWidth="650" fitHeight="350">
-        </ImageView>
-        </StackPane>
-        <GridPane hgap="20" vgap="20" prefHeight="300" prefWidth="360" styleClass="box">
-            <StackPane GridPane.columnIndex="0" GridPane.rowIndex="0"
-                       styleClass="box,green-theme" prefWidth="150" prefHeight="130">
-            </StackPane>
 
-        </GridPane>
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.DefaultController">
+    <HBox prefHeight="378.0" prefWidth="754.0" AnchorPane.bottomAnchor="491.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="455.0" AnchorPane.topAnchor="0.0">
+        <ImageView fx:id="bookImg" fitHeight="277.0" fitWidth="449.0">
+        </ImageView>
+        <fx:include source="shouyin_analysis.fxml" />
     </HBox>
 </AnchorPane>

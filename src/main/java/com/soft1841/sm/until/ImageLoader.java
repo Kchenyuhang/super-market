@@ -13,7 +13,7 @@ import java.util.concurrent.BlockingQueue;
  * 2018.12.29
  */
 public class ImageLoader extends Thread{
-    double width = 500;
+    double width = 400;
     double height = 200;
     //阻塞队列存储图片
     BlockingQueue blockingQueue = new ArrayBlockingQueue<>(2);

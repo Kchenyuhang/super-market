@@ -205,7 +205,6 @@ public class  CashierController implements Initializable {
             System.out.println(cashier.getName() + cashier.getRole() + cashier.getPicture());
             cashierService.insertCashier(cashier);
             stage.close();
-            //重新读取一下数据显示
             cashierList = cashierService.getAllCashiers();
             showCashier(cashierList);
         });

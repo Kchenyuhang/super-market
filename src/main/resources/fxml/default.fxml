@@ -27,14 +27,14 @@
         <!--</GridPane>-->
     <!--</HBox>-->
 <!--</AnchorPane>-->
-    <HBox layoutX="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
+    <HBox  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
         <ImageView fx:id="bookImg" fitHeight="315.0" fitWidth="855.0" />
       <HBox prefHeight="1114.0" prefWidth="259.0" />
         <AnchorPane prefHeight="1119.0" prefWidth="482.0">
             <HBox>
                 <HBox prefHeight="419.0" prefWidth="60.0">
                 </HBox>
-             <VBox layoutX="-2.0" prefHeight="419.0" prefWidth="482.0" spacing="10.0" styleClass="box,default-theme">
+             <VBox  prefHeight="419.0" prefWidth="482.0" spacing="10.0" styleClass="box,default-theme">
                   <HBox prefHeight="199.0" prefWidth="413.0" spacing="10.0">
                         <ImageView fx:id="smImg" fitHeight="206.0" fitWidth="207.0" pickOnBounds="true" preserveRatio="true" />
                             <!--<Image url="/img/sample.png" />-->
@@ -62,7 +62,7 @@
                   </HBox>
              </VBox>
             </HBox>
-             <GridPane hgap="10" layoutX="125.0" layoutY="486.0" prefHeight="370.0" prefWidth="416.0" vgap="10" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="486.0">
+             <GridPane hgap="10"  prefHeight="370.0" prefWidth="416.0" vgap="10" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="486.0">
                  <StackPane prefHeight="195" prefWidth="180" styleClass="box" GridPane.columnIndex="0" GridPane.rowIndex="0">
                      <ImageView fitHeight="193" fitWidth="178">
                          <Image url="/img/toux2.jpeg" />
@@ -92,7 +92,7 @@
                   <RowConstraints />
                </rowConstraints>
              </GridPane>
-         <Label layoutX="105.0" layoutY="426.0" prefHeight="37.0" prefWidth="121.0" text="优秀员工：">
+         <Label  prefHeight="37.0" prefWidth="121.0" text="优秀员工：" AnchorPane.rightAnchor="300" AnchorPane.topAnchor="450">
             <font>
                <Font size="22.0" />
             </font>

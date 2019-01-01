@@ -130,6 +130,7 @@ public class GoodsController  implements Initializable{
             descriptionLabel.setEditable(true);
             //删除按钮
             Button delBtn = new Button("删除");
+            delBtn.getStyleClass ().add ( "warning-theme" );
             delBtn.setOnAction(event -> {
                 //弹出一个确认对话框
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -147,7 +148,7 @@ public class GoodsController  implements Initializable{
             });
             Button alterBtn = new Button("编辑");
 
-            alterBtn.setStyle("-fx-pref-height:35;-fx-pref-width: 100 ");
+            alterBtn.getStyleClass ().add ( "black-theme" );
 
             alterBtn.setOnAction(event -> {
 
@@ -164,6 +165,7 @@ public class GoodsController  implements Initializable{
 
             //确认按钮
             Button yesBtn = new Button("确认");
+            yesBtn.getStyleClass ().add ( "btn-radius" );
             alterBtn.setOnAction(event -> {
             });
             //加入

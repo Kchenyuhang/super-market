@@ -115,6 +115,25 @@ public class GoodsDAOImpl implements GoodsDAO {
 
     }
 
+    @Override
+    public List<Goods> getGoodsByTypeId(long typeId) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public List<Goods> selectBooksLike(String keywords) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Goods getGoodsByBarCode(String barCode) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public int countGoods() throws SQLException {
+        return Db.use().queryNumber("SELECT COUNT(*) FROM t_goods").intValue();
+    }
 
 
     private Goods convertGoods(Entity entity) {

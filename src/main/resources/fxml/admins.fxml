@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="1174.0" prefWidth="1956.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.AdminMainController">
+<AnchorPane prefHeight="1174.0" prefWidth="1956.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soft1841.sm.controller.AdminMainController">
 <HBox prefHeight="112.0" prefWidth="2000.0">
 <ImageView fitHeight="126.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
 <Image url="/img/star.png" />
@@ -48,8 +48,9 @@
         <Image url="/img/dongtu.gif" />
     </ImageView>
 </HBox>
-<VBox layoutX="1696.0" layoutY="108.0" prefHeight="915.0" prefWidth="228.0" spacing="65">
+<VBox layoutX="1696.0" layoutY="108.0" prefHeight="915.0" prefWidth="228.0" spacing="55">
 <Button fx:id="a" mnemonicParsing="false" onAction="#listType" prefHeight="70.0" prefWidth="225.0" styleClass="green-theme " text="商品类别" />
+      <Button fx:id="j" mnemonicParsing="false" onAction="#listGoodsAnalysis" prefHeight="44.0" prefWidth="239.0" styleClass="green-theme " text="分析统计" />
 <Button fx:id="b" mnemonicParsing="false" onAction="#listGoods" prefHeight="71.0" prefWidth="224.0" styleClass="green-theme " text="商品信息" />
 <Button fx:id="c" mnemonicParsing="false" onAction="#listVIP" prefHeight="72.0" prefWidth="227.0" styleClass="green-theme  " text="会员信息" />
 <Button fx:id="d" mnemonicParsing="false" onAction="#listCashier" prefHeight="70.0" prefWidth="221.0" styleClass="green-theme " text="收银员信息" />
@@ -59,9 +60,9 @@
 <Button fx:id="h" mnemonicParsing="false" prefHeight="71.0" prefWidth="226.0" styleClass="green-theme  " text="数据备份" />
 <Button fx:id="i" mnemonicParsing="false" prefHeight="71.0" prefWidth="226.0" styleClass="green-theme  " text="主题设置" />
 </VBox>
-<Separator layoutX="1678.0" layoutY="106.0" orientation="VERTICAL" prefHeight="1095.0" prefWidth="15.0" />
-<Separator layoutX="-5.0" layoutY="106.0" prefHeight="15.0" prefWidth="1691.0" />
-<StackPane fx:id="mainContainer" layoutY="115.0" maxHeight="1000" minWidth="812.0" prefHeight="963.0" prefWidth="1683.0">
+<Separator layoutX="1642.0" layoutY="111.0" orientation="VERTICAL" prefHeight="1076.0" prefWidth="15.0" />
+<Separator layoutX="-5.0" layoutY="106.0" prefHeight="15.0" prefWidth="1656.0" />
+<StackPane fx:id="mainContainer" layoutY="111.0" maxHeight="1000" minWidth="812.0" prefHeight="967.0" prefWidth="1648.0">
     <fx:include source="default.fxml" />
     <padding>
 <Insets bottom="5" left="30" right="10" top="10" />

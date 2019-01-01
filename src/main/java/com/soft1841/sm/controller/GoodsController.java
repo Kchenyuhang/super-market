@@ -127,7 +127,7 @@ public class GoodsController  implements Initializable{
             priceLabel.setEditable(false);
             //描述
             TextField descriptionLabel = new TextField("描述："+goods.getDescription());
-            descriptionLabel.setEditable(false);
+            descriptionLabel.setEditable(true);
             //删除按钮
             Button delBtn = new Button("删除");
             delBtn.setOnAction(event -> {
@@ -145,14 +145,23 @@ public class GoodsController  implements Initializable{
                     goodsPane.getChildren().remove(vBox);
                 }
             });
-            //编辑按钮
             Button alterBtn = new Button("编辑");
+
+            alterBtn.setStyle("-fx-pref-height:35;-fx-pref-width: 100 ");
+
             alterBtn.setOnAction(event -> {
+
                 priceLabel.setEditable(true);
+
                 priceLabel.getStyleClass().add("blue-theme");
+
                 nameLabel.getStyleClass().add("blue-theme");
+
                 nameLabel.setEditable(true);
+
             });
+
+
             //确认按钮
             Button yesBtn = new Button("确认");
             alterBtn.setOnAction(event -> {

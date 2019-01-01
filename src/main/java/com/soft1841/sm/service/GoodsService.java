@@ -61,5 +61,4 @@ public interface GoodsService{
      */
     int countByType(long typeId);
 
-    List<Goods> getAllgoods();
 }
